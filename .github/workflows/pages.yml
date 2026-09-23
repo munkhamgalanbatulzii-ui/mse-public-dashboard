@@ -33,7 +33,9 @@ jobs:
           cache: pip
 
       - name: Install scraper
-        run: |\n          python -m pip install -r requirements.txt\n          python -m playwright install --with-deps chromium
+        run: |
+          python -m pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
 
       - name: Fetch latest MSE data
         run: python scrape_mse.py
