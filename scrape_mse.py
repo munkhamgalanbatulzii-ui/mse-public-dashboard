@@ -4,10 +4,9 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from playwright.async_api import async_playwright
 
-URL = "https://new.mse.mn/trade-daily-report"
+URL = "https://new.mse.mn/todays-trade"
 OUT = Path(__file__).parent / "data" / "latest.json"
 UB = timezone(timedelta(hours=8))
-
 
 def num(s):
     if s is None:
@@ -23,38 +22,8 @@ def num(s):
         m = re.search(r"-?\d+(?:\.\d+)?", s)
         return float(m.group()) if m else None
 
-
 def clean(s):
     return re.sub(r"\s+", " ", (s or "")).strip()
-
-
-def norm_header(s):
-    s = clean(s).lower()
-    s = s.replace("(%)", "%")
-    return s
-
-
-HEADER_ALIASES = {
-    "symbol": {"симбол", "symbol"},
-    "open": {"нээлт", "нээлтийн ханш", "open"},
-    "high": {"дээд", "дээд ханш", "high"},
-    "low": {"доод", "доод ханш", "low"},
-    "prev_close": {"өмнөх өдрийн хаалт", "өмнөх хаалт", "previous close", "prev close"},
-    "close": {"хаалт", "хаалтын ханш", "close"},
-    "change": {"өөрчлөлт", "change"},
-    "change_pct": {"өөрчлөлт %", "өөрчлөлт (%)", "change %", "change (%)"},
-    "volume": {"тоо ширхэг", "ширхэг", "volume", "qty", "quantity"},
-    "turnover": {"үнийн дүн", "дүн", "turnover", "amount", "value"},
-}
-
-
-def header_index(headers, key):
-    aliases = HEADER_ALIASES[key]
-    for i, h in enumerate(headers):
-        if norm_header(h) in aliases:
-            return i
-    return None
-
 
 async def extract_tables(page):
     return await page.evaluate("""
@@ -75,7 +44,7 @@ async def extract_tables(page):
       }
       const dateInput = [...document.querySelectorAll('input')]
         .map(x => x.value || '')
-        .find(v => /^\\d{4}-\\d{2}-\\d{2}$/.test(v)) || '';
+        .find(v => /^\d{4}-\d{2}-\d{2}$/.test(v)) || '';
       return {
         dateInput,
         tables: [...document.querySelectorAll('table')].map((t, i) => ({
@@ -90,11 +59,14 @@ async def extract_tables(page):
     }
     """)
 
-
 async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page(viewport={"width": 1440, "height": 1200}, locale="mn-MN")
+        page = await browser.new_page(
+            viewport={"width": 1440, "height": 1200},
+            locale="mn-MN",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140 Safari/537.36"
+        )
         await page.goto(URL, wait_until="domcontentloaded", timeout=90000)
         try:
             await page.wait_for_load_state("networkidle", timeout=30000)
@@ -102,7 +74,7 @@ async def main():
             pass
 
         extracted = None
-        for _ in range(15):
+        for _ in range(20):
             extracted = await extract_tables(page)
             tables = extracted.get("tables", [])
             if any(any(clean(c) for c in r) for t in tables for r in t.get("rows", [])):
@@ -121,44 +93,36 @@ async def main():
         headers = [clean(h) for h in t.get("headers", [])]
         raw_rows = []
 
-        idx = {k: header_index(headers, k) for k in HEADER_ALIASES}
-        is_security_table = (
-            idx["symbol"] is not None
-            and idx["close"] is not None
-            and idx["change_pct"] is not None
-            and idx["volume"] is not None
-            and idx["turnover"] is not None
-        )
-
         for r in t.get("rows", []):
             r = [clean(x) for x in r]
             if not any(r):
                 continue
             raw_rows.append(r)
 
-            if not is_security_table:
+            # MSE regular security tables have 15 body cells:
+            # 0 symbol, 1 open, 2 high, 3 low, 4 last, 5 prev close,
+            # 6 close, 7 change, 8 change %, 9 volume, 10 turnover,
+            # 11 bid qty, 12 bid price, 13 ask qty, 14 ask price.
+            if len(r) < 11:
                 continue
 
-            def cell(key):
-                i = idx[key]
-                return r[i] if i is not None and i < len(r) else None
-
-            symbol = clean(cell("symbol"))
-            if not symbol or not re.fullmatch(r"[A-Za-z0-9._/-]{1,60}", symbol):
+            symbol = r[0]
+            if not symbol or not re.fullmatch(r"[A-Za-z0-9._/-]{1,80}", symbol):
                 continue
 
             securities.append({
                 "category": cat,
                 "symbol": symbol,
-                "open": num(cell("open")),
-                "high": num(cell("high")),
-                "low": num(cell("low")),
-                "prev_close": num(cell("prev_close")),
-                "close": num(cell("close")),
-                "change": num(cell("change")),
-                "change_pct": num(cell("change_pct")),
-                "volume": num(cell("volume")),
-                "turnover": num(cell("turnover")),
+                "open": num(r[1]),
+                "high": num(r[2]),
+                "low": num(r[3]),
+                "last": num(r[4]),
+                "prev_close": num(r[5]),
+                "close": num(r[6]),
+                "change": num(r[7]),
+                "change_pct": num(r[8]),
+                "volume": num(r[9]),
+                "turnover": num(r[10]),
             })
 
         if raw_rows:
@@ -173,11 +137,11 @@ async def main():
     securities = list(dedup.values())
 
     if not securities:
-        raise RuntimeError("МХБ-ийн өдрийн тайлангаас үнэт цаасны мөр илрээгүй; өмнөх нийтлэгдсэн dashboard хэвээр үлдэнэ.")
+        raise RuntimeError("МХБ-ийн өнөөдрийн арилжааны хүснэгтээс үнэт цаасны мөр илрээгүй.")
 
     traded = [x for x in securities if (x.get("volume") or 0) > 0 or (x.get("turnover") or 0) > 0]
     if not traded:
-        raise RuntimeError("Арилжаатай үнэт цаас илрээгүй; өмнөх нийтлэгдсэн dashboard хэвээр үлдэнэ.")
+        raise RuntimeError("Арилжаатай үнэт цаас илрээгүй.")
 
     adv = sum(1 for x in traded if (x.get("change_pct") or 0) > 0)
     dec = sum(1 for x in traded if (x.get("change_pct") or 0) < 0)
@@ -213,7 +177,6 @@ async def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"OK: {source_date} | {len(traded)} traded securities | turnover={total_turnover:,.0f}")
-
 
 if __name__ == "__main__":
     asyncio.run(main())
