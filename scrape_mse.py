@@ -1,97 +1,87 @@
 #!/usr/bin/env python3
-import asyncio,json,re
+import json,re
 from datetime import datetime,timezone,timedelta
 from pathlib import Path
-from playwright.async_api import async_playwright
+import requests
+from bs4 import BeautifulSoup
 
-URL="https://open.mse.mn/securities"
+URL="https://stock.bbe.mn/Home/TopIndex"
 OUT=Path(__file__).parent/"data"/"latest.json"
 UB=timezone(timedelta(hours=8))
+HEAD={"User-Agent":"Mozilla/5.0","Accept-Language":"mn,en;q=0.8"}
 
 def n(s):
     if s is None:return None
-    s=str(s).replace("₮","").replace("%","").replace(",","").replace("−","-").replace("–","-")
+    s=str(s).replace("₮","").replace("%","").replace(",","").replace("−","-").replace("–","-").strip()
     m=re.search(r"[+-]?\d+(?:\.\d+)?",s)
     return float(m.group()) if m else None
 
-def parse(text,it):
-    a=[x.strip() for x in text.splitlines() if x.strip()]
-    try:i=a.index(it["symbol"])
-    except ValueError:i=0
-    price=chg=pct=None
-    for x in a[i:i+30]:
-        if price is None and "₮" in x:
-            price=n(x);continue
-        if price is not None and "%" in x:
-            m=re.search(r"([+-]?\d[\d,.]*)\s*\(([+-]?\d[\d,.]*)%\)",x)
-            if m: chg=n(m.group(1));pct=n(m.group(2))
-            else:
-                m=re.search(r"([+-]?\d[\d,.]*)%",x)
-                if m:pct=n(m.group(1))
-            break
-    if price is None:return None
-    return {"category":it["category"],"symbol":it["symbol"],"name":it["name"],
-            "open":None,"high":None,"low":None,"last":price,
-            "prev_close":price-chg if chg is not None else None,"close":price,
-            "change":chg,"change_pct":pct,"volume":None,"turnover":None,
-            "detail_url":it["url"]}
+def rows(table):
+    out=[]
+    for tr in table.select("tbody tr"):
+        td=[x.get_text(" ",strip=True) for x in tr.select("td")]
+        if len(td)<6: continue
+        sym=td[0].strip()
+        if not re.fullmatch(r"[A-Za-z0-9._/-]{1,40}",sym): continue
+        out.append({
+            "category":"МХБ","symbol":sym,"name":sym,
+            "open":None,"high":None,"low":None,
+            "last":n(td[1]),"close":n(td[1]),"change":n(td[2]),
+            "change_pct":n(td[3]),"volume":n(td[4]),"turnover":n(td[5]),
+        })
+    return out
 
-async def worker(browser,q,out):
-    p=await browser.new_page()
-    while True:
-        it=await q.get()
-        if it is None:q.task_done();break
-        try:
-            await p.goto(it["url"],wait_until="domcontentloaded",timeout=45000)
-            await p.wait_for_timeout(700)
-            r=parse(await p.locator("body").inner_text(),it)
-            if r:out.append(r)
-        except Exception as e: print("WARN",it["symbol"],e)
-        q.task_done()
-    await p.close()
+def main():
+    r=requests.get(URL,headers=HEAD,timeout=30)
+    r.raise_for_status()
+    soup=BeautifulSoup(r.text,"html.parser")
+    tables=soup.find_all("table")
+    if len(tables)<4: raise RuntimeError(f"Ханшийн хүснэгт олдсонгүй: {len(tables)}")
 
-async def main():
-    async with async_playwright() as pw:
-        b=await pw.chromium.launch(headless=True)
-        p=await b.new_page()
-        await p.goto(URL,wait_until="domcontentloaded",timeout=90000)
-        await p.wait_for_timeout(3000)
-        items=await p.evaluate("""() => {
-          const cats=['I ангилал','II ангилал','III ангилал'],out=[];
-          [...document.querySelectorAll('table')].slice(0,3).forEach((t,ti)=>{
-            [...t.querySelectorAll('tbody tr')].forEach(tr=>{
-              const td=[...tr.querySelectorAll('td')].map(x=>x.innerText.trim());
-              const a=tr.querySelector('a[href^="/securities/"]');
-              if(a&&td.length>=3&&/^[A-Za-z0-9._/-]{1,40}$/.test(td[1]))
-                out.push({symbol:td[1],name:td[2],category:cats[ti],url:new URL(a.getAttribute('href'),location.origin).href});
-            });
-          }); return out;
-        }""")
-        await p.close()
-        items=list({x["symbol"]:x for x in items}.values())
-        print("Listed equities:",len(items))
-        if not items: raise RuntimeError("MSE Open жагсаалт олдсонгүй")
-        q=asyncio.Queue();out=[]
-        for x in items:await q.put(x)
-        ws=[asyncio.create_task(worker(b,q,out)) for _ in range(8)]
-        for _ in ws:await q.put(None)
-        await q.join();await asyncio.gather(*ws);await b.close()
-    if len(out)<10:raise RuntimeError(f"Ханштай үнэт цаас хэт цөөн: {len(out)}")
-    out.sort(key=lambda x:x["symbol"])
-    changed=[x for x in out if x["change_pct"] is not None]
-    adv=sum((x["change_pct"] or 0)>0 for x in out)
-    dec=sum((x["change_pct"] or 0)<0 for x in out)
-    flat=sum(x["change_pct"]==0 for x in out)
+    top_turn=rows(tables[0])
+    top_vol=rows(tables[1])
+    gainers=rows(tables[2])
+    losers=rows(tables[3])
+
+    d={}
+    for x in top_turn+top_vol+gainers+losers:
+        old=d.get(x["symbol"])
+        if old is None or (x.get("turnover") or 0)>(old.get("turnover") or 0):
+            d[x["symbol"]]=x
+    sec=list(d.values())
+
+    text=soup.get_text(" ",strip=True)
+    dm=re.search(r"(20\d{2})[-./](\d{2})[-./](\d{2})",text)
+    day=f"{dm.group(1)}-{dm.group(2)}-{dm.group(3)}" if dm else datetime.now(UB).date().isoformat()
+
+    total_turn=total_vol=None
+    adv=dec=flat=None
+    m=re.search(r"([\d,]+)\s*төгрөгийн\s+үнийн\s+дүн\s+бүхий\s+([\d,]+)\s*ширхэг.*?([\d,]+)\s+өсч,\s*([\d,]+)\s+буурсан.*?([\d,]+)\s+ханш\s+тогтвортой",text,re.I)
+    if m:
+        total_turn=n(m.group(1)); total_vol=n(m.group(2))
+        adv=int(m.group(3).replace(",","")); dec=int(m.group(4).replace(",","")); flat=int(m.group(5).replace(",",""))
+    else:
+        adv=sum((x.get("change_pct") or 0)>0 for x in sec)
+        dec=sum((x.get("change_pct") or 0)<0 for x in sec)
+        flat=sum(x.get("change_pct")==0 for x in sec)
+
+    for x in sec:
+        if x["close"] is not None and x["change"] is not None:
+            x["prev_close"]=x["close"]-x["change"]
+        else:x["prev_close"]=None
+
     now=datetime.now(UB)
-    data={"source":URL,"source_title":"MSE Open","updated_at":now.isoformat(timespec="seconds"),
-          "date":now.date().isoformat(),"data_mode":"official_open_mse_prices",
-          "summary":{"securities":len(out),"advancers":adv,"decliners":dec,"unchanged":flat,"volume":None,"turnover":None},
-          "top_gainers":sorted(changed,key=lambda x:x["change_pct"],reverse=True)[:10],
-          "top_losers":sorted(changed,key=lambda x:x["change_pct"])[:10],
-          "top_turnover":sorted(changed,key=lambda x:abs(x["change_pct"]),reverse=True)[:10],
-          "securities":out}
+    data={
+      "source":URL,"source_title":"МХБ ханшийн мэдээ","updated_at":now.isoformat(timespec="seconds"),
+      "date":day,"data_mode":"mse_daily_mirror",
+      "summary":{"securities":len(sec),"advancers":adv,"decliners":dec,"unchanged":flat,
+                 "volume":total_vol,"turnover":total_turn},
+      "top_gainers":gainers[:10],"top_losers":losers[:10],"top_turnover":top_turn[:10],
+      "securities":sorted(sec,key=lambda x:-(x.get("turnover") or 0))
+    }
+    if not sec: raise RuntimeError("Үнэт цаасны мөр олдсонгүй")
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding="utf-8")
-    print("OK:",len(out),"up",adv,"down",dec,"flat",flat)
+    print(f"OK {day}: {len(sec)} symbols, turnover={total_turn}, volume={total_vol}")
 
-if __name__=="__main__":asyncio.run(main())
+if __name__=="__main__": main()
