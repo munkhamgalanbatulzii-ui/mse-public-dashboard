@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Монголын Хөрөнгийн Биржийн өдөр тутмын арилжааны автомат dashboard" />
+<title>МХБ — Өдрийн самбар</title>
+<style>
+:root{--bg:#07101f;--card:#0e1a2d;--line:#1d2b42;--text:#eef5ff;--muted:#8ea0b8;--up:#5ed49b;--down:#ff7b8a;--accent:#7db0ff}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#07101f,#091526 50%,#07101f);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:1240px;margin:auto;padding:28px 20px 56px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:22px}.brand h1{margin:0;font-size:clamp(24px,4vw,38px);letter-spacing:-.04em}.brand p{margin:7px 0 0;color:var(--muted)}.status{text-align:right;color:var(--muted);font-size:13px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--up);margin-right:7px;box-shadow:0 0 14px var(--up)}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.card{background:rgba(14,26,45,.9);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 12px 35px rgba(0,0,0,.14)}.k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.v{font-size:25px;font-weight:750;margin-top:8px;letter-spacing:-.03em}.up{color:var(--up)}.down{color:var(--down)}
+.grid{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:12px;margin-top:12px}.panel{background:rgba(14,26,45,.9);border:1px solid var(--line);border-radius:16px;padding:16px;min-width:0}.panel h2{font-size:15px;margin:0 0 12px}.rank{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid rgba(255,255,255,.06)}.rank:first-of-type{border-top:0}.sym{font-weight:700}.small{font-size:12px;color:var(--muted)}
+.tablePanel{margin-top:12px}.toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap}input,select{background:#091526;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 12px;outline:none}input{min-width:260px;flex:1}.tableWrap{overflow:auto;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:11px 12px;border-bottom:1px solid rgba(255,255,255,.06);text-align:right;white-space:nowrap;font-size:13px}th{position:sticky;top:0;background:#0c182a;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}td:first-child,th:first-child,td:nth-child(2),th:nth-child(2){text-align:left}.source{margin-top:16px;color:var(--muted);font-size:12px}.source a{color:var(--accent)}.empty{padding:40px;text-align:center;color:var(--muted)}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.top{flex-direction:column}.status{text-align:left}.cards .card:last-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="brand"><h1>МХБ · Өдрийн самбар</h1><p>Монголын Хөрөнгийн Биржийн нийтэд нээлттэй арилжааны мэдээллээс автомат шинэчлэгдэнэ.</p></div><div class="status"><span class="dot"></span><span id="state">Дата уншиж байна…</span><br><span id="updated"></span></div></div>
+  <div class="cards">
+    <div class="card"><div class="k">Нийт арилжааны дүн</div><div class="v" id="turnover">—</div></div>
+    <div class="card"><div class="k">Арилжигдсан ҮЦ</div><div class="v" id="securities">—</div></div>
+    <div class="card"><div class="k">Өссөн</div><div class="v up" id="advancers">—</div></div>
+    <div class="card"><div class="k">Буурсан</div><div class="v down" id="decliners">—</div></div>
+    <div class="card"><div class="k">Нийт ширхэг</div><div class="v" id="volume">—</div></div>
+  </div>
+  <div class="grid">
+    <div class="panel"><h2>▲ Хамгийн их өсөлт</h2><div id="gainers"></div></div>
+    <div class="panel"><h2>▼ Хамгийн их бууралт</h2><div id="losers"></div></div>
+    <div class="panel"><h2>₮ Үнийн дүнгээр идэвхтэй</h2><div id="topturn"></div></div>
+  </div>
+  <div class="panel tablePanel">
+    <div class="toolbar"><h2 style="margin:0">Бүх арилжигдсан үнэт цаас</h2><input id="q" placeholder="Симбол эсвэл ангиллаар хайх…"><select id="cat"><option value="">Бүх ангилал</option></select></div>
+    <div class="tableWrap"><table><thead><tr><th>Симбол</th><th>Ангилал</th><th>Хаалт</th><th>Өөрчлөлт %</th><th>Ширхэг</th><th>Үнийн дүн</th><th>Дээд</th><th>Доод</th></tr></thead><tbody id="tbody"></tbody></table></div>
+  </div>
+  <div class="source">Эх сурвалж: <a href="https://new.mse.mn/todays-trade" target="_blank" rel="noopener">Монголын Хөрөнгийн Бирж — Өнөөдрийн арилжаа</a>. Мэдээллийн зориулалттай.</div>
+</div>
+<script>
+const fmt=n=>n==null?'—':new Intl.NumberFormat('mn-MN',{maximumFractionDigits:2}).format(n);
+const money=n=>{if(n==null)return'—';const a=Math.abs(n);if(a>=1e12)return(fmt(n/1e12)+' их наяд ₮');if(a>=1e9)return(fmt(n/1e9)+' тэрбум ₮');if(a>=1e6)return(fmt(n/1e6)+' сая ₮');return fmt(n)+' ₮'};
+const pct=n=>n==null?'—':`${n>0?'+':''}${fmt(n)}%`;
+let DATA=[];
+function ranks(id,arr,field,type){document.getElementById(id).innerHTML=(arr||[]).slice(0,5).map(x=>`<div class="rank"><div><div class="sym">${x.symbol}</div><div class="small">${x.category||''}</div></div><div class="${type||''}" style="font-weight:700">${field==='turnover'?money(x[field]):pct(x[field])}</div></div>`).join('')||'<div class="empty">Мэдээлэл алга</div>'}
+function renderTable(){const q=document.getElementById('q').value.toLowerCase(),cat=document.getElementById('cat').value;const rows=DATA.filter(x=>(!q||(`${x.symbol} ${x.category}`).toLowerCase().includes(q))&&(!cat||x.category===cat));document.getElementById('tbody').innerHTML=rows.map(x=>`<tr><td><b>${x.symbol}</b></td><td>${x.category}</td><td>${fmt(x.close??x.last)}</td><td class="${(x.change_pct||0)>0?'up':(x.change_pct||0)<0?'down':''}">${pct(x.change_pct)}</td><td>${fmt(x.volume)}</td><td>${money(x.turnover)}</td><td>${fmt(x.high)}</td><td>${fmt(x.low)}</td></tr>`).join('')||'<tr><td colspan="8" class="empty">Илэрц алга</td></tr>'}
+fetch('./data/latest.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('data');return r.json()}).then(d=>{DATA=d.securities||[];document.getElementById('state').textContent='Шинэчлэгдсэн · '+(d.date||'');document.getElementById('updated').textContent=d.updated_at?new Date(d.updated_at).toLocaleString('mn-MN'):'';for(const k of ['securities','advancers','decliners','volume'])document.getElementById(k).textContent=fmt(d.summary?.[k]);document.getElementById('turnover').textContent=money(d.summary?.turnover);ranks('gainers',d.top_gainers,'change_pct','up');ranks('losers',d.top_losers,'change_pct','down');ranks('topturn',d.top_turnover,'turnover','');const cats=[...new Set(DATA.map(x=>x.category).filter(Boolean))].sort();document.getElementById('cat').innerHTML+=[...cats].map(c=>`<option>${c}</option>`).join('');renderTable()}).catch(()=>{document.getElementById('state').textContent='Дата шинэчлэгдэж байна';document.getElementById('updated').textContent='GitHub Action эхний удаа ажилласны дараа мэдээлэл гарна';});
+document.getElementById('q').addEventListener('input',renderTable);document.getElementById('cat').addEventListener('change',renderTable);
+</script>
+</body></html>
