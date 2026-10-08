@@ -99,6 +99,22 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
 .ratio-foot{font-size:11px;line-height:1.65;color:#77837f;border-top:1px solid #edf1ed;padding:11px 18px;margin:0}
 @media(max-width:680px){.ratio-head{flex-direction:column}.ratio-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:10px}.ratio-scroll{padding:0 10px 12px}.ratio-head{padding:12px}.ratio-foot{padding:11px}}
 </style>
+<style>
+/* Four-chart quarterly analysis: clean Excel-style column charts */
+.simple-quarter-filters{margin:16px 0 8px}
+.simple-quarter-note{font-size:12px;color:#647d7b;margin:0 0 17px;line-height:1.7;padding-left:3px}
+.simple-quarter-charts{gap:18px;align-items:stretch}
+.simple-quarter-card{min-width:0;background:#fff;border:1px solid #dde4e4;border-radius:9px;padding:0 14px 12px;overflow:hidden}
+.simple-quarter-header{min-height:65px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;padding:14px 4px 5px}
+.simple-quarter-header h2{font-size:17px;font-weight:650;letter-spacing:-.01em;color:#465358;margin:0}
+.simple-quarter-header span{font-size:11px;color:#829293}
+.simple-quarter-charts .history-chart{overflow-x:auto;min-height:282px;scrollbar-color:#c5d0d1 #f6f8f6;scrollbar-width:thin}
+.simple-quarter-charts .history-chart svg{display:block;width:auto;max-width:none;height:300px;min-width:100%}
+.simple-quarter-charts .history-chart svg .quarter-axis{fill:#68757a;font-size:11px}
+.simple-quarter-charts .history-chart svg .quarter-label{fill:#44515a;font-size:11px;font-weight:600}
+.simple-quarter-footnote{font-size:11px;line-height:1.8;color:#7e8a8b;margin:14px 2px 0}
+@media(max-width:760px){.simple-quarter-charts{grid-template-columns:1fr}.simple-quarter-card{padding:0 9px 10px}.simple-quarter-header{padding:12px 4px}.simple-quarter-charts .history-chart svg{height:280px}}
+</style>
 </head>
 <body>
 <div class="layout">
@@ -152,57 +168,40 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
 </div>
 <div class="filters" id="financialFilters"></div><div class="table-wrap" id="financialTable"></div></div></section>
   
-<section id="history" class="view" aria-label="2023 оноос хойших санхүүгийн түүх">
- <div class="history-hero">
-  <div><div class="eyebrow" style="color:#d5a34e">EQUITY RESEARCH  /  FINANCIAL INTELLIGENCE 2023—2026</div><h2 style="margin:0;color:#fff;font-size:23px">26 компанийн улирлын санхүүгийн шинжилгээ</h2><p style="color:#becde0;font-size:12px;line-height:1.7;max-width:760px">2026.10.08-ны Excel файлд байгаа бодит 26 компанийн 2023–2026 оны 3 бүлгийн үзүүлэлтийг компани, хугацаа, өссөн дүн/тухайн улирлаар харьцуулна. Мэдээлэл нь импортолсон тайлангийн хугацаа, эх сурвалжтай хадгалагдана.</p></div>
-  <div class="hist-hero-actions"><button class="btn" id="mseRawDownload">↓ Excel эх өгөгдөл (CSV)</button><button class="btn" id="histExport">↓ Бөглөсөн дата (CSV)</button><button class="btn primary" id="histImportBtn">↑ Улирлын CSV импорт</button><input id="histFileInput" type="file" accept=".csv,text/csv" class="hidden"/></div>
- </div>
- <div class="hist-alert" id="histStatus" role="status"></div>
- <div class="hist-filter panel">
-   <label class="hist-control">Компани<select class="select" id="histCompany" aria-label="Компани"></select></label>
-   <label class="hist-control">Он<select class="select" id="histYear" aria-label="Он"><option value="all">2023–2026 бүгд</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select></label>
-   <label class="hist-control">Орлого / ашгийн суурь<select class="select" id="histMode" aria-label="Өссөн дүн эсвэл тухайн улирал"><option value="ytd">Өссөн дүн (YTD)</option><option value="single">Зөвхөн тухайн улирал</option></select></label>
-   <label class="hist-control">Нэгж<select class="select" id="histUnit" aria-label="Тайлангийн мөнгөн нэгж"><option value="b">Тэрбум ₮</option><option value="m">Сая ₮</option><option value="raw">₮</option></select></label>
- </div>
- <div id="histKpis" class="grid4"></div>
- <div class="history-charts">
-   <div class="panel"><div class="panel-title"><h2>01. Санхүүгийн үзүүлэлт</h2><span class="hint">Нийт хөрөнгө · Өр төлбөр · Өмч</span></div><div id="chartBalance" class="history-chart"></div></div>
-   <div class="panel"><div class="panel-title"><h2>02. Орлого, үр дүн</h2><span class="hint">Орлого · Нийт ашиг · Цэвэр ашиг</span></div><div id="chartIncome" class="history-chart"></div></div>
-   <div class="panel"><div class="panel-title"><h2>03. Санхүүгийн өгөөж</h2><span class="hint">ROA · ROE (%)</span></div><div id="chartReturns" class="history-chart"></div></div>
-   <div class="panel"><div class="panel-title"><h2>04. Хувьцаанд ногдох үзүүлэлт</h2><span class="hint">EPS · Нэгж хувьцааны дансны үнэ (₮)</span></div><div id="chartPerShare" class="history-chart"></div></div>
-   <div class="panel"><div class="panel-title"><h2>05. Үнэлгээ ба хөрөнгийн эргэц</h2><span class="hint">ROTA · P/E · P/B (×)</span></div><div id="chartMultiples" class="history-chart"></div></div>
- </div>
- <div class="panel hist-wide" style="margin-top:18px">
-  <div class="panel-title"><h2>Улирлын дэлгэрэнгүй тайлан</h2><span id="histRangeHint" class="hint"></span></div>
-  <div class="hist-tabs" role="tablist" aria-label="Санхүүгийн тайлангийн бүлэг"><button class="hist-tab active" data-group="balance">01 · Санхүүгийн үзүүлэлт</button><button class="hist-tab" data-group="income">02 · Орлого, үр дүнгийн тайлан</button><button class="hist-tab" data-group="ratio">03 · Санхүүгийн харьцаанууд</button></div>
-  <div class="history-tablewrap" id="histPivot"></div>
-  <div class="hist-explainer" id="histMethod"></div>
- </div>
-
- <div class="panel hist-wide" style="margin-top:18px" id="fullStatementsPanel">
-   <div class="panel-title"><h2>МХБ-ийн эх хүснэгт — бүх үзүүлэлт</h2><span class="hint">3 бүлэг · Excel-д байсан анхны утга</span></div>
-   <p class="section-note">Дээрх хураангуй үзүүлэлтээс гадна банк, ББСБ, даатгал болон бусад салбарын бүх тусгай үзүүлэлт энд харагдана. Утгын нэгжийг Excel-ийн анхны утгаар хадгалсан. ⚠ тэмдэгтэй тоог эх сурвалжаас шалгах шаардлагатай.</p>
-   <div id="mseAllMetricsStats" class="section-note"></div>
-   <div id="mseAllMetrics" class="history-tablewrap"></div>
-   <div id="mseRiskNotes" class="hist-explainer"></div>
- </div>
- <div class="panel hist-wide" style="margin-top:18px">
-  <div class="panel-title"><h2>26 компанийн харьцуулалт</h2><span class="hint">Ижил хугацаа, ижил үзүүлэлт</span></div>
-  <div class="filters">
-   <label class="hist-control">Үзүүлэлт<select id="histCompareMetric" class="select"></select></label>
-   <label class="hist-control">Улирал<select id="histComparePeriod" class="select"></select></label>
-   <label class="hist-control">Салбар<select id="histCompareSector" class="select"></select></label>
+<section id="history" class="view" aria-label="Улирлын шинжилгээ — 4 үзүүлэлт">
+  <div class="history-hero">
+    <div>
+      <div class="eyebrow" style="color:#d5a34e">MANDAL CAPITAL  /  MSE EQUITY RESEARCH</div>
+      <h2 style="margin:0;color:#fff;font-size:23px">Улирлын санхүүгийн шинжилгээ</h2>
+      <p style="color:#becde0;font-size:12px;line-height:1.7;max-width:780px">2023 оноос хойших зөвхөн тайлагнасан улирлууд. Компанийн 4 гол үзүүлэлтийг энгийн баганан графикаар харна.</p>
+    </div>
   </div>
-  <div class="hist-compare-layout"><div id="histCompareGraph"></div><div class="table-wrap" id="histCompareTable"></div></div>
- </div>
- <div class="panel hist-wide" style="margin-top:18px">
-  <div class="panel-title"><h2>Өгөгдлийн бүрдүүлэлт ба импорт</h2><span class="hint">Ил тод, баталгаажуулах боломжтой</span></div>
-  <div class="hist-import-grid">
-    <div><p class="section-note">МХБ-ийн 2023.I–2026.III улирлын 26 компанийн мэдээлэлд зориулж бэлдсэн CSV загвар. Нэг мөр = нэг компани + нэг улирал; мөнгөн дүн төгрөгөөр, өгөөжийн харьцаа хувиар (жишээ 12.5), EPS болон P/E-ийг тусад нь оруулна.</p><div class="hist-buttons"><button class="btn soft" id="histTemplate">↓ 390 мөртэй бэлэн CSV загвар</button><button class="btn" id="histSampleRow">↓ Нэг мөртэй тайлбартай загвар</button><button class="btn" id="histClear">↶ Улирлын дата арилгах</button></div><div class="note">Баганууд: <code>symbol, year, quarter, basis, statementType, sourceUrl, ...</code> + 20 гаруй үзүүлэлт. Импортын файлд бөглөөгүй талбар байвал шинэ тоо гэж үзэхгүй. Улирал нь 1–4, basis нь <code>ytd</code> эсвэл <code>quarter</code>.</div></div>
-    <div><h3 style="font-size:14px;color:var(--navy);margin:0 0 13px">Хамрах хүрээ</h3><div id="histCoverage" class="quality-list"></div><p class="note" style="margin-top:18px">Эх сурвалж: <a class="inline-link" href="https://mse.mn/companies-info" target="_blank" rel="noopener">МХБ — Компаниуд</a> · <a class="inline-link" href="https://open.mse.mn/securities" target="_blank" rel="noopener">MSE Open</a> · <a class="inline-link" href="https://mse.mn/uploads/files/File/content/1%20new%20mse%20zaawar.pdf" target="_blank" rel="noopener">МХБ-ийн санхүүгийн тайлангийн маягт</a></p></div>
+  <div class="hist-filter panel simple-quarter-filters">
+    <label class="hist-control">Компани<select class="select" id="histCompany" aria-label="Компани"></select></label>
+    <label class="hist-control">Хугацаа<select class="select" id="histYear" aria-label="Он"><option value="all">2023 оноос хойш бүгд</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select></label>
+    <label class="hist-control">Орлого, ашгийн төрөл<select class="select" id="histMode" aria-label="Өссөн дүн эсвэл тухайн улирал"><option value="ytd">Оны эхнээс өссөн дүн (YTD)</option><option value="single">Зөвхөн тухайн улирал</option></select></label>
   </div>
- </div>
-</section>
+  <p class="simple-quarter-note" id="histMessage">Тайлагнасан хугацааны мэдээллийг ачаалж байна…</p>
+  <div class="history-charts simple-quarter-charts">
+    <article class="panel simple-quarter-card">
+      <div class="simple-quarter-header"><h2>Цэвэр ашиг</h2><span>₮ · улирал бүр</span></div>
+      <div id="chartNetProfit" class="history-chart"></div>
+    </article>
+    <article class="panel simple-quarter-card">
+      <div class="simple-quarter-header"><h2>Өөрийн хөрөнгө</h2><span>₮ · тайлант өдрийн үлдэгдэл</span></div>
+      <div id="chartEquity" class="history-chart"></div>
+    </article>
+    <article class="panel simple-quarter-card">
+      <div class="simple-quarter-header"><h2>Өр төлбөр</h2><span>₮ · тайлант өдрийн үлдэгдэл</span></div>
+      <div id="chartLiabilities" class="history-chart"></div>
+    </article>
+    <article class="panel simple-quarter-card">
+      <div class="simple-quarter-header"><h2>Борлуулалтын орлого</h2><span>₮ · улирал бүр</span></div>
+      <div id="chartRevenue" class="history-chart"></div>
+    </article>
+  </div>
+  <p class="simple-quarter-footnote">Эх сурвалж: МХБ-ийн санхүүгийн тайлангаас нэгтгэсэн мэдээлэл. Орлого, ашгийн тайлан нь YTD суурьтай байж болно; “Зөвхөн тухайн улирал” горимд өмнөх улирлын өссөн дүн байхгүй бол тооцоог нууж харуулна. Мэдээлэлгүй улирлыг 0 гэж үзэхгүй.</p>
+</section></section>
 
 <section id="ownership" class="view" aria-label="Хувь эзэмшил ба P/B шинжилгээ">
 <div class="dv-hero"><div><div class="dv-eyebrow">MANDAL CAPITAL / OWNERSHIP INTELLIGENCE</div><h2>Хувь эзэмшил ба P/B үнэлгээ</h2><p>26 компанийн олон нийтийн эзэмшлийн тооцоолсон үлдэгдэл, томоохон эзэмшигчид болон 2026.II улирлын өөрийн хөрөнгөд суурилсан урьдчилсан P/B харьцаа.</p></div><div class="dv-hero-pick"><label for="owCompany">Компани сонгох</label><select class="select" id="owCompany"></select><span>Ханш 2026.10.08 · Баланс 2026.II</span></div></div>
@@ -391,26 +390,63 @@ function formatDate(y,q){return y+'Q'+q}
 function periodKey(r){return +r.year*10+ +r.quarter}
 function save(){try{localStorage.setItem('mseIQuarterly_v2',JSON.stringify(archive));return true}catch(e){api.toast('Хөтчийн санах ой дүүрсэн. CSV-г татаж хадгална уу.');return false}}
 function coverage(){return Object.values(archive).filter(hasValues)}
-function svgChart(el,series,typ){
- const available=activePeriods().filter(p=>series.some(s=>real(getValue(s.key,selectedSymbol,p.year,p.quarter))));
- if(!available.length){el.innerHTML='<div class="hist-empty"><strong>Энэ үзүүлэлтийн тайлан одоогоор байхгүй.</strong></div>';return}
- const isBar=typ==='money'||typ==='per', rows=series.map(o=>({...o,values:available.map(p=>getValue(o.key,selectedSymbol,p.year,p.quarter))}));
- const pool=rows.flatMap(r=>r.values).filter(real); let lo=Math.min(...pool,0),hi=Math.max(...pool,0);
- if(hi===lo){hi+=1;lo-=1}let pad=(hi-lo)*.13;hi+=pad;lo-=Math.min(pad,lo<0?pad:0);
- const W=760,H=300,L=70,R=15,T=30,B=56,GW=W-L-R,GH=H-T-B;
- const X=i=>L+(i+.5)*GW/available.length,Y=v=>T+(hi-v)/(hi-lo)*GH;
- const short=v=>{if(!real(v))return '—';if(typ==='pct')return num(v,1)+'%';if(typ==='times')return num(v,1)+'×';if(typ==='per')return num(v,1)+' ₮';const a=Math.abs(v),sign=v<0?'-':'';return sign+(a>=1e12?num(a/1e12,1)+' их наяд':a>=1e9?num(a/1e9,1)+' тэрбум':a>=1e6?num(a/1e6,1)+' сая':num(a,0))+' ₮'};
- let out=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${escape(series.map(s=>s.label).join(', '))} 2023 оноос хойших улирлын график">`;
- for(let i=0;i<=4;i++){const v=lo+(hi-lo)*i/4,y=Y(v);out+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="#e7edf0" stroke-dasharray="3 5"/><text class="axis" text-anchor="end" x="${L-8}" y="${y+4}">${escape(short(v).replace(' ₮',''))}</text>`}
- out+=`<line x1="${L}" x2="${W-R}" y1="${Y(0)}" y2="${Y(0)}" stroke="#b6c9cf"/>`;
- available.forEach((p,i)=>{out+=`<text class="axis" text-anchor="middle" x="${X(i)}" y="${H-20}">${p.short}</text>`});
- if(isBar){const interval=GW/available.length;const bw=Math.min(18,Math.max(3,interval/(rows.length+1)));rows.forEach((r,j)=>r.values.forEach((v,i)=>{if(!real(v))return;const x=X(i)-(rows.length*bw)/2+j*bw,y0=Y(0),yy=Y(v),top=Math.min(y0,yy),h=Math.max(1,Math.abs(y0-yy));out+=`<rect x="${x}" y="${top}" width="${Math.max(2,bw-1)}" height="${h}" rx="2" fill="${r.color}"><title>${escape(r.label)} · ${available[i].label}: ${escape(short(v))}</title></rect>`;if(available.length<=8||i>=available.length-4){out+=`<text class="dv-bar-label" transform="translate(${x+bw/2},${Math.max(11,top-6)}) rotate(-36)" text-anchor="start">${escape(short(v).replace(' ₮',''))}</text>`}}))}
- else rows.forEach(r=>{let run=[];function flush(){if(run.length>1)out+=`<polyline points="${run.join(' ')}" fill="none" stroke="${r.color}" stroke-width="2.8" stroke-linejoin="round"/>`;run=[]}r.values.forEach((v,i)=>{if(!real(v)){flush();return}run.push(X(i)+','+Y(v))});flush();r.values.forEach((v,i)=>{if(!real(v))return;out+=`<circle r="3.8" cx="${X(i)}" cy="${Y(v)}" fill="${r.color}"><title>${escape(r.label)} ${available[i].label}: ${escape(short(v))}</title></circle>`})});
+function drawQuarterBar(el,key,title){
+ const periods=activePeriods().map(p=>({p,value:getValue(key,selectedSymbol,p.year,p.quarter)}))
+  .filter(x=>real(x.value));
+ if(!periods.length){
+  el.innerHTML='<div class="hist-empty"><strong>Тухайн хугацааны тайлангийн мэдээлэл байхгүй.</strong>Мэдээлэлгүй улирлыг графикт оруулахгүй.</div>';
+  return;
+ }
+ const n=periods.length, W=Math.max(720,90+n*122),H=314,L=88,R=18,T=46,B=53;
+ const width=W-L-R,plotHeight=H-T-B;
+ const raw=periods.map(x=>x.value),min=Math.min(0,...raw),max=Math.max(0,...raw);
+ const span=Math.max(1,max-min),upper=max+span*0.22,lower=min<0?min-span*0.13:0;
+ const y=v=>T+(upper-v)/(upper-lower)*plotHeight;
+ const x=i=>L+(i+.5)*width/n,barWidth=Math.min(76,width/n*.66);
+ const money=v=>{
+  if(!real(v))return '—';
+  const abs=Math.abs(v),sign=v<0?'−':'',format=new Intl.NumberFormat('mn-MN',{maximumFractionDigits:abs>=1e9?2:1});
+  return sign+(abs>=1e12?format.format(abs/1e12)+' их наяд':abs>=1e9?format.format(abs/1e9)+' тэрбум':abs>=1e6?format.format(abs/1e6)+' сая':format.format(abs))+' ₮';
+ };
+ const short=v=>{
+  const a=Math.abs(v),sign=v<0?'−':'',format=new Intl.NumberFormat('mn-MN',{maximumFractionDigits:1});
+  return sign+(a>=1e12?format.format(a/1e12)+' их н.':a>=1e9?format.format(a/1e9)+' тэрбум':a>=1e6?format.format(a/1e6)+' сая':format.format(a));
+ };
+ const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\u0027':'&#39;'}[c]));
+ let out='<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+safe(title)+' — '+n+' улирлын баганан график">';
+ for(let k=0;k<=4;k++){
+  const v=lower+(upper-lower)*k/4,yy=y(v);
+  out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" stroke="#d7dcdd" stroke-width="1"/>';
+  out+='<text class="quarter-axis" x="'+(L-10)+'" y="'+(yy+4)+'" text-anchor="end">'+safe(short(v))+'</text>';
+ }
+ const zero=y(0);
+ out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+zero+'" y2="'+zero+'" stroke="#aebbbd" stroke-width="1.3"/>';
+ periods.forEach(({p,value},i)=>{
+  const center=x(i),height=Math.max(1,Math.abs(y(value)-zero)),top=Math.min(y(value),zero);
+  const fill=value<0?'#bc6c72':'#1c6787';
+  const labelY=value<0?Math.min(H-B+16,y(value)+17):Math.max(16,y(value)-10);
+  out+='<rect x="'+(center-barWidth/2)+'" y="'+top+'" width="'+barWidth+'" height="'+height+'" rx="1" fill="'+fill+'"><title>'+safe(p.year+'.Q'+p.quarter+' · '+title+' · '+money(value))+'</title></rect>';
+  out+='<text class="quarter-label" x="'+center+'" y="'+labelY+'" text-anchor="middle">'+safe(money(value))+'</text>';
+  out+='<text class="quarter-axis" x="'+center+'" y="'+(H-20)+'" text-anchor="middle">'+p.year+'.Q'+p.quarter+'</text>';
+ });
  out+='</svg>';
- el.innerHTML=out+`<div class="hist-legend">${rows.map(r=>`<span><i style="background:${r.color}"></i>${escape(r.label)}</span>`).join('')}</div>`;
+ el.innerHTML=out;
 }
-const COLORS=['#0c9383','#224b51','#d7a65a','#8b9ca5'];
-function renderCharts(){svgChart($('chartBalance'),[{key:'assets',label:'Нийт хөрөнгө',color:COLORS[0]},{key:'liabilities',label:'Өр төлбөр',color:COLORS[2]},{key:'equity',label:'Өөрийн хөрөнгө',color:COLORS[1]}],'money');svgChart($('chartIncome'),[{key:'revenue',label:((api.getCompanies().find(c=>c.symbol===selectedSymbol)||{}).sector==='Банк'?'Хүүгийн орлого':(api.getCompanies().find(c=>c.symbol===selectedSymbol)||{}).sector==='Даатгал'?'Даатгалын хураамж':'Борлуулалтын орлого'),color:COLORS[0]},{key:'grossProfit',label:'Нийт ашиг',color:COLORS[2]},{key:'netProfit',label:'Цэвэр ашиг',color:COLORS[1]}],'money');svgChart($('chartReturns'),[{key:'roa',label:'ROA',color:COLORS[0]},{key:'roe',label:'ROE',color:COLORS[1]}],'pct');svgChart($('chartPerShare'),[{key:'eps',label:'EPS',color:COLORS[0]},{key:'bookValuePerShare',label:'Нэгж хувьцааны дансны үнэ',color:COLORS[2]}],'per');svgChart($('chartMultiples'),[{key:'rota',label:'ROTA',color:COLORS[0]},{key:'pe',label:'P/E',color:COLORS[2]},{key:'pb',label:'P/B',color:COLORS[1]}],'times')}
+function renderCharts(){
+ const configs=[
+  ['chartNetProfit','netProfit','Цэвэр ашиг'],
+  ['chartEquity','equity','Өөрийн хөрөнгө'],
+  ['chartLiabilities','liabilities','Өр төлбөр'],
+  ['chartRevenue','revenue','Борлуулалтын орлого']
+ ];
+ for(const [id,key,title] of configs)drawQuarterBar($(id),key,title);
+ const periods=activePeriods().filter(p=>configs.some(([,key])=>real(getValue(key,selectedSymbol,p.year,p.quarter))));
+ const latest=periods[periods.length-1];
+ $('histMessage').textContent=(selectedSymbol+' · '+periods.length+' тайлагнасан улирал')+
+  (latest?' · Сүүлчийн боломжит үе '+latest.year+'.Q'+latest.quarter:' · Тайлан олдсонгүй')+
+  ' · Орлого, ашиг: '+(mode==='ytd'?'оны эхнээс өссөн дүн':'зөвхөн тухайн улирал')+
+  ' · Балансын үзүүлэлт: тайлант өдрийн үлдэгдэл.';
+}
 function renderKpis(){const records=PERIODS.map(p=>({p,row:quarterRow(selectedSymbol,p.year,p.quarter)})).filter(x=>hasValues(x.row));const latest=records[records.length-1];const vals=records.filter(x=>real(x.row.netProfit)).length;const total=records.length;const most=latest&&getValue('netProfit',selectedSymbol,latest.p.year,latest.p.quarter);const output=[['Тайлантай улирал',total+' / 15','2023.I–2026.III','▤'],['Хамгийн сүүлийн тайлан',latest?latest.p.year+' · Q'+latest.p.quarter:'—','Нотлогдсон тайлангийн үе','◷'],['Цэвэр ашгийн өгөгдөл',vals+' / 15','Тайлантай улирлын тоо','↗'],['Сүүлийн цэвэр ашиг',real(most)?metricFormat(most,'money'):'—',latest?'Тэрбум/сая ₮-ийн тохиргоогоор':'Эх сурвалж шаардлагатай','₮']];$('histKpis').innerHTML=output.map(([label,value,meta,ico])=>`<div class="kpi hist-kpi"><div class="k-title">${escape(label)} <span class="k-icon">${ico}</span></div><div class="k-val">${escape(value)}</div><div class="k-meta">${escape(meta)}</div></div>`).join('')}
 function renderStatus(){const count=coverage().length;const selected=PERIODS.filter(p=>hasValues(quarterRow(selectedSymbol,p.year,p.quarter))).length;const sources=PERIODS.map(p=>quarterRow(selectedSymbol,p.year,p.quarter)).filter(x=>hasValues(x)&&x.sourceUrl).length;const company=api.getCompanies().find(x=>x.symbol===selectedSymbol);$('histStatus').innerHTML=count===0?`<strong>Excel файлаас бодит өгөгдөл оруулсан. Live API холболт хийгдээгүй.</strong> Албан ёсны I ангиллын 26 компанийн жагсаалт болон 2023–2026 оны улирлын бүтэц бэлэн. Эх сурвалжаар баталгаажсан тоон өгөгдөл оруулах хүртэл график, хүснэгтийн утгуудыг зохиохгүй.`:`<strong>${escape(company?.symbol||selectedSymbol)} · ${selected}/15 улиралд мэдээлэлтэй</strong> · Эх сурвалжийн URL тэмдэглэсэн: ${sources} улирал. Нийт сан дахь бөглөгдсөн компани-улирал: ${count}/390. Өгөгдөл HTML файл дотор суулгагдсан; таны CSV нэмэлт шинэчлэлт хөтчид хадгалагдана.`}
 function renderPivot(){const periods=activePeriods().slice().reverse();const rows=FIELDS[group];const c=api.getCompanies().find(x=>x.symbol===selectedSymbol);const typeMeta=group==='ratio'?'ROA/ROE/ROTA нь тайлант хугацааны суурьтай, эх сурвалжийн өгсөн утгаар харагдана; автоматаар жилжүүлэхгүй.':group==='income'?'Орлого ба ашгийн өссөн дүнг зөвхөн тухайн улирал болгон хувиргахдаа өмнөх улирлын өссөн дүнг хасна. Өмнөх тайлан байхгүй бол — гэж харуулна.':'Балансын дүн бол тухайн тайлант өдрийн үлдэгдэл; улирлын зөрүүг тооцохгүй.';
@@ -451,7 +487,7 @@ function renderAllSourceIndicators(){
 function renderCoverage(){let content='';for(const y of [2023,2024,2025,2026]){const done=Object.values(archive).filter(r=>+r.year===y&&hasValues(r)).length;const total=y===2026?78:104;content+=`<div class="quality-item"><span class="quality-label">${y} · ${y===2026?'I–III':'I–IV'} улирал</span><span class="quality-track"><span class="quality-progress" style="display:block;width:${done/total*100}%"></span></span><span class="quality-num">${done}/${total}</span></div>`}$('histCoverage').innerHTML=content}
 function renderCompare(){const list=api.getCompanies().filter(c=>compareSector==='all'||c.sector===compareSector);const p=PERIODS.find(p=>p.id===comparePeriod);const type=TYPES[compareMetric];const ranked=list.map(c=>({...c,value:getValue(compareMetric,c.symbol,p.year,p.quarter)})).filter(c=>real(c.value)).sort((a,b)=>b.value-a.value);const max=Math.max(1,...ranked.map(r=>Math.abs(r.value)));$('histCompareGraph').innerHTML=ranked.length?`<div class="hist-mini-head">Өндрөөс бага руу · эхний 12 компани</div>${ranked.slice(0,12).map(r=>`<div class="hist-compare-bar"><button class="clickable ticker" data-symbol="${escape(r.symbol)}">${escape(r.symbol)}</button><div class="track"><div class="fill" style="width:${Math.abs(r.value)/max*100}%;background:${r.value<0?'#d55362':'#4675b8'}"></div></div><em>${escape(metricFormat(r.value,type))}</em></div>`).join('')}`:`<div class="hist-empty"><div><strong>Энэ хугацааны харьцуулах өгөгдөл алга</strong>Компанийн улирлын тайлангуудыг CSV-ээр импортлоорой.</div></div>`;
  let html='<table><thead><tr><th>Компани</th><th>Үзүүлэлт ('+escape(unitLabel(type))+')</th></tr></thead><tbody>';for(const r of list.sort((a,b)=>a.symbol.localeCompare(b.symbol))) {const v=getValue(compareMetric,r.symbol,p.year,p.quarter);html+=`<tr><td><button class="clickable" data-hist-symbol="${escape(r.symbol)}">${escape(r.symbol)}</button> <span class="hint">${escape(r.name)}</span></td><td class="${real(v)&&v<0?'neg':''}">${escape(metricFormat(v,type))}</td></tr>`}html+='</tbody></table>';$('histCompareTable').innerHTML=html}
-function render(){renderKpis();renderStatus();renderCharts();renderPivot();renderCompare();renderCoverage()}
+function render(){renderCharts()}
 function qs(s){return '"'+String(s??'').replace(/"/g,'""')+'"'}
 function csv(records){return '\ufeff'+[ALL_COLUMNS.join(','),...records.map(r=>ALL_COLUMNS.map(k=>qs(r[k])).join(','))].join('\r\n')}
 function download(name,text){const blob=new Blob([text],{type:'text/csv;charset=utf-8'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}
@@ -466,21 +502,15 @@ function doImport(txt){const parsed=parseCSV(txt);if(parsed.length<2)throw Error
  const record={...base,...delta,basis,statementType:typ};for(const prop of ['periodEnd','publishedAt','sourceUrl','auditStatus']){const v=get(parts,prop);if(v)record[prop]=v}archive[key]=record;modified++}
  if(!modified)throw Error(`Уншсан боловч тоон үзүүлэлттэй мөр олдсонгүй. ${errors.slice(0,2).join('; ')}`);save();syncOverview();render();api.toast(`${modified} компани-улирлын тайланг шинэчиллээ. Алгассан: ${skipped}; танигдаагүй тикер: ${unknown}.${errors.length?' Алдаа: '+errors.slice(0,2).join(', '):''}`);return modified}
 function changeCompany(symbol){if(!api.getCompanies().some(c=>c.symbol===symbol))return;selectedSymbol=symbol;$('histCompany').value=symbol;api.showView('history');render();}
-const cmpOptions=Object.values(FIELDS).flat();$('histCompareMetric').innerHTML=cmpOptions.map(([k,label])=>`<option value="${k}">${escape(label)}</option>`).join('');$('histCompareMetric').value=compareMetric;
-$('histComparePeriod').innerHTML=PERIODS.slice().reverse().map(p=>`<option value="${p.id}">${p.label}</option>`).join('');$('histComparePeriod').value=comparePeriod;
-$('histCompany').innerHTML=api.getCompanies().map(c=>`<option value="${escape(c.symbol)}">${escape(c.symbol)} — ${escape(c.name)}</option>`).join('');$('histCompany').value=selectedSymbol;
-$('histCompareSector').innerHTML='<option value="all">Бүх салбар</option>'+[...new Set(api.getCompanies().map(c=>c.sector))].sort((a,b)=>a.localeCompare(b,'mn')).map(s=>`<option value="${escape(s)}">${escape(s)}</option>`).join('');
-$('histCompany').addEventListener('change',e=>{selectedSymbol=e.target.value;render()});$('histYear').addEventListener('change',e=>{yearFilter=e.target.value;render()});$('histMode').addEventListener('change',e=>{mode=e.target.value;render()});$('histUnit').addEventListener('change',e=>{unit=e.target.value;render()});
-document.querySelectorAll('.hist-tab').forEach(b=>b.addEventListener('click',()=>{group=b.dataset.group;renderPivot()}));
-$('histCompareMetric').addEventListener('change',e=>{compareMetric=e.target.value;renderCompare()});$('histComparePeriod').addEventListener('change',e=>{comparePeriod=e.target.value;renderCompare()});$('histCompareSector').addEventListener('change',e=>{compareSector=e.target.value;renderCompare()});
-$('mseRawDownload').addEventListener('click',()=>{const info=window.MSE_IMPORTED;const out=[['Тикер','Он','Улирал','Бүлэг','Үзүүлэлт','Утга','Анхааруулга'],...info.raw.map(r=>[info.symbols[r[0]],r[1],r[2],info.groups[r[3]],info.metrics[r[4]],r[5],r[6]?'Шалгах':''])];download('MSE_I_2023_2026_all_reported_metrics.csv','\ufeff'+out.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n'))});
-$('histTemplate').addEventListener('click' ,()=>download('MSE_I_2023-2026_quarterly_390_rows.csv',csv(emptyTemplate())));
-$('histSampleRow').addEventListener('click',()=>download('MSE_quarterly_example_blank.csv',csv(emptyTemplate().slice(0,1))));
-$('histExport').addEventListener('click',()=>{const r=coverage();if(!r.length){api.toast('Экспортлох санхүүгийн өгөгдөл хараахан алга. Эхлээд CSV импортлоно уу.');return}download('MSE_I_financial_data_export.csv',csv(r))});
-$('histImportBtn').addEventListener('click',()=>$('histFileInput').click());$('histFileInput').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{doImport(await f.text())}catch(err){api.toast('Импорт амжилтгүй: '+err.message)}finally{e.target.value=''}});
-$('histClear').addEventListener('click',()=>{if(!confirm('Илгээсэн улирлын тоон өгөгдлүүдийг энэ хөтчөөс арилгах уу?'))return;archive={};save();syncOverview();render();api.toast('Улирлын датаг арилгалаа.')});
-document.body.addEventListener('click',e=>{const b=e.target.closest('[data-hist-symbol]');if(b)changeCompany(b.dataset.histSymbol)});
-$('modalToHistory').addEventListener('click',()=>{const code=($('modalSymbol').textContent||'').split('·')[0].trim();api.closeModal();changeCompany(code)});
+$('histCompany').innerHTML=api.getCompanies().map(c=>'<option value="'+escape(c.symbol)+'">'+escape(c.symbol)+' — '+escape(c.name)+'</option>').join('');
+$('histCompany').value=selectedSymbol;
+$('histCompany').addEventListener('change',e=>{selectedSymbol=e.target.value;render()});
+$('histYear').addEventListener('change',e=>{yearFilter=e.target.value;render()});
+$('histMode').addEventListener('change',e=>{mode=e.target.value;render()});
+$('modalToHistory').addEventListener('click',()=>{
+ const code=($('modalSymbol').textContent||'').split('·')[0].trim();
+ api.closeModal();changeCompany(code);
+});
 window.MSEQuarterly={debug:{flow,doImport,getValue,archive:()=>archive},changeCompany,render,
  applyHosted(rows){
   if(!rows||typeof rows!=='object'||Array.isArray(rows))return 0;
