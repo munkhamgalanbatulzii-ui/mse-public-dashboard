@@ -80,6 +80,25 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
 <style>
 .ow-pie{min-height:220px;display:flex;align-items:center;gap:20px;padding:18px;flex-wrap:wrap}.ow-donut{width:170px;height:170px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}.ow-donut span{display:flex;align-items:center;justify-content:center;flex-direction:column;width:115px;height:115px;border-radius:50%;background:#fff;font-weight:800;font-size:26px;color:#183f47}.ow-donut small{font-size:10px;color:#718387;font-weight:600}.ow-legend{display:grid;gap:12px}.ow-legend .row{display:flex;gap:9px;align-items:center;font-size:12px}.ow-legend .dot{display:inline-block;width:10px;height:10px;border-radius:3px}.ow-method{display:grid;gap:12px;padding:15px 2px}.ow-method strong{font-size:24px;color:#087d70}.ow-method .calc{padding:12px 15px;background:#f1f7f4;border-radius:9px;font-size:13px;line-height:1.7}.ow-flag{display:inline-block;font-size:10px;border-radius:5px;padding:3px 6px;background:#fff1e3;color:#865d2a}.ow-good{font-size:10px;color:#277a6a}.ow-data{font-size:12px;color:#798996;line-height:1.5}.ow-rank{display:grid;grid-template-columns:58px minmax(40px,1fr) 62px;gap:9px;align-items:center;margin:9px 0;font-size:12px}.ow-rank button{border:0;color:#087e78;background:transparent;font-weight:800;cursor:pointer;text-align:left}.ow-rank .bar{height:8px;background:#ecf1ee;border-radius:8px;overflow:hidden}.ow-rank i{display:block;height:100%;background:#159888;border-radius:8px}.ow-rank b{text-align:right;font-variant-numeric:tabular-nums}.ow-mini{margin-top:14px;border:1px solid #e1e7e4;border-radius:10px;padding:15px;background:#f9fbfa}.ow-mini h3{margin:0 0 9px;font-size:14px}.ow-mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.ow-mini-grid span{font-size:11px;color:#71818c}.ow-mini-grid b{display:block;font-size:16px;color:#0d625b;margin-top:4px}.ow-modal-extra{padding:0 0 18px}.ow-muted{color:#7c8890;font-size:11px}.ow-holdertable th,.ow-holdertable td{font-size:11px!important}.ow-snapshot{font-size:12px;color:#607177;margin-top:10px}.ow-warn{margin-top:12px;padding:10px;border-left:3px solid #c58d42;background:#fff7ee;color:#74512c;font-size:12px;line-height:1.6}@media(max-width:650px){.ow-pie{justify-content:center}.ow-donut{height:145px;width:145px}.ow-donut span{height:98px;width:98px;font-size:23px}.ow-mini-grid{grid-template-columns:1fr 1fr}}
 </style>
+
+<style>
+.ratio-panel{margin:16px 0 20px;background:#fff;border:1px solid #d9e7e1;border-radius:12px;overflow:hidden}
+.ratio-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:16px 18px;background:#f0f8f4;border-bottom:1px solid #dfede5}
+.ratio-head strong{font-size:15px;color:#133f39}.ratio-head p{font-size:12px;color:#52706b;margin:6px 0 0;line-height:1.6}
+#ratioSyncState{font-size:11px;color:#336a5e;min-width:125px;text-align:right}
+.ratio-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:14px 18px}
+.ratio-card{border:1px solid #e5ede8;border-radius:8px;padding:12px}
+.ratio-card span{display:block;color:#6a807b;font-size:11px}.ratio-card b{color:#1b4c43;font-size:20px;display:block;margin-top:5px}.ratio-card small{color:#84938b;font-size:10px}
+.ratio-scroll{overflow-x:auto;padding:2px 18px 16px;max-height:650px;overflow-y:auto}
+.ratio-scroll table{width:100%;min-width:920px;border-collapse:collapse;font-size:12px}
+.ratio-scroll th{position:sticky;top:0;background:#f7f9f7;z-index:1;padding:10px 9px;white-space:nowrap;text-align:right;color:#57716a}
+.ratio-scroll td{padding:10px 9px;border-bottom:1px solid #edf1ed;text-align:right;white-space:nowrap}
+.ratio-scroll td:first-child,.ratio-scroll th:first-child{text-align:left}
+.ratio-scroll td:first-child{color:#22483f;font-weight:700}
+.ratio-scroll .ratio-warn{color:#b06c1b}.ratio-scroll .ratio-empty{color:#a0a8a5}
+.ratio-foot{font-size:11px;line-height:1.65;color:#77837f;border-top:1px solid #edf1ed;padding:11px 18px;margin:0}
+@media(max-width:680px){.ratio-head{flex-direction:column}.ratio-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:10px}.ratio-scroll{padding:0 10px 12px}.ratio-head{padding:12px}.ratio-foot{padding:11px}}
+</style>
 </head>
 <body>
 <div class="layout">
@@ -125,7 +144,13 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
     <div class="panel"><div class="panel-title"><h2>26 компанийн нэгдсэн хүснэгт</h2><span class="hint" id="mainCount"></span></div><div class="filters" id="overviewFilters"></div><div class="table-wrap" id="overviewTable"></div></div>
   </section>
   <section id="trading" class="view"><div class="grid4" id="tradingKpis"></div><div class="panel"><div class="panel-title"><h2>Арилжааны үзүүлэлтүүд</h2><span class="hint">₮ · ширхэг · хувь</span></div><p class="section-note">Өдрийн нээлт, дээд, доод, хаалт, өөрчлөлт, арилжааны тоо хэмжээ ба үнийн дүн. CSV импортлоход мэдээлэл автоматаар шинэчлэгдэнэ.</p><div class="filters" id="tradingFilters"></div><div class="table-wrap" id="tradingTable"></div></div></section>
-  <section id="financial" class="view"><div class="grid4" id="financialKpis"></div><div class="panel"><div class="panel-title"><h2>Санхүүгийн тайлан ба үнэлгээний харьцаа</h2><span class="hint">тайлангийн үеийг нягтална уу</span></div><p class="section-note">Орлого, цэвэр ашиг, нийт хөрөнгө, өөрийн хөрөнгө, өр төлбөр, ROE, ROA, P/E, P/B, EPS. Хугацааны давтамж зөрүүтэй мэдээллийг шууд харьцуулахгүй.</p><div class="filters" id="financialFilters"></div><div class="table-wrap" id="financialTable"></div></div></section>
+  <section id="financial" class="view"><div class="grid4" id="financialKpis"></div><div class="panel"><div class="panel-title"><h2>Санхүүгийн тайлан ба үнэлгээний харьцаа</h2><span class="hint">тайлангийн үеийг нягтална уу</span></div><p class="section-note">Орлого, цэвэр ашиг, нийт хөрөнгө, өөрийн хөрөнгө, өр төлбөр, ROE, ROA, P/E, P/B, EPS. Хугацааны давтамж зөрүүтэй мэдээллийг шууд харьцуулахгүй.</p><div id="autoRatioOverview" class="ratio-panel">
+  <div class="ratio-head"><div><strong>Автомат тооцоолсон үнэлгээ ба өгөөж</strong><p>P/E, P/B — сүүлийн үнэ + улирлын тайлан; ROE, ROA — сүүлийн 12 сарын ашиг + дундаж хөрөнгө.</p></div><span id="ratioSyncState">Өгөгдөл шалгаж байна…</span></div>
+  <div id="ratioSummaryCards" class="ratio-cards"></div>
+  <div id="ratioAutoTable" class="ratio-scroll"></div>
+  <p class="ratio-foot">P/E нь TTM ашиг эерэг үед; P/B нь эерэг өөрийн хөрөнгөд үндэслэнэ. ROE, ROA-д эхний ба эцсийн балансын дундаж ашиглана. Мэдээлэлгүй эсвэл тайлангийн зөрүүтэй үед дүн зохиохгүй. Хувьцааны тоо, хяналтын бус эзэмшил, ашиг тооцох суурь нь баталгаажуулалт шаарддаг.</p>
+</div>
+<div class="filters" id="financialFilters"></div><div class="table-wrap" id="financialTable"></div></div></section>
   
 <section id="history" class="view" aria-label="2023 оноос хойших санхүүгийн түүх">
  <div class="history-hero">
@@ -434,7 +459,7 @@ function emptyTemplate(){return api.getCompanies().flatMap(c=>PERIODS.map(p=>({s
 // RFC4180-style CSV parser, including quotes, embedded newlines and BOM.
 function parseCSV(src){const first=src.replace(/^\uFEFF/,'').split(/\r?\n/,1)[0];const delim=(first.match(/;/g)||[]).length>(first.match(/,/g)||[]).length?';':',';src=src.replace(/^\uFEFF/,'');const rows=[];let row=[],field='',quoted=false;for(let i=0;i<src.length;i++){const ch=src[i];if(ch==='"'){if(quoted&&src[i+1]==='"'){field+='"';i++}else quoted=!quoted}else if(ch===delim&&!quoted){row.push(field);field=''}else if((ch==='\r'||ch==='\n')&&!quoted){if(ch==='\r'&&src[i+1]==='\n')i++;row.push(field);if(row.some(v=>v.trim()))rows.push(row);row=[];field=''}else field+=ch}row.push(field);if(row.some(v=>v.trim()))rows.push(row);if(quoted)throw Error('Хаагдаагүй хашилт (CSV)');return rows}
 function parseValue(text){if(text==null||!String(text).trim())return null;let t=String(text).trim().replace(/[₮%\s]/g,'');if(t.includes(',')&&t.includes('.')){t=t.replace(/,/g,'')}else if(t.includes(',')&&/^-?\d+,\d{1,2}$/.test(t))t=t.replace(',','.');else t=t.replace(/,/g,'');const v=Number(t);return Number.isFinite(v)?v:null}
-function syncOverview(){for(const c of api.getCompanies()){const rows=PERIODS.slice().reverse().map(p=>quarterRow(c.symbol,p.year,p.quarter)).filter(hasValues);if(!rows.length)continue;const newest=rows[0];for(const k of ['assets','liabilities','equity','shares','revenue','netProfit','roa','roe','eps','pe','pb']){const v=getValue(k,c.symbol,newest.year,newest.quarter);c[k]=real(v)?v:null}c.reportPeriod=newest.year+'Q'+newest.quarter}api.syncSnapshot();api.refresh()}
+function syncOverview(){for(const c of api.getCompanies()){const rows=PERIODS.slice().reverse().map(p=>quarterRow(c.symbol,p.year,p.quarter)).filter(hasValues);if(!rows.length)continue;const newest=rows[0];for(const k of ['assets','liabilities','equity','shares','revenue','netProfit','roa','roe','eps','pe','pb']){const v=getValue(k,c.symbol,newest.year,newest.quarter);c[k]=real(v)?v:null}c.reportPeriod=newest.year+'Q'+newest.quarter}api.syncSnapshot();api.refresh();if(window.MSEValuations?.refresh)window.MSEValuations.refresh()}
 function doImport(txt){const parsed=parseCSV(txt);if(parsed.length<2)throw Error('Хамгийн багадаа CSV-ийн толгой мөр + нэг мөр шаардлагатай.');const headers=parsed[0].map(s=>s.trim());const idx={};for(let i=0;i<headers.length;i++)idx[headers[i].toLowerCase()]=i;const get=(parts,k)=>{const at=idx[k.toLowerCase()];return at==null?'':String(parts[at]??'').trim()};if(!['symbol','year','quarter'].every(k=>k in idx))throw Error('symbol, year, quarter багана заавал байх ёстой.');let modified=0,skipped=0,unknown=0,errors=[];const allowed=new Set(api.getCompanies().map(c=>c.symbol));for(const [i,parts] of parsed.slice(1).entries()){const symbol=get(parts,'symbol').toUpperCase(),year=+get(parts,'year'),quarter=+get(parts,'quarter');if(!symbol||!allowed.has(symbol)){unknown++;continue}if(!Number.isInteger(year)||year<2023||year>2026||![1,2,3,4].includes(quarter)||(year===2026&&quarter>3)){skipped++;errors.push(`Мөр ${i+2}: Огноо буруу`);continue}const key=id(symbol,year,quarter),base=archive[key]||{symbol,year,quarter,basis:'ytd',statementType:'consolidated'};let found=false;const delta={};for(const metric of ALL_METRICS){const raw=get(parts,metric);if(!raw)continue;const value=parseValue(raw);if(!real(value)){errors.push(`Мөр ${i+2}: ${metric} тоо буруу`);continue}delta[metric]=value;found=true}if(!found){skipped++;continue}
  const basis=get(parts,'basis').toLowerCase()||base.basis;if(!['ytd','quarter'].includes(basis)){skipped++;errors.push(`Мөр ${i+2}: basis буруу`);continue}
  const typ=get(parts,'statementType')||base.statementType;
@@ -456,7 +481,17 @@ $('histImportBtn').addEventListener('click',()=>$('histFileInput').click());$('h
 $('histClear').addEventListener('click',()=>{if(!confirm('Илгээсэн улирлын тоон өгөгдлүүдийг энэ хөтчөөс арилгах уу?'))return;archive={};save();syncOverview();render();api.toast('Улирлын датаг арилгалаа.')});
 document.body.addEventListener('click',e=>{const b=e.target.closest('[data-hist-symbol]');if(b)changeCompany(b.dataset.histSymbol)});
 $('modalToHistory').addEventListener('click',()=>{const code=($('modalSymbol').textContent||'').split('·')[0].trim();api.closeModal();changeCompany(code)});
-window.MSEQuarterly={debug:{flow,doImport,getValue,archive:()=>archive},changeCompany,render};
+window.MSEQuarterly={debug:{flow,doImport,getValue,archive:()=>archive},changeCompany,render,
+ applyHosted(rows){
+  if(!rows||typeof rows!=='object'||Array.isArray(rows))return 0;
+  let changed=0;
+  for(const [key,value] of Object.entries(rows)){
+   if(!/^([A-Z0-9]+):(20[2-9][0-9])Q[1-4]$/.test(key)||!value||typeof value!=='object'||!real(value.assets))continue;
+   if(JSON.stringify(archive[key])!==JSON.stringify(value)){archive[key]={...value};changed++}
+  }
+  if(changed){syncOverview();render()}
+  return changed;
+ }};
 // Sync browser saved quarterly snapshots to the primary financial tab without requiring import again.
 if(coverage().length)syncOverview();render();
 })();
@@ -555,22 +590,166 @@ document.addEventListener('click',e=>{const el=e.target.closest('[data-symbol]')
 const oldDetails=APP.details;APP.details=function(symbol){oldDetails(symbol);renderModal(symbol)};
 function showOwnership(symbol){if(symbol&&D[symbol])go(symbol);document.querySelectorAll('.view').forEach(el=>el.classList.toggle('active',el.id==='ownership'));document.querySelectorAll('.navbtn').forEach(el=>el.classList.toggle('active',el.dataset.view==='ownership'));$('pageTitle').textContent='Хувь эзэмшил ба P/B үнэлгээ';$('pageSub').textContent='26 компанийн эзэмшлийн бүтэц, урьдчилсан P/B, томоохон хувьцаа эзэмшигчид';window.scrollTo({top:0,behavior:'instant'})}
 document.querySelector('.navbtn[data-view="ownership"]').addEventListener('click',()=>showOwnership());
+window.MSEOwnershipApp={render};
 render();
-(async()=>{
- const urls=['../data/latest.json','https://raw.githubusercontent.com/munkhamgalanbatulzii-ui/mse-public-dashboard/main/data/latest.json'];
- for(const url of urls){
-  try{
-   const response=await fetch(url,{cache:'no-store'});
-   if(!response.ok)continue;
-   const daily=await response.json();
-   if(!daily||!Array.isArray(daily.securities)||!daily.date)continue;
-   window.MSE_MARKET_SNAPSHOT=daily;
-   renderMarketOverview();renderTables();
-   return;
-  }catch(e){/* historical report remains optional */}
- }
- const info=$('marketSnapshotInfo');if(info)info.textContent='Арилжааны мэдээлэл олдсонгүй · эх Excel-ийн боломжит үзүүлэлтүүд';
 })();
+</script>
+
+<script>
+(function(){
+ 'use strict';
+ const app=window.MSEDashboard, quarterly=window.MSEQuarterly, imported=window.MSE_IMPORTED;
+ if(!app||!quarterly||!imported)return;
+ const elem=id=>document.getElementById(id);
+ const finite=v=>typeof v==='number'&&Number.isFinite(v);
+ const show=v=>finite(v)?new Intl.NumberFormat('mn-MN',{maximumFractionDigits:2}).format(v):'—';
+ const h=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\u0027':'&#39;'}[c]));
+ const originals=Object.fromEntries(imported.companies.map(c=>[c.symbol,c]));
+ const snapshotDate=()=>window.MSE_MARKET_SNAPSHOT&&window.MSE_MARKET_SNAPSHOT.date;
+ const archive=()=>quarterly.debug.archive();
+ let fetchRunning=false;
+ function latestRow(sym){
+  const matches=Object.values(archive()).filter(r=>r&&r.symbol===sym&&Number.isInteger(r.year)&&Number.isInteger(r.quarter)&&finite(r.equity)&&finite(r.assets)&&finite(r.netProfit));
+  matches.sort((a,b)=>(b.year*4+b.quarter)-(a.year*4+a.quarter));
+  return matches[0]||null;
+ }
+ function cumulativeProfit(sym,y,q){
+  const a=archive(),record=a[sym+':'+y+'Q'+q];
+  if(!record)return null;
+  if(record.basis!=='quarter')return finite(record.netProfit)?record.netProfit:null;
+  let sum=0;
+  for(let i=1;i<=q;i++){
+   const r=a[sym+':'+y+'Q'+i];
+   if(!r||r.basis!=='quarter'||!finite(r.netProfit))return null;
+   sum+=r.netProfit;
+  }
+  return sum;
+ }
+ function trailingProfit(sym,row){
+  const y=row.year,q=row.quarter,now=cumulativeProfit(sym,y,q);
+  if(!finite(now))return null;
+  if(q===4)return now;
+  const prevFY=cumulativeProfit(sym,y-1,4),prevYTD=cumulativeProfit(sym,y-1,q);
+  return finite(prevFY)&&finite(prevYTD)?prevFY+now-prevYTD:null;
+ }
+ function chooseQuote(sym,company){
+  const orig=originals[sym]||{};
+  let price=orig.close,date=imported.asOf||'2026-10-08',mode='Excel агшин';
+  if(finite(company.close)&&company.close>0&&company.priceDate&&company.priceDate>date){
+   price=company.close;date=company.priceDate;mode='Импорт';
+  }
+  const d=window.MSE_MARKET_SNAPSHOT;
+  const hit=d&&Array.isArray(d.securities)?d.securities.find(x=>x.symbol===sym):null;
+  if(hit&&finite(hit.close)&&hit.close>0&&d.date&&d.date>=date){
+   price=hit.close;date=d.date;mode='Өдрийн арилжаа';
+  }
+  return {price:finite(price)&&price>0?price:null,date,mode,rec:hit&&mode==='Өдрийн арилжаа'?hit:null};
+ }
+ function ratio(sym,c){
+  const latest=latestRow(sym),quote=chooseQuote(sym,c);
+  const output={sym,name:c.name,quarter:latest?latest.year+'Q'+latest.quarter:'—',priceDate:quote.date,price:quote.price,mode:quote.mode,pe:null,pb:null,roe:null,roa:null,flags:[],financialDate:latest?.periodEnd||null,ttmProfit:null};
+  if(!latest){output.flags.push('Тайлан байхгүй');return output}
+  const shares=finite(latest.shares)&&latest.shares>0?latest.shares:(window.MSE_OWNERSHIP?.[sym]?.totalShares||null);
+  const equity=latest.equity,assets=latest.assets,ttm=trailingProfit(sym,latest);
+  output.ttmProfit=ttm;
+  if(finite(quote.price)&&finite(shares)&&shares>0&&finite(equity)&&equity>0)output.pb=quote.price*shares/equity;
+  // Scraped/migrated financial rows sometimes disagree with their own reported returns.
+  const ytd=cumulativeProfit(sym,latest.year,latest.quarter);
+  const check=(val,den,reported,tag)=>{
+   if(!finite(val)||!finite(den)||den<=0||!finite(reported))return false;
+   const implied=val/den*100;
+   if(Math.abs(implied-reported)>Math.max(15,Math.abs(reported)*1.5)){output.flags.push(tag+' зөрүүтэй');return true}
+   return false;
+  };
+  const questionable=check(ytd,equity,latest.roe,'ROE')||check(ytd,assets,latest.roa,'ROA');
+  if(questionable){output.flags.push('Ашгийн эх дүн шалгах');return output}
+  if(!finite(ttm)){output.flags.push('TTM тайлан дутуу');return output}
+  if(ttm>0&&finite(quote.price)&&finite(shares)&&shares>0)output.pe=quote.price*shares/ttm;
+  const prev=archive()[sym+':'+(latest.year-1)+'Q'+latest.quarter];
+  if(prev&&finite(prev.equity)&&prev.equity>0&&equity>0)output.roe=ttm/((equity+prev.equity)/2)*100;
+  if(prev&&finite(prev.assets)&&prev.assets>0&&assets>0)output.roa=ttm/((assets+prev.assets)/2)*100;
+  if(ttm<=0)output.flags.push('TTM ашиг ≤ 0');
+  return output;
+ }
+ function refresh(){
+  const rows=app.getCompanies();
+  if(!Array.isArray(rows))return;
+  const result=rows.map(c=>ratio(c.symbol,c));
+  const bySym=Object.fromEntries(result.map(x=>[x.sym,x]));
+  const source=window.MSE_MARKET_SNAPSHOT;
+  for(const c of rows){
+   const x=bySym[c.symbol];
+   if(!x)continue;
+   c.close=x.price;c.priceDate=x.priceDate;
+   c.pe=x.pe;c.pb=x.pb;c.roe=x.roe;c.roa=x.roa;
+   if(x.quarter!=='—')c.reportPeriod=x.quarter;
+   const latest=latestRow(c.symbol);
+   const shares=finite(latest?.shares)&&latest.shares>0?latest.shares:window.MSE_OWNERSHIP?.[c.symbol]?.totalShares;
+   if(finite(x.price)&&finite(shares)&&shares>0)c.marketCap=x.price*shares;
+   const daily=x.mode==='Өдрийн арилжаа'&&source?.date===x.priceDate&&Array.isArray(source.securities)?source.securities.find(q=>q.symbol===c.symbol):null;
+   if(daily){
+    c.changePct=daily.change_pct;c.turnover=daily.turnover;c.volume=daily.volume;
+    c.prevClose=daily.prev_close;c.open=daily.open;c.high=daily.high;c.low=daily.low;
+   }
+   const owner=window.MSE_OWNERSHIP?.[c.symbol];
+   if(owner){
+    if(finite(x.price)){owner.price=x.price;owner.publicMarketCap=owner.publicShares*x.price}
+    owner.pb2026Q2=x.pb;
+    if(latest?.equity>0)owner.equity2026Q2=latest.equity;
+    if(finite(shares)&&latest?.equity>0)owner.bookValuePerShare=latest.equity/shares;
+   }
+   const dividends=window.MSE_DIVIDENDS?.companies?.[c.symbol];
+   if(dividends&&finite(x.price)&&x.price>0){
+    dividends.close=x.price;
+    dividends.ttmYield=finite(dividends.ttmDps)?dividends.ttmDps/x.price*100:null;
+    const ann=dividends.dpsByYear?.['2025'];
+    dividends.yield2025=finite(ann)?ann/x.price*100:null;
+    c.dividendYield=dividends.ttmYield;
+   }
+  }
+  const sync=elem('ratioSyncState');
+  if(sync)sync.textContent='Ханшийн сан: '+(snapshotDate()||'Excel')+' · Тайлан: '+(imported.asOf||'эх Excel');
+  const calcCount=key=>result.filter(r=>finite(r[key])).length;
+  const cards=elem('ratioSummaryCards');
+  if(cards)cards.innerHTML=[['P/E TTM',calcCount('pe'),'Үнэ шинэчлэгдэхэд'],['P/B',calcCount('pb'),'Үнэ шинэчлэгдэхэд'],['ROE TTM',calcCount('roe'),'Шинэ тайлантай'],['ROA TTM',calcCount('roa'),'Шинэ тайлантай']].map(x=>'<div class="ratio-card"><span>'+x[0]+'</span><b>'+x[1]+' / 26</b><small>'+x[2]+'</small></div>').join('');
+  const table=elem('ratioAutoTable');
+  if(table){
+   const head='<table><thead><tr><th>Компани</th><th>Ханш (₮)</th><th>Ханшийн огноо</th><th>Тайлан</th><th>P/E (TTM)</th><th>P/B</th><th>ROE (TTM)</th><th>ROA (TTM)</th><th>Шалгалт</th></tr></thead><tbody>';
+   const body=result.map(r=>'<tr><td>'+h(r.sym)+'</td><td>'+show(r.price)+'</td><td>'+h(r.priceDate)+'</td><td>'+h(r.quarter)+'</td><td>'+ (finite(r.pe)?show(r.pe)+'×':'<span class="ratio-empty">—</span>') +'</td><td>'+(finite(r.pb)?show(r.pb)+'×':'<span class="ratio-empty">—</span>')+'</td><td>'+(finite(r.roe)?show(r.roe)+'%':'<span class="ratio-empty">—</span>')+'</td><td>'+(finite(r.roa)?show(r.roa)+'%':'<span class="ratio-empty">—</span>')+'</td><td class="'+(r.flags.length?'ratio-warn':'')+'">'+h(r.flags.join('; ')||r.mode)+'</td></tr>').join('');
+   table.innerHTML=head+body+'</tbody></table>';
+  }
+  app.refresh();
+  window.MSEDividendApp?.render?.();
+  window.MSEOwnershipApp?.render?.();
+ }
+ async function load(){
+  if(fetchRunning)return;
+  fetchRunning=true;
+  try{
+   const url=new URL('data/quarters.json',location.href);
+   const response=await fetch(url,{cache:'no-store'});
+   if(response.ok){
+    const doc=await response.json();
+    if(doc?.quarters&&typeof doc.quarters==='object'){
+     if(doc.asOf&&doc.asOf>imported.asOf)imported.asOf=doc.asOf;
+     quarterly.applyHosted(doc.quarters);
+    }
+   }
+  }catch(e){/* embedded financial data is the safe fallback */}
+  try{
+   const resp=await fetch(new URL('../data/latest.json',location.href),{cache:'no-store'});
+   if(resp.ok){
+    const data=await resp.json();
+    if(data?.date&&Array.isArray(data.securities))window.MSE_MARKET_SNAPSHOT=data;
+   }
+  }catch(e){/* embedded quote is dated and retained */}
+  refresh();
+  fetchRunning=false;
+ }
+ window.MSEValuations={refresh,load,inspect:sym=>ratio(sym,app.getCompanies().find(c=>c.symbol===sym)||{})};
+ refresh();
+ load();
+ setInterval(load,30*60*1000);
 })();
 </script>
 </body>
