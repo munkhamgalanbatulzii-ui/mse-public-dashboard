@@ -161,6 +161,7 @@ def main():
                         })
         finally:
             browser.close()
+    previous = {}
     if OUT.exists():
         try:
             previous=json.loads(OUT.read_text(encoding="utf-8"))
@@ -174,6 +175,14 @@ def main():
                         current.add(key)
         except (OSError,ValueError,TypeError):
             pass
+    if previous and previous.get("scannedAt","")[:10] == out["scannedAt"][:10]:
+        old_sig={symbol:{json.dumps(row,ensure_ascii=False,sort_keys=True) for row in obj.get("reports",[])}
+                 for symbol,obj in previous.get("issuers",{}).items()}
+        new_sig={symbol:{json.dumps(row,ensure_ascii=False,sort_keys=True) for row in obj.get("reports",[])}
+                 for symbol,obj in out["issuers"].items()}
+        if old_sig == new_sig:
+            print("NO NEW ISSUER REPORTS (latest scan succeeded); not committing duplicate daily data")
+            return
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"scannedAt":out["scannedAt"],"sites":[{"url":s["url"],"http":s.get("httpStatus"),"tabs":s["tabs"] and [{"name":t["name"],"rows":t["rows"],"matches":t["matchingIssuerRows"]} for t in s["tabs"]],"errors":s["errors"]} for s in out["sites"]],
                       "perIssuer":{s:len(x["reports"]) for s,x in out["issuers"].items()},
