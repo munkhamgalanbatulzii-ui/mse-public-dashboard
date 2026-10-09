@@ -101,7 +101,12 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
 </style>
 <style>
 /* Four-chart quarterly analysis: clean Excel-style column charts */
-.simple-quarter-filters{margin:16px 0 8px}
+.simple-quarter-filters{margin:16px 0 8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.yearly-compare-key{display:flex;align-items:center;gap:15px;flex-wrap:wrap;color:#677c81;font-size:11px;padding:6px 2px}
+.yearly-compare-key span{display:inline-flex;align-items:center;gap:6px}
+.yearly-key-dot{display:inline-block;width:10px;height:10px;border-radius:2px;background:#4d7790}
+.yearly-key-dot.prior-dot{background:#a5b8c1}
+.yearly-key-dot.recent-dot{background:#137f78}
 .simple-quarter-note{font-size:12px;color:#647d7b;margin:0 0 17px;line-height:1.7;padding-left:3px}
 .simple-quarter-charts{gap:18px;align-items:stretch}
 .simple-quarter-card{min-width:0;background:#fff;border:1px solid #dde4e4;border-radius:9px;padding:0 14px 12px;overflow:hidden}
@@ -109,11 +114,11 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
 .simple-quarter-header h2{font-size:17px;font-weight:650;letter-spacing:-.01em;color:#465358;margin:0}
 .simple-quarter-header span{font-size:11px;color:#829293}
 .simple-quarter-charts .history-chart{overflow-x:auto;min-height:282px;scrollbar-color:#c5d0d1 #f6f8f6;scrollbar-width:thin}
-.simple-quarter-charts .history-chart svg{display:block;width:auto;max-width:none;height:300px;min-width:100%}
+.simple-quarter-charts .history-chart svg{display:block;width:auto;max-width:none;height:335px;min-width:100%}
 .simple-quarter-charts .history-chart svg .quarter-axis{fill:#68757a;font-size:11px}
 .simple-quarter-charts .history-chart svg .quarter-label{fill:#44515a;font-size:11px;font-weight:600}
 .simple-quarter-footnote{font-size:11px;line-height:1.8;color:#7e8a8b;margin:14px 2px 0}
-@media(max-width:760px){.simple-quarter-charts{grid-template-columns:1fr}.simple-quarter-card{padding:0 9px 10px}.simple-quarter-header{padding:12px 4px}.simple-quarter-charts .history-chart svg{height:280px}}
+@media(max-width:760px){.simple-quarter-charts{grid-template-columns:1fr}.simple-quarter-card{padding:0 9px 10px}.simple-quarter-header{padding:12px 4px}.simple-quarter-charts .history-chart svg{height:320px}}
 </style>
 <style>
 .issuer-audit{margin:18px 0;background:#fff;border:1px solid #dce9e3;border-radius:10px;overflow:hidden}
@@ -188,19 +193,22 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
   <div class="history-hero">
     <div>
       <div class="eyebrow" style="color:#d5a34e">MANDAL CAPITAL  /  MSE EQUITY RESEARCH</div>
-      <h2 style="margin:0;color:#fff;font-size:23px">Улирлын санхүүгийн шинжилгээ</h2>
-      <p style="color:#becde0;font-size:12px;line-height:1.7;max-width:780px">2023 оноос хойших зөвхөн тайлагнасан улирлууд. Компанийн 4 гол үзүүлэлтийг энгийн баганан графикаар харна.</p>
+      <h2 style="margin:0;color:#fff;font-size:23px">Жилийн эцэс ба ижил улирлын харьцуулалт</h2>
+      <p style="color:#becde0;font-size:12px;line-height:1.7;max-width:780px">Жил бүрийн эцсийн үзүүлэлтүүдийн дараа хамгийн сүүлийн тайлант улирлыг өмнөх оны ижил улиралтай зэрэгцүүлэн харуулна.</p>
     </div>
   </div>
   <div class="hist-filter panel simple-quarter-filters">
     <label class="hist-control">Компани<select class="select" id="histCompany" aria-label="Компани"></select></label>
-    <label class="hist-control">Хугацаа<select class="select" id="histYear" aria-label="Он"><option value="all">2023 оноос хойш бүгд</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select></label>
-    <label class="hist-control">Орлого, ашгийн төрөл<select class="select" id="histMode" aria-label="Өссөн дүн эсвэл тухайн улирал"><option value="ytd">Оны эхнээс өссөн дүн (YTD)</option><option value="single">Зөвхөн тухайн улирал</option></select></label>
+    <div class="yearly-compare-key" aria-label="Графикийн тайлбар">
+      <span><i class="yearly-key-dot annual-dot"></i>Жилийн эцэс</span>
+      <span><i class="yearly-key-dot prior-dot"></i>Өмнөх оны ижил улирал</span>
+      <span><i class="yearly-key-dot recent-dot"></i>Сүүлийн улирал</span>
+    </div>
   </div>
   <p class="simple-quarter-note" id="histMessage">Тайлагнасан хугацааны мэдээллийг ачаалж байна…</p>
   <div class="history-charts simple-quarter-charts">
     <article class="panel simple-quarter-card">
-      <div class="simple-quarter-header"><h2>Цэвэр ашиг</h2><span>₮ · улирал бүр</span></div>
+      <div class="simple-quarter-header"><h2>Цэвэр ашиг</h2><span>₮ · жилийн болон YTD дүн</span></div>
       <div id="chartNetProfit" class="history-chart"></div>
     </article>
     <article class="panel simple-quarter-card">
@@ -212,11 +220,11 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
       <div id="chartLiabilities" class="history-chart"></div>
     </article>
     <article class="panel simple-quarter-card">
-      <div class="simple-quarter-header"><h2 id="histRevenueTitle">Борлуулалтын орлого</h2><span>₮ · улирал бүр</span></div>
+      <div class="simple-quarter-header"><h2 id="histRevenueTitle">Борлуулалтын орлого</h2><span>₮ · жилийн болон YTD дүн</span></div>
       <div id="chartRevenue" class="history-chart"></div>
     </article>
   </div>
-  <p class="simple-quarter-footnote">Эх сурвалж: МХБ-ийн санхүүгийн тайлангаас нэгтгэсэн мэдээлэл. Орлого, ашгийн тайлан нь YTD суурьтай байж болно; “Зөвхөн тухайн улирал” горимд өмнөх улирлын өссөн дүн байхгүй бол тооцоог нууж харуулна. Мэдээлэлгүй улирлыг 0 гэж үзэхгүй.</p>
+  <p class="simple-quarter-footnote">Эх сурвалж: МХБ болон компаниудын тайлангаас нэгтгэсэн мэдээлэл. Жилийн эцэс нь тухайн оны IV улирлын жилийн нийт дүн; харьцуулалтын сүүлийн хоёр баганад өмнөх оны ижил улирал ба хамгийн сүүлийн улирлыг харуулна. Орлого, цэвэр ашиг нь оны эхнээс өссөн дүн (YTD), өөрийн хөрөнгө ба өр төлбөр нь тайлант өдрийн үлдэгдэл. 0 ₮ болон мэдээлэлгүй хугацааг хасна. Хоёр ижил улирлын нэг нь байхгүй бол дүн зохиохгүй.</p>
 </section></section>
 
 <section id="ownership" class="view" aria-label="Хувь эзэмшил ба P/B шинжилгээ">
@@ -406,44 +414,76 @@ function formatDate(y,q){return y+'Q'+q}
 function periodKey(r){return +r.year*10+ +r.quarter}
 function save(){try{localStorage.setItem('mseIQuarterly_v2',JSON.stringify(archive));return true}catch(e){api.toast('Хөтчийн санах ой дүүрсэн. CSV-г татаж хадгална уу.');return false}}
 function coverage(){return Object.values(archive).filter(hasValues)}
-function drawQuarterBar(el,key,title){
- const periods=activePeriods().map(p=>({p,value:getValue(key,selectedSymbol,p.year,p.quarter)}))
-  .filter(x=>real(x.value)&&x.value!==0);
+// Compare year-end statement balances/full-year YTD results with the most recent
+// year-to-date quarter and the same quarter one year earlier. No fake zero bars.
+function comparisonValue(metric,year,quarter){
+ return FLOW.has(metric)?flow(metric,selectedSymbol,year,quarter,'ytd'):reported(metric,selectedSymbol,year,quarter);
+}
+function comparisonLayout(){
+ const mainFields=['netProfit','equity','liabilities','revenue'];
+ const present=v=>real(v)&&v!==0;
+ const latest=PERIODS.slice().reverse().find(p=>mainFields.some(field=>present(comparisonValue(field,p.year,p.quarter))));
+ if(!latest)return {annual:[],prior:null,latest:null};
+ const annual=[];
+ for(let year=2023;year<latest.year;year++){
+  // In Q4 comparisons, the previous year's Q4 becomes the penultimate bar.
+  if(latest.quarter===4&&year===latest.year-1)continue;
+  annual.push({year,quarter:4,kind:'annual',label:year+' эцэс'});
+ }
+ const priorYear=latest.year-1;
+ const prior=priorYear>=2023?{year:priorYear,quarter:latest.quarter,kind:'prior',label:priorYear+'.Q'+latest.quarter}:null;
+ return {annual,prior,latest:{year:latest.year,quarter:latest.quarter,kind:'latest',label:latest.year+'.Q'+latest.quarter}};
+}
+function drawQuarterBar(el,key,title,layout){
+ const valid=v=>real(v)&&v!==0;
+ const a=layout.annual.map(p=>({...p,value:comparisonValue(key,p.year,p.quarter)})).filter(x=>valid(x.value));
+ const group=[layout.prior,layout.latest].filter(Boolean).map(p=>({...p,value:comparisonValue(key,p.year,p.quarter)})).filter(x=>valid(x.value));
+ const periods=[...a,...group];
  if(!periods.length){
-  el.innerHTML='<div class="hist-empty"><strong>Тухайн хугацааны тайлангийн мэдээлэл байхгүй.</strong>Мэдээлэлгүй улирлыг графикт оруулахгүй.</div>';
+  el.innerHTML='<div class="hist-empty"><strong>Харьцуулах тайлангийн дүн байхгүй.</strong>0 ₮ болон мэдээлэлгүй хугацааг харуулахгүй.</div>';
   return;
  }
- const n=periods.length, W=Math.max(720,90+n*122),H=314,L=88,R=18,T=46,B=53;
- const width=W-L-R,plotHeight=H-T-B;
- const raw=periods.map(x=>x.value),min=Math.min(0,...raw),max=Math.max(0,...raw);
- const span=Math.max(1,max-min),upper=max+span*0.22,lower=min<0?min-span*0.13:0;
+ const W=Math.max(690,100+125*periods.length+(a.length&&group.length?42:0)+38);
+ const H=335,L=93,R=32,T=61,B=53,slot=125,gap=a.length&&group.length?42:0;
+ const plotHeight=H-T-B;
+ const values=periods.map(p=>p.value);
+ const bottom=Math.min(0,...values),peak=Math.max(0,...values);
+ const span=Math.max(1,peak-bottom),upper=peak+span*.19,lower=bottom<0?bottom-span*.14:0;
  const y=v=>T+(upper-v)/(upper-lower)*plotHeight;
- const x=i=>L+(i+.5)*width/n,barWidth=Math.min(76,width/n*.66);
+ const x=i=>L+slot*(i+.5)+(i>=a.length?gap:0);
+ const barWidth=69,nonzeroY=y(0);
+ const compact=new Intl.NumberFormat('mn-MN',{maximumFractionDigits:2});
  const money=v=>{
-  if(!real(v))return '—';
-  const abs=Math.abs(v),sign=v<0?'−':'',format=new Intl.NumberFormat('mn-MN',{maximumFractionDigits:abs>=1e9?2:1});
-  return sign+(abs>=1e12?format.format(abs/1e12)+' их наяд':abs>=1e9?format.format(abs/1e9)+' тэрбум':abs>=1e6?format.format(abs/1e6)+' сая':format.format(abs))+' ₮';
+  if(!valid(v))return '—';
+  const magnitude=Math.abs(v),negative=v<0?'−':'';
+  return negative+(magnitude>=1e12?compact.format(magnitude/1e12)+' их наяд':magnitude>=1e9?compact.format(magnitude/1e9)+' тэрбум':magnitude>=1e6?compact.format(magnitude/1e6)+' сая':compact.format(magnitude))+' ₮';
  };
  const short=v=>{
-  const a=Math.abs(v),sign=v<0?'−':'',format=new Intl.NumberFormat('mn-MN',{maximumFractionDigits:1});
-  return sign+(a>=1e12?format.format(a/1e12)+' их н.':a>=1e9?format.format(a/1e9)+' тэрбум':a>=1e6?format.format(a/1e6)+' сая':format.format(a));
+  const m=Math.abs(v),neg=v<0?'−':'';
+  return neg+(m>=1e12?compact.format(m/1e12)+' их н.':m>=1e9?compact.format(m/1e9)+' тэрбум':m>=1e6?compact.format(m/1e6)+' сая':compact.format(m));
  };
- const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\u0027':'&#39;'}[c]));
- let out='<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+safe(title)+' — '+n+' улирлын баганан график">';
- for(let k=0;k<=4;k++){
-  const v=lower+(upper-lower)*k/4,yy=y(v);
-  out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" stroke="#d7dcdd" stroke-width="1"/>';
-  out+='<text class="quarter-axis" x="'+(L-10)+'" y="'+(yy+4)+'" text-anchor="end">'+safe(short(v))+'</text>';
+ const safe=v=>String(v).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+ let out='<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+safe(title)+' — жилийн эцэс ба ижил улирлын харьцуулалт">';
+ if(group.length){
+  const xStart=L+a.length*slot+gap;
+  out+='<rect x="'+(xStart+5)+'" y="'+(T-4)+'" width="'+(group.length*slot-10)+'" height="'+(H-B-T+9)+'" rx="10" fill="#eef6f3"/>';
  }
- const zero=y(0);
- out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+zero+'" y2="'+zero+'" stroke="#aebbbd" stroke-width="1.3"/>';
- periods.forEach(({p,value},i)=>{
-  const center=x(i),height=Math.max(1,Math.abs(y(value)-zero)),top=Math.min(y(value),zero);
-  const fill=value<0?'#bc6c72':'#1c6787';
-  const labelY=value<0?Math.min(H-B+16,y(value)+17):Math.max(16,y(value)-10);
-  out+='<rect x="'+(center-barWidth/2)+'" y="'+top+'" width="'+barWidth+'" height="'+height+'" rx="1" fill="'+fill+'"><title>'+safe(p.year+'.Q'+p.quarter+' · '+title+' · '+money(value))+'</title></rect>';
-  out+='<text class="quarter-label" x="'+center+'" y="'+labelY+'" text-anchor="middle">'+safe(money(value))+'</text>';
-  out+='<text class="quarter-axis" x="'+center+'" y="'+(H-20)+'" text-anchor="middle">'+p.year+'.Q'+p.quarter+'</text>';
+ if(a.length)out+='<text class="quarter-axis" x="'+x(0)+'" y="20" text-anchor="start" font-weight="700">ЖИЛИЙН ЭЦЭС</text>';
+ if(group.length)out+='<text class="quarter-axis" x="'+(L+a.length*slot+gap+12)+'" y="20" text-anchor="start" font-weight="700">ИЖИЛ УЛИРЛЫН ХАРЬЦУУЛАЛТ</text>';
+ for(let k=0;k<=4;k++){
+  const value=lower+(upper-lower)*k/4,yy=y(value);
+  out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" stroke="#dbe2e2" stroke-width="1"/>';
+  out+='<text class="quarter-axis" x="'+(L-12)+'" y="'+(yy+4)+'" text-anchor="end">'+safe(short(value))+'</text>';
+ }
+ out+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+nonzeroY+'" y2="'+nonzeroY+'" stroke="#aebbbd" stroke-width="1.25"/>';
+ periods.forEach((p,i)=>{
+  const center=x(i),barTop=Math.min(y(p.value),nonzeroY);
+  const barHeight=Math.max(1,Math.abs(y(p.value)-nonzeroY));
+  const fill=p.value<0?'#bd6268':p.kind==='latest'?'#137f78':p.kind==='prior'?'#a5b8c1':'#4d7790';
+  const labelY=p.value<0?Math.min(H-B-3,y(p.value)+16):Math.max(T-5,y(p.value)-10);
+  out+='<rect x="'+(center-barWidth/2)+'" y="'+barTop+'" width="'+barWidth+'" height="'+barHeight+'" rx="3" fill="'+fill+'"><title>'+safe(p.label+' · '+title+' · '+money(p.value))+'</title></rect>';
+  out+='<text class="quarter-label" x="'+center+'" y="'+labelY+'" text-anchor="middle">'+safe(money(p.value))+'</text>';
+  out+='<text class="quarter-axis" x="'+center+'" y="'+(H-23)+'" text-anchor="middle" font-weight="'+(p.kind==='latest'?'700':'400')+'">'+safe(p.label)+'</text>';
  });
  out+='</svg>';
  el.innerHTML=out;
@@ -452,19 +492,19 @@ function renderCharts(){
  const bankTickers=new Set(['KHAN','GLMT','XAC','SBM','TDB']);
  const revenueTitle=bankTickers.has(selectedSymbol)?'Хүүгийн орлого':'Борлуулалтын орлого';
  const rt=$('histRevenueTitle');if(rt)rt.textContent=revenueTitle;
+ const layout=comparisonLayout();
  const configs=[
   ['chartNetProfit','netProfit','Цэвэр ашиг'],
   ['chartEquity','equity','Өөрийн хөрөнгө'],
   ['chartLiabilities','liabilities','Өр төлбөр'],
   ['chartRevenue','revenue',revenueTitle]
  ];
- for(const [id,key,title] of configs)drawQuarterBar($(id),key,title);
- const periods=activePeriods().filter(p=>configs.some(([,key])=>{const v=getValue(key,selectedSymbol,p.year,p.quarter);return real(v)&&v!==0}));
- const latest=periods[periods.length-1];
- $('histMessage').textContent=(selectedSymbol+' · '+periods.length+' тайлагнасан улирал')+
-  (latest?' · Сүүлчийн боломжит үе '+latest.year+'.Q'+latest.quarter:' · Тайлан олдсонгүй')+
-  ' · Орлого, ашиг: '+(mode==='ytd'?'оны эхнээс өссөн дүн':'зөвхөн тухайн улирал')+
-  ' · Балансын үзүүлэлт: тайлант өдрийн үлдэгдэл.';
+ for(const [id,key,title] of configs)drawQuarterBar($(id),key,title,layout);
+ const comparison=layout.latest?(layout.prior?layout.prior.label+' ↔ ':'')+layout.latest.label:'тайлан олдсонгүй';
+ const annual=layout.annual.length?layout.annual[0].year+'–'+layout.annual[layout.annual.length-1].year:'жилийн эцсийн мэдээлэл алга';
+ $('histMessage').textContent=selectedSymbol+' · Жилийн эцэс: '+annual+
+  ' · Сүүлийн үеийн харьцуулалт: '+comparison+
+  ' · Орлого, ашиг: оны эхнээс өссөн (YTD) · Хөрөнгө, өр: тайлант өдрийн үлдэгдэл.';
 }
 function renderKpis(){const records=PERIODS.map(p=>({p,row:quarterRow(selectedSymbol,p.year,p.quarter)})).filter(x=>hasValues(x.row));const latest=records[records.length-1];const vals=records.filter(x=>real(x.row.netProfit)).length;const total=records.length;const most=latest&&getValue('netProfit',selectedSymbol,latest.p.year,latest.p.quarter);const output=[['Тайлантай улирал',total+' / 15','2023.I–2026.III','▤'],['Хамгийн сүүлийн тайлан',latest?latest.p.year+' · Q'+latest.p.quarter:'—','Нотлогдсон тайлангийн үе','◷'],['Цэвэр ашгийн өгөгдөл',vals+' / 15','Тайлантай улирлын тоо','↗'],['Сүүлийн цэвэр ашиг',real(most)?metricFormat(most,'money'):'—',latest?'Тэрбум/сая ₮-ийн тохиргоогоор':'Эх сурвалж шаардлагатай','₮']];$('histKpis').innerHTML=output.map(([label,value,meta,ico])=>`<div class="kpi hist-kpi"><div class="k-title">${escape(label)} <span class="k-icon">${ico}</span></div><div class="k-val">${escape(value)}</div><div class="k-meta">${escape(meta)}</div></div>`).join('')}
 function renderStatus(){const count=coverage().length;const selected=PERIODS.filter(p=>hasValues(quarterRow(selectedSymbol,p.year,p.quarter))).length;const sources=PERIODS.map(p=>quarterRow(selectedSymbol,p.year,p.quarter)).filter(x=>hasValues(x)&&x.sourceUrl).length;const company=api.getCompanies().find(x=>x.symbol===selectedSymbol);$('histStatus').innerHTML=count===0?`<strong>Excel файлаас бодит өгөгдөл оруулсан. Live API холболт хийгдээгүй.</strong> Албан ёсны I ангиллын 26 компанийн жагсаалт болон 2023–2026 оны улирлын бүтэц бэлэн. Эх сурвалжаар баталгаажсан тоон өгөгдөл оруулах хүртэл график, хүснэгтийн утгуудыг зохиохгүй.`:`<strong>${escape(company?.symbol||selectedSymbol)} · ${selected}/15 улиралд мэдээлэлтэй</strong> · Эх сурвалжийн URL тэмдэглэсэн: ${sources} улирал. Нийт сан дахь бөглөгдсөн компани-улирал: ${count}/390. Өгөгдөл HTML файл дотор суулгагдсан; таны CSV нэмэлт шинэчлэлт хөтчид хадгалагдана.`}
@@ -523,10 +563,7 @@ function doImport(txt){const parsed=parseCSV(txt);if(parsed.length<2)throw Error
 function changeCompany(symbol){if(!api.getCompanies().some(c=>c.symbol===symbol))return;selectedSymbol=symbol;$('histCompany').value=symbol;api.showView('history');render();}
 $('histCompany').innerHTML=api.getCompanies().map(c=>'<option value="'+escape(c.symbol)+'">'+escape(c.symbol)+' — '+escape(c.name)+'</option>').join('');
 $('histCompany').value=selectedSymbol;
-$('histYear').innerHTML+=Array.from({length:Math.max(0,lastYear-2026)},(_,i)=>'<option value="'+(2027+i)+'">'+(2027+i)+'</option>').join('');
 $('histCompany').addEventListener('change',e=>{selectedSymbol=e.target.value;render()});
-$('histYear').addEventListener('change',e=>{yearFilter=e.target.value;render()});
-$('histMode').addEventListener('change',e=>{mode=e.target.value;render()});
 $('modalToHistory').addEventListener('click',()=>{
  const code=($('modalSymbol').textContent||'').split('·')[0].trim();
  api.closeModal();changeCompany(code);
