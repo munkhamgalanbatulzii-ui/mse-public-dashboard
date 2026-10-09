@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-09T11:56:00+08:00",
+  "scannedAt": "2026-10-09T11:57:20+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -72,11 +72,18 @@
       "tabs": [
         {
           "name": "Анхны хуудас",
-          "rows": 0,
+          "rows": 1,
           "matchingIssuerRows": 0,
-          "sampleRows": [],
+          "sampleRows": [
+            "№ Компанийн нэр Симбол Тоон код Шийдвэрийн огноо Бүртгэх өдөр Тараах өдөр Нэгж хувьцаанд ногдох ашгийн хэмжээ Нийт ногдол ашиг Тайлбар"
+          ],
           "controls": [],
-          "reportLinks": [],
+          "reportLinks": [
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "1"
+            }
+          ],
           "navigation": [
             {
               "text": "Шинэ хувилбартай танилцах",
@@ -97,16 +104,91 @@
               "text": "ENG",
               "disabled": false,
               "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary disable"
+            },
+            {
+              "text": "Бүгд",
+              "disabled": false,
+              "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-:r5:\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" data-placeholder=\"\" class=\"flex items-center justify-between whitespace-nowrap rounded-md border border-border-primary shadow-xs text-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring disabled:c"
+            },
+            {
+              "text": "Бүгд",
+              "disabled": false,
+              "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-:r6:\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" data-placeholder=\"\" class=\"flex items-center justify-between whitespace-nowrap rounded-md border border-border-primary shadow-xs text-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring disabled:c"
+            },
+            {
+              "text": "Өмнөх",
+              "disabled": false,
+              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary d"
+            },
+            {
+              "text": "1",
+              "disabled": false,
+              "html": "<a aria-current=\"page\" class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 rounded-md p-xl size-[40px] text-sm leading-5 font-medium text-text-primary hover:bg-gray-50 bg-gray-50\" href=\"#\">1</a>"
+            },
+            {
+              "text": "Дараах",
+              "disabled": false,
+              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary d"
             }
           ]
         },
         {
           "name": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "rows": 0,
-          "matchingIssuerRows": 0,
-          "sampleRows": [],
+          "rows": 11,
+          "matchingIssuerRows": 1,
+          "sampleRows": [
+            "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
+            "1 Хас Банк XAC 2026 оны 3 -р улирлын тайлан 2026-10-09 ",
+            "2 Түшиг Уул ХК TUS 2026 оны 2 -р улирлын тайлан 2026-09-30 ",
+            "3 Дархан нэхий ХК NEH 2026 оны 2 -р улирлын тайлан 2026-09-28 ",
+            "4 Дорнод худалдаа ХК DES 2026 оны 2 -р улирлын тайлан 2026-09-22 ",
+            "5 Махимпекс ХК MMX 2026 оны 2 -р улирлын тайлан 2026-09-17 ",
+            "6 Эрдэнэт ус, дулаан түгээх сүлжээ ХК EUD 2026 оны 2 -р улирлын тайлан 2026-09-16 ",
+            "7 Их барилга ХК IBA 2026 оны 2 -р улирлын тайлан 2026-09-15 "
+          ],
           "controls": [],
-          "reportLinks": [],
+          "reportLinks": [
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "Хувьцаат компаниудын тайлан, мэдээлэл\n\nХувьцаат компаниудын тайлан, мэдээлэл"
+            },
+            {
+              "url": "https://mse.mn/report-and-research",
+              "text": "Тайлан, судалгаа\n\nТайлан, судалгаа"
+            },
+            {
+              "url": "https://mse.mn/trade-report",
+              "text": "Арилжааны тайлан\n\nАрилжааны тайлан"
+            },
+            {
+              "url": "https://mse.mn/financial-transparency",
+              "text": "Төсөв, санхүүгийн ил тод байдал\n\nТөсөв, санхүүгийн ил тод байдал"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "1"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "2"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "3"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "323"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "324"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "325"
+            }
+          ],
           "navigation": [
             {
               "text": "Шинэ хувилбартай танилцах",
@@ -127,16 +209,296 @@
               "text": "ENG",
               "disabled": false,
               "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary disable"
+            },
+            {
+              "text": "Үнэт цаас",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6a:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6a:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Хувьцаат компани\n\nХувьцаат компани",
+              "disabled": false,
+              "html": "<a href=\"/companies-info\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-building.svg\" style=\""
+            },
+            {
+              "text": "Үнэт цаасны бүртгэлд өөрчлөлт орсон хувьцаат компаниудын мэд",
+              "disabled": false,
+              "html": "<a href=\"/company-change-info\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file-check.svg\" "
+            },
+            {
+              "text": "Өрийн хэрэгсэл\n\nӨрийн хэрэгсэл",
+              "disabled": false,
+              "html": "<a href=\"/stock-list\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-book.svg\" style=\"color: t"
+            },
+            {
+              "text": "Хөрөнгө оруулалтын сан\n\nХөрөнгө оруулалтын сан",
+              "disabled": false,
+              "html": "<a href=\"/fund\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-book.svg\" style=\"color: transpa"
+            },
+            {
+              "text": "Хөрөнгөөр баталгаажсан үнэт цаас\n\nХөрөнгөөр баталгаажсан үнэ",
+              "disabled": false,
+              "html": "<a href=\"/asset-backed-securities\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-bank-note.sv"
+            },
+            {
+              "text": "Шинээр санал болгож буй үнэт цаас\n\nШинээр санал болгож буй ү",
+              "disabled": false,
+              "html": "<a href=\"/new-issue\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-coins-hand.svg\" style=\"col"
+            },
+            {
+              "text": "Хувьцаа эзэмшигчдийн хурал\n\nХувьцаа эзэмшигчдийн хурал",
+              "disabled": false,
+              "html": "<a href=\"/shareholders-meeting\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/user.svg\" style=\"colo"
+            },
+            {
+              "text": "Хувьцаат компаниудын тайлан, мэдээлэл\n\nХувьцаат компаниудын ",
+              "disabled": false,
+              "html": "<a href=\"/company-reports\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"col"
+            },
+            {
+              "text": "Компанийн засаглал\n\nКомпанийн засаглал",
+              "disabled": false,
+              "html": "<a href=\"/company-governance\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-cube.svg\" style=\""
+            },
+            {
+              "text": "Бүртгэлтэй хувьцаат компанийн судалгаа\n\nСудалгаа",
+              "disabled": false,
+              "html": "<a href=\"/research\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/search.svg\" style=\"color: transpa"
+            },
+            {
+              "text": "Бүртгэлийн гэрээ\n\nListing agreement form",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/124\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"col"
+            },
+            {
+              "text": "Жилийн үйлчилгээний хураамж",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/216\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"col"
+            },
+            {
+              "text": "ЗГДҮЦ\n\nЗасгийн Газрын Дотоодын Үнэт Цаас",
+              "disabled": false,
+              "html": "<a href=\"/government-securities\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" styl"
+            },
+            {
+              "text": "Гишүүн брокер",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6b:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6b:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Гишүүн брокерийн мэдээлэл\n\nГишүүн брокерийн мэдээлэл",
+              "disabled": false,
+              "html": "<a href=\"/brokers-info\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-building.svg\" style=\"c"
+            },
+            {
+              "text": "Арилжааны идэвх\n\nАрилжааны идэвх",
+              "disabled": false,
+              "html": "<a href=\"/trade-activity\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/chart.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Зохицуулалт, арга хэмжээ\n\nЗохицуулалт, арга хэмжээ",
+              "disabled": false,
+              "html": "<a href=\"/regulation-and-measures\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-folder.svg\""
+            },
+            {
+              "text": "Тайлан, судалгаа\n\nТайлан, судалгаа",
+              "disabled": false,
+              "html": "<a href=\"/report-and-research\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/search.svg\" style=\"col"
+            },
+            {
+              "text": "Шинээр элсэх\n\nШинээр элсэх",
+              "disabled": false,
+              "html": "<a href=\"/become-member\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/user.svg\" style=\"color: tran"
+            },
+            {
+              "text": "Үнэт цаасны арилжаа",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6c:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6c:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Өнөөдрийн арилжаа\n\nӨнөөдрийн арилжаа",
+              "disabled": false,
+              "html": "<a href=\"/todays-trade\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/chart.svg\" style=\"color: tran"
+            },
+            {
+              "text": "Арилжааны түүх\n\nАрилжааны түүх",
+              "disabled": false,
+              "html": "<a href=\"/trade-history\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/trade-file.svg\" style=\"color"
+            },
+            {
+              "text": "Арилжааны тайлан\n\nАрилжааны тайлан",
+              "disabled": false,
+              "html": "<a href=\"/trade-report\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-folder.svg\" style=\"col"
+            },
+            {
+              "text": "Индекс\n\nИндекс",
+              "disabled": false,
+              "html": "<a href=\"/index\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/bar-chart.svg\" style=\"color: transpa"
+            },
+            {
+              "text": "Арилжаа зогссон\n\nАрилжаа зогссон",
+              "disabled": false,
+              "html": "<a href=\"/suspended-companies\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/trade-x-file.svg\" styl"
+            },
+            {
+              "text": "Захиалгын сан\n\nЗахиалгын сан",
+              "disabled": false,
+              "html": "<a href=\"/order-book\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/trade-coin.svg\" style=\"color: t"
+            },
+            {
+              "text": "ЗГҮЦ-ны тооцоолуур\n\nЗГҮЦ-ны тооцоолуур",
+              "disabled": false,
+              "html": "<a href=\"/government-securities-calculator\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/line-char"
+            },
+            {
+              "text": "УУБ-ийн арилжаа",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6d:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6d:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Бүтээгдэхүүн\n\nБүтээгдэхүүн",
+              "disabled": false,
+              "html": "<a href=\"/product\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-product.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Арилжаа\n\nАрилжаа",
+              "disabled": false,
+              "html": "<a href=\"/trade\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/chart.svg\" style=\"color: transparent"
+            },
+            {
+              "text": "Худалдагч\n\nХудалдагч",
+              "disabled": false,
+              "html": "<a href=\"/seller\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-building.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Гишүүн брокер\n\nГишүүн брокер",
+              "disabled": false,
+              "html": "<a href=\"/member-broker\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-building.svg\" style=\""
+            },
+            {
+              "text": "Итгэмжлэл\n\nИтгэмжлэл",
+              "disabled": false,
+              "html": "<a href=\"/authorization\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-case.svg\" style=\"color:"
+            },
+            {
+              "text": "Журам, заавар\n\nЖурам, заавар",
+              "disabled": false,
+              "html": "<a href=\"/regulation\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-file.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Дэнчин байршуулах данснуудын дамжуулагч банкны мэдээлэл",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/366\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-bank-note.svg\" style"
+            },
+            {
+              "text": "Сар тутмын индексийн хөдөлгөөний мэдээлэл",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/369\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/bar-chart.svg\" style=\"colo"
+            },
+            {
+              "text": "Арилжааны систем\n\nУУБ-ний арилжааны систем",
+              "disabled": false,
+              "html": "<a href=\"https://comex.mse.mn/home\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/icon-desktop.svg\""
+            },
+            {
+              "text": "Ил тод байдал",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6e:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6e:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Авлигын эсрэг\n\nАвлигын эсрэг",
+              "disabled": false,
+              "html": "<a href=\"/anti-corruption\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/open-law.svg\" style=\"color"
+            },
+            {
+              "text": "Комплаенс\n\nКомплаенс",
+              "disabled": false,
+              "html": "<a href=\"/compliance\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file-check.svg\" style=\"co"
+            },
+            {
+              "text": "Мэдээллийн аюулгүй байдал\n\nМэдээллийн аюулгүй байдал",
+              "disabled": false,
+              "html": "<a href=\"/information-security\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/open-security.svg\" st"
+            },
+            {
+              "text": "Шилэн данс\n\nШилэн данс",
+              "disabled": false,
+              "html": "<a href=\"https://shilendans.gov.mn/organization/19129\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/na"
+            },
+            {
+              "text": "Төсөв, санхүүгийн ил тод байдал\n\nТөсөв, санхүүгийн ил тод ба",
+              "disabled": false,
+              "html": "<a href=\"/financial-transparency\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-coins-hand.sv"
+            },
+            {
+              "text": "Хүний нөөцийн ил тод байдал\n\nХүний нөөцийн ил тод байдал",
+              "disabled": false,
+              "html": "<a href=\"/hr-transparency\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/user.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Шимтгэл хураамж\n\nШимтгэл хураамж",
+              "disabled": false,
+              "html": "<a href=\"/charges\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"color: tran"
             }
           ]
         },
         {
           "name": "Үйл ажиллагааны тайлан",
-          "rows": 0,
-          "matchingIssuerRows": 0,
-          "sampleRows": [],
+          "rows": 11,
+          "matchingIssuerRows": 1,
+          "sampleRows": [
+            "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
+            "1 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+            "2 Түшиг Уул ХК TUS хагас жилийн үйл ажиллагааны тайлан 2026-09-30 ",
+            "3 Бэрх Уул ХК BEU 2025 оны үйл ажиллагааны тайлан 2026-09-29 ",
+            "10 Монголын төмөр зам ХК MTZ 2026 оны эхний хагас жилийн тайлан 2026-09-21 ",
+            "7 Ард Даатгал ХК AIC Үйл ажиллагааны тайлан 2026 оны хагас жил 2026-09-18 ",
+            "4 Атар-Өргөө ХК ATR 2026 оны хагас жилийн үйл ажиллагааны тайлан 2026-09-17 ",
+            "5 Шивээ овоо ХК SHV Компанийн 2026 оны хагас жилийн үйл ажиллагааны тайлан 2026-09-16 "
+          ],
           "controls": [],
-          "reportLinks": [],
+          "reportLinks": [
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "Хувьцаат компаниудын тайлан, мэдээлэл\n\nХувьцаат компаниудын тайлан, мэдээлэл"
+            },
+            {
+              "url": "https://mse.mn/report-and-research",
+              "text": "Тайлан, судалгаа\n\nТайлан, судалгаа"
+            },
+            {
+              "url": "https://mse.mn/trade-report",
+              "text": "Арилжааны тайлан\n\nАрилжааны тайлан"
+            },
+            {
+              "url": "https://mse.mn/financial-transparency",
+              "text": "Төсөв, санхүүгийн ил тод байдал\n\nТөсөв, санхүүгийн ил тод байдал"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "1"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "2"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "3"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "166"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "167"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "168"
+            }
+          ],
           "navigation": [
             {
               "text": "Шинэ хувилбартай танилцах",
@@ -157,15 +519,265 @@
               "text": "ENG",
               "disabled": false,
               "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary disable"
+            },
+            {
+              "text": "Үнэт цаас",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6a:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6a:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Хувьцаат компани\n\nХувьцаат компани",
+              "disabled": false,
+              "html": "<a href=\"/companies-info\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-building.svg\" style=\""
+            },
+            {
+              "text": "Үнэт цаасны бүртгэлд өөрчлөлт орсон хувьцаат компаниудын мэд",
+              "disabled": false,
+              "html": "<a href=\"/company-change-info\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file-check.svg\" "
+            },
+            {
+              "text": "Өрийн хэрэгсэл\n\nӨрийн хэрэгсэл",
+              "disabled": false,
+              "html": "<a href=\"/stock-list\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-book.svg\" style=\"color: t"
+            },
+            {
+              "text": "Хөрөнгө оруулалтын сан\n\nХөрөнгө оруулалтын сан",
+              "disabled": false,
+              "html": "<a href=\"/fund\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-book.svg\" style=\"color: transpa"
+            },
+            {
+              "text": "Хөрөнгөөр баталгаажсан үнэт цаас\n\nХөрөнгөөр баталгаажсан үнэ",
+              "disabled": false,
+              "html": "<a href=\"/asset-backed-securities\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-bank-note.sv"
+            },
+            {
+              "text": "Шинээр санал болгож буй үнэт цаас\n\nШинээр санал болгож буй ү",
+              "disabled": false,
+              "html": "<a href=\"/new-issue\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-coins-hand.svg\" style=\"col"
+            },
+            {
+              "text": "Хувьцаа эзэмшигчдийн хурал\n\nХувьцаа эзэмшигчдийн хурал",
+              "disabled": false,
+              "html": "<a href=\"/shareholders-meeting\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/user.svg\" style=\"colo"
+            },
+            {
+              "text": "Хувьцаат компаниудын тайлан, мэдээлэл\n\nХувьцаат компаниудын ",
+              "disabled": false,
+              "html": "<a href=\"/company-reports\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"col"
+            },
+            {
+              "text": "Компанийн засаглал\n\nКомпанийн засаглал",
+              "disabled": false,
+              "html": "<a href=\"/company-governance\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-cube.svg\" style=\""
+            },
+            {
+              "text": "Бүртгэлтэй хувьцаат компанийн судалгаа\n\nСудалгаа",
+              "disabled": false,
+              "html": "<a href=\"/research\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/search.svg\" style=\"color: transpa"
+            },
+            {
+              "text": "Бүртгэлийн гэрээ\n\nListing agreement form",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/124\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"col"
+            },
+            {
+              "text": "Жилийн үйлчилгээний хураамж",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/216\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"col"
+            },
+            {
+              "text": "ЗГДҮЦ\n\nЗасгийн Газрын Дотоодын Үнэт Цаас",
+              "disabled": false,
+              "html": "<a href=\"/government-securities\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" styl"
+            },
+            {
+              "text": "Гишүүн брокер",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6b:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6b:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Гишүүн брокерийн мэдээлэл\n\nГишүүн брокерийн мэдээлэл",
+              "disabled": false,
+              "html": "<a href=\"/brokers-info\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-building.svg\" style=\"c"
+            },
+            {
+              "text": "Арилжааны идэвх\n\nАрилжааны идэвх",
+              "disabled": false,
+              "html": "<a href=\"/trade-activity\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/chart.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Зохицуулалт, арга хэмжээ\n\nЗохицуулалт, арга хэмжээ",
+              "disabled": false,
+              "html": "<a href=\"/regulation-and-measures\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-folder.svg\""
+            },
+            {
+              "text": "Тайлан, судалгаа\n\nТайлан, судалгаа",
+              "disabled": false,
+              "html": "<a href=\"/report-and-research\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/search.svg\" style=\"col"
+            },
+            {
+              "text": "Шинээр элсэх\n\nШинээр элсэх",
+              "disabled": false,
+              "html": "<a href=\"/become-member\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/user.svg\" style=\"color: tran"
+            },
+            {
+              "text": "Үнэт цаасны арилжаа",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6c:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6c:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Өнөөдрийн арилжаа\n\nӨнөөдрийн арилжаа",
+              "disabled": false,
+              "html": "<a href=\"/todays-trade\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/chart.svg\" style=\"color: tran"
+            },
+            {
+              "text": "Арилжааны түүх\n\nАрилжааны түүх",
+              "disabled": false,
+              "html": "<a href=\"/trade-history\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/trade-file.svg\" style=\"color"
+            },
+            {
+              "text": "Арилжааны тайлан\n\nАрилжааны тайлан",
+              "disabled": false,
+              "html": "<a href=\"/trade-report\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-folder.svg\" style=\"col"
+            },
+            {
+              "text": "Индекс\n\nИндекс",
+              "disabled": false,
+              "html": "<a href=\"/index\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/bar-chart.svg\" style=\"color: transpa"
+            },
+            {
+              "text": "Арилжаа зогссон\n\nАрилжаа зогссон",
+              "disabled": false,
+              "html": "<a href=\"/suspended-companies\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/trade-x-file.svg\" styl"
+            },
+            {
+              "text": "Захиалгын сан\n\nЗахиалгын сан",
+              "disabled": false,
+              "html": "<a href=\"/order-book\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/trade-coin.svg\" style=\"color: t"
+            },
+            {
+              "text": "ЗГҮЦ-ны тооцоолуур\n\nЗГҮЦ-ны тооцоолуур",
+              "disabled": false,
+              "html": "<a href=\"/government-securities-calculator\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/line-char"
+            },
+            {
+              "text": "УУБ-ийн арилжаа",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6d:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6d:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Бүтээгдэхүүн\n\nБүтээгдэхүүн",
+              "disabled": false,
+              "html": "<a href=\"/product\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-product.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Арилжаа\n\nАрилжаа",
+              "disabled": false,
+              "html": "<a href=\"/trade\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/chart.svg\" style=\"color: transparent"
+            },
+            {
+              "text": "Худалдагч\n\nХудалдагч",
+              "disabled": false,
+              "html": "<a href=\"/seller\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-building.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Гишүүн брокер\n\nГишүүн брокер",
+              "disabled": false,
+              "html": "<a href=\"/member-broker\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/broker-building.svg\" style=\""
+            },
+            {
+              "text": "Итгэмжлэл\n\nИтгэмжлэл",
+              "disabled": false,
+              "html": "<a href=\"/authorization\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-case.svg\" style=\"color:"
+            },
+            {
+              "text": "Журам, заавар\n\nЖурам, заавар",
+              "disabled": false,
+              "html": "<a href=\"/regulation\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/coal-file.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Дэнчин байршуулах данснуудын дамжуулагч банкны мэдээлэл",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/366\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-bank-note.svg\" style"
+            },
+            {
+              "text": "Сар тутмын индексийн хөдөлгөөний мэдээлэл",
+              "disabled": false,
+              "html": "<a href=\"/custom-page/369\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/bar-chart.svg\" style=\"colo"
+            },
+            {
+              "text": "Арилжааны систем\n\nУУБ-ний арилжааны систем",
+              "disabled": false,
+              "html": "<a href=\"https://comex.mse.mn/home\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/icon-desktop.svg\""
+            },
+            {
+              "text": "Ил тод байдал",
+              "disabled": false,
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r6e:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6e:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+            },
+            {
+              "text": "Авлигын эсрэг\n\nАвлигын эсрэг",
+              "disabled": false,
+              "html": "<a href=\"/anti-corruption\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/open-law.svg\" style=\"color"
+            },
+            {
+              "text": "Комплаенс\n\nКомплаенс",
+              "disabled": false,
+              "html": "<a href=\"/compliance\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file-check.svg\" style=\"co"
+            },
+            {
+              "text": "Мэдээллийн аюулгүй байдал\n\nМэдээллийн аюулгүй байдал",
+              "disabled": false,
+              "html": "<a href=\"/information-security\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/open-security.svg\" st"
+            },
+            {
+              "text": "Шилэн данс\n\nШилэн данс",
+              "disabled": false,
+              "html": "<a href=\"https://shilendans.gov.mn/organization/19129\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/na"
+            },
+            {
+              "text": "Төсөв, санхүүгийн ил тод байдал\n\nТөсөв, санхүүгийн ил тод ба",
+              "disabled": false,
+              "html": "<a href=\"/financial-transparency\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-coins-hand.sv"
+            },
+            {
+              "text": "Хүний нөөцийн ил тод байдал\n\nХүний нөөцийн ил тод байдал",
+              "disabled": false,
+              "html": "<a href=\"/hr-transparency\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/user.svg\" style=\"color: tr"
+            },
+            {
+              "text": "Шимтгэл хураамж\n\nШимтгэл хураамж",
+              "disabled": false,
+              "html": "<a href=\"/charges\" class=\"flex rounded-md hover:bg-bg-secondary p-3 items-start justify-start gap-4 cursor-pointer h-[96px]\" data-radix-collection-item=\"\"><div style=\"width: 24px; height: 24px;\"><img alt=\"icon\" loading=\"lazy\" width=\"24\" height=\"24\" decoding=\"async\" data-nimg=\"1\" class=\"inline-block \" src=\"/assets/images/nav/stock-file.svg\" style=\"color: tran"
             }
           ]
         }
       ],
-      "errors": [
-        "Tab inaccessible: Хувьцаат компаниудын санхүүгийн тайлан",
-        "Tab inaccessible: Үйл ажиллагааны тайлан"
+      "errors": [],
+      "sources": [
+        {
+          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
+          "symbol": "XAC",
+          "matches": [
+            {
+              "text": "1 Хас Банк XAC 2026 оны 3 -р улирлын тайлан 2026-10-09 ",
+              "urls": [],
+              "hasAction": true
+            }
+          ]
+        },
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "symbol": "XAC",
+          "matches": [
+            {
+              "text": "1 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+              "urls": [],
+              "hasAction": true
+            }
+          ]
+        }
       ],
-      "sources": [],
       "httpStatus": 200,
       "pageTitle": "MSE",
       "finalURL": "https://mse.mn/company-reports"
@@ -306,263 +918,7 @@
           ]
         },
         {
-          "name": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "rows": 17,
-          "matchingIssuerRows": 0,
-          "sampleRows": [
-            " I улирал II улирал III улирал IV улирал",
-            "",
-            "Тогтмол ирүүлэх мэдээллийн төрөл Жилийн эцсийн санхүүгийн тайлан Хувьцаа эзэмшигчдийн ээлжит хурал хуралдуулах сүүлчийн хугацаа Хагас жилийн санхүүгийн тайлан 3-р улирлын санхүүгийн тайлан",
-            "Ногдол ашиг хувиарлах тухай шийдвэр Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Хагас жилийн үйл ажиллагааны тайлан",
-            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр Аудитын дүгнэлт",
-            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Жилийн үйл ажиллагааны тайлан",
-            "Компанийн засаглалын кодексын хэрэгжилтийн тайлан, үнэлгээ",
-            "Байгаль орчин, нийгэм засаглалын тайлан"
-          ],
-          "controls": [
-            {
-              "tag": "SELECT",
-              "id": "",
-              "name": "",
-              "placeholder": "",
-              "options": [
-                {
-                  "value": "9t2kmsyg",
-                  "text": "Хувьцаат компани"
-                },
-                {
-                  "value": "suf17bdw",
-                  "text": "Бонд"
-                },
-                {
-                  "value": "i51kk8hz",
-                  "text": "ХБҮЦ"
-                }
-              ],
-              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
-            },
-            {
-              "tag": "SELECT",
-              "id": "",
-              "name": "",
-              "placeholder": "",
-              "options": [
-                {
-                  "value": "general",
-                  "text": "Ерөнхий мэдээлэл"
-                },
-                {
-                  "value": "financial",
-                  "text": "Санхүү үйл ажиллагааны мэдээлэл"
-                },
-                {
-                  "value": "meeting",
-                  "text": "Хурлын мэдээлэл"
-                },
-                {
-                  "value": "other",
-                  "text": "Бусад мэдээлэл"
-                }
-              ],
-              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
-            }
-          ],
-          "reportLinks": [
-            {
-              "url": "https://new.mse.mn/financial-transparency",
-              "text": "Ил тод байдал"
-            }
-          ],
-          "navigation": [
-            {
-              "text": "ENG",
-              "disabled": false,
-              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none hover:rounded-sm focus:ring-bg-brand-solid focus:ring-offset-white disabled:text-button-tertiary-fg-disabled rounded-sm p-0 text-sm leading-5 font-semibold gap-1 focus:ring-0 focus:ring-offset-0 focus:outline-none text-white hover:text-whit"
-            },
-            {
-              "text": "Бусад систем",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex h-6 items-center gap-1 rounded-xs border border-white/40 bg-transparent px-2 text-[12px] font-medium leading-4 text-white hover:bg-white/10 transition-colors\">Бусад систем<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap"
-            },
-            {
-              "text": "Зах зээл",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Зах зээл<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\""
-            },
-            {
-              "text": "Үнэт цаас гаргагч",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-brand-600\">Үнэт цаас гаргагч<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejo"
-            },
-            {
-              "text": "Хөрөнгө оруулагч",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Хөрөнгө оруулагч<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin"
-            },
-            {
-              "text": "УУБ-ний арилжаа",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">УУБ-ний арилжаа<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin="
-            },
-            {
-              "text": "IPO Hub",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">IPO Hub<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" "
-            },
-            {
-              "text": "Foreign investor",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Foreign investor<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin"
-            },
-            {
-              "text": "Ил тод байдал",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Ил тод байдал<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"r"
-            },
-            {
-              "text": "Таны мэдлэгт",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Таны мэдлэгт<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"ro"
-            },
-            {
-              "text": "Open",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex items-center justify-center rounded-sm p-2.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900\" aria-label=\"Open\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" clas"
-            },
-            {
-              "text": "Open",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex items-center justify-center rounded-sm p-2.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900\" aria-label=\"Open\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" clas"
-            },
-            {
-              "text": "Open",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex items-center justify-center rounded-sm p-2.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900\" aria-label=\"Open\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" clas"
-            },
-            {
-              "text": "Open",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex items-center justify-center rounded-sm p-2.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900\" aria-label=\"Open\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" clas"
-            },
-            {
-              "text": "Open",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex items-center justify-center rounded-sm p-2.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900\" aria-label=\"Open\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" clas"
-            },
-            {
-              "text": "Open",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex items-center justify-center rounded-sm p-2.5 text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900\" aria-label=\"Open\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" clas"
-            },
-            {
-              "text": "Хувьцаат компани",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"w-full rounded-xxs px-3 py-2 text-left text-base font-medium leading-6 transition-colors border-l-2 border-brand-500 bg-brand-50 text-brand-700\">Хувьцаат компани </button>"
-            },
-            {
-              "text": "Бонд",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"w-full rounded-xxs px-3 py-2 text-left text-base font-medium leading-6 transition-colors text-gray-500 hover:bg-gray-50\">Бонд</button>"
-            },
-            {
-              "text": "ХБҮЦ",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"w-full rounded-xxs px-3 py-2 text-left text-base font-medium leading-6 transition-colors text-gray-500 hover:bg-gray-50\">ХБҮЦ</button>"
-            },
-            {
-              "text": "Ерөнхий мэдээлэл",
-              "disabled": false,
-              "html": "<button aria-current=\"true\" class=\"whitespace-nowrap px-4 pb-3 pt-1 text-[14px] font-medium transition-colors border-b-2 border-brand-600 text-brand-700\">Ерөнхий мэдээлэл</button>"
-            },
-            {
-              "text": "Санхүү үйл ажиллагааны мэдээлэл",
-              "disabled": false,
-              "html": "<button class=\"whitespace-nowrap px-4 pb-3 pt-1 text-[14px] font-medium transition-colors text-gray-500 hover:text-gray-700\">Санхүү үйл ажиллагааны мэдээлэл</button>"
-            },
-            {
-              "text": "Хурлын мэдээлэл",
-              "disabled": false,
-              "html": "<button class=\"whitespace-nowrap px-4 pb-3 pt-1 text-[14px] font-medium transition-colors text-gray-500 hover:text-gray-700\">Хурлын мэдээлэл</button>"
-            },
-            {
-              "text": "Бусад мэдээлэл",
-              "disabled": false,
-              "html": "<button class=\"whitespace-nowrap px-4 pb-3 pt-1 text-[14px] font-medium transition-colors text-gray-500 hover:text-gray-700\">Бусад мэдээлэл</button>"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 border border-button-primary-border bg-button-primary-bg text-button-primary-fg shadow-xs hover:bg-button-primary-bg-hover hover:border-button-primary-border-hover hover:text-button-primary-fg-hover focus:outline-none focus:ring-2 foc"
-            },
-            {
-              "text": "10-р сар\n13\nЦан цохих ёслол\n\"ЛэндМН ББСБ\" ХК-ийн \"Lend MSME ",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "10-р сар\n15\nСургалт\nХөрөнгийн зах зээл дээрээс санхүүжилт та",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "10-р сар\n21\nСургалт\nМонголын хөрөнгийн бирж, Чикагогийн түүх",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "Бүртгүүлэх",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-brand-500 bg-brand-600 px-4 py-2.5 text-[14px] font-semibold leading-5 text-white shadow-xs transition-colors hover:bg-brand-500 sm:flex-none\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_0_\" data-state=\"closed\">Бүртгүүлэх <svg xmlns=\""
-            },
-            {
-              "text": "10-р сар\n06\nСургалт\nҮнэт цаасны зах зээлийн анхан шатны мэдл",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "Go to slide 1",
-              "disabled": false,
-              "html": "<button type=\"button\" aria-label=\"Go to slide 1\" class=\"h-1 cursor-pointer rounded-sm transition-colors w-16 bg-brand-600\"></button>"
-            },
-            {
-              "text": "Go to slide 2",
-              "disabled": false,
-              "html": "<button type=\"button\" aria-label=\"Go to slide 2\" class=\"h-1 cursor-pointer rounded-sm transition-colors w-16 bg-gray-200\"></button>"
-            },
-            {
-              "text": "Previous slide",
-              "disabled": true,
-              "html": "<button type=\"button\" disabled=\"\" aria-label=\"Previous slide\" class=\"inline-flex h-10 w-10 items-center justify-center rounded-sm shadow-xs transition-colors disabled:cursor-not-allowed bg-gray-100 text-gray-400\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lineca"
-            },
-            {
-              "text": "Next slide",
-              "disabled": false,
-              "html": "<button type=\"button\" aria-label=\"Next slide\" class=\"inline-flex h-10 w-10 items-center justify-center rounded-sm shadow-xs transition-colors disabled:cursor-not-allowed bg-brand-600 text-white hover:bg-brand-700\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linec"
-            }
-          ]
-        },
-        {
-          "name": "Үйл ажиллагааны тайлан",
+          "name": "Шинэ санхүү, үйл ажиллагааны мэдээ",
           "rows": 17,
           "matchingIssuerRows": 0,
           "sampleRows": [
@@ -818,11 +1174,7 @@
           ]
         }
       ],
-      "errors": [
-        "Financial disclosure filter: TimeoutError: Locator.select_option: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator(\"select\").last\n    - locator resolved ",
-        "Tab inaccessible: Хувьцаат компаниудын санхүүгийн тайлан",
-        "Tab inaccessible: Үйл ажиллагааны тайлан"
-      ],
+      "errors": [],
       "sources": [],
       "httpStatus": 200,
       "pageTitle": "Үнэт цаас гаргагч · Монголын Хөрөнгийн Бирж",
