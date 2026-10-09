@@ -115,7 +115,19 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
 .simple-quarter-footnote{font-size:11px;line-height:1.8;color:#7e8a8b;margin:14px 2px 0}
 @media(max-width:760px){.simple-quarter-charts{grid-template-columns:1fr}.simple-quarter-card{padding:0 9px 10px}.simple-quarter-header{padding:12px 4px}.simple-quarter-charts .history-chart svg{height:280px}}
 </style>
-</head>
+<style>
+.issuer-audit{margin:18px 0;background:#fff;border:1px solid #dce9e3;border-radius:10px;overflow:hidden}
+.issuer-audit .panel-title{background:#f0f7f3}
+.issuer-audit-note{font-size:11px;color:#667875;line-height:1.65;padding:12px 16px;margin:0}
+#issuerAuditTable{overflow-x:auto}
+#issuerAuditTable table{width:100%;min-width:1050px;border-collapse:collapse;font-size:12px}
+#issuerAuditTable th{white-space:nowrap;padding:11px 12px;text-align:right;color:#657573;background:#f8faf8;border-bottom:1px solid #e1ece7}
+#issuerAuditTable th:first-child,#issuerAuditTable td:first-child{text-align:left}
+#issuerAuditTable td{padding:10px 12px;border-bottom:1px solid #edf1ee;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+#issuerAuditTable td:last-child{white-space:normal;max-width:205px;text-align:left}
+.issuer-matched{color:#168477;font-weight:600}.issuer-pending{color:#ae7b32}.issuer-review{color:#b3525a;font-weight:650}
+#issuerAuditTable a{color:#087a6f;text-decoration:underline;text-underline-offset:2px}
+</style></head>
 <body>
 <div class="layout">
  <aside class="sidebar" aria-label="Дашбоардын үндсэн цэс">
@@ -165,6 +177,12 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
   <div id="ratioSummaryCards" class="ratio-cards"></div>
   <div id="ratioAutoTable" class="ratio-scroll"></div>
   <p class="ratio-foot">P/E нь TTM ашиг эерэг үед; P/B нь эерэг өөрийн хөрөнгөд үндэслэнэ. ROE, ROA-д эхний ба эцсийн балансын дундаж ашиглана. Мэдээлэлгүй эсвэл тайлангийн зөрүүтэй үед дүн зохиохгүй. Хувьцааны тоо, хяналтын бус эзэмшил, ашиг тооцох суурь нь баталгаажуулалт шаарддаг.</p>
+</div>
+<div class="issuer-audit panel" id="issuerAuditPanel">
+  <div class="panel-title"><h2>Банк, ББСБ — 2026 оны эхний хагас жилийн тайлангийн тулгалт</h2><span class="hint" id="issuerAuditDate">Эх сурвалж шалгаж байна…</span></div>
+  <p class="issuer-audit-note">5 банк, 4 ББСБ-ын тайлангийн үндсэн дүн, зээлийн багц, чанаргүй зээлийн харьцаа. Зөвхөн олдсон тоог харуулна; баримтаар баталгаажуулаагүй тоонд анхааруулга гарна.</p>
+  <div id="issuerAuditTable" class="table-wrap"><div class="empty">Тайлангийн тулгалтын мэдээлэл ачаалж байна…</div></div>
+  <div class="issuer-audit-note" id="issuerAuditScan">МХБ-ийн үйл ажиллагааны тайланг автоматаар шалгах төлөвийг ачаалж байна…</div>
 </div>
 <div class="filters" id="financialFilters"></div><div class="table-wrap" id="financialTable"></div></div></section>
   
@@ -778,6 +796,57 @@ render();
  }
  window.MSEValuations={refresh,load,inspect:sym=>ratio(sym,app.getCompanies().find(c=>c.symbol===sym)||{})};
  refresh();
+ load();
+ setInterval(load,30*60*1000);
+})();
+</script>
+<script>
+(() => {
+ 'use strict';
+ const $=id=>document.getElementById(id),format=v=>typeof v==='number'&&Number.isFinite(v)?new Intl.NumberFormat('mn-MN',{maximumFractionDigits:1}).format(v):'—';
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\u0027':'&#39;'}[c]));
+ const asBillions=v=>typeof v==='number'&&Number.isFinite(v)?format(v/1e9)+' тэрбум':'—';
+ const ids=['KHAN','GLMT','XAC','SBM','TDB','INV','LEND','ADB','SEND'];
+ const labels={KHAN:'Хаан банк',GLMT:'Голомт банк',XAC:'ХасБанк',SBM:'Төрийн банк',TDB:'Худалдаа, хөгжлийн банк',INV:'Инвескор ББСБ',LEND:'ЛэндМН ББСБ',ADB:'Ард Кредит ББСБ',SEND:'Сэндли ББСБ'};
+ let audit=null,watch=null;
+ function render(){
+   if(!audit)return;
+   const archive=window.MSEQuarterly?.debug.archive()||{};
+   $('issuerAuditDate').textContent='Эх сурвалжийн тулгалт: '+audit.asOf+' · 2026.II улирал';
+   const h='<table><thead><tr><th>Компани</th><th>Нийт хөрөнгө</th><th>Өөрийн хөрөнгө</th><th>Цэвэр ашиг (H1)</th><th>Зээлийн багц</th><th>NPL (%)</th><th>Тулгалтын төлөв</th><th>Тайлангийн эх сурвалж</th></tr></thead><tbody>';
+   const rows=ids.map(sym=>{
+     const record=archive[sym+':2026Q2']||{};
+     const entry=audit.issuers?.[sym]||{};
+     const facts=entry.facts||{};
+     const status=entry.matchStatus;
+     const names={matched:'Үндсэн дүн таарсан',awaiting_direct_statement:'Дэлгэрэнгүй шалгах',needs_review:'Зөрүү шалгах'};
+     const className=status==='matched'?'issuer-matched':status==='needs_review'?'issuer-review':'issuer-pending';
+     const loan=facts.loanPortfolio?.amount, npl=facts.nplRatio?.amount;
+     const url=entry.sourceUrl||'https://mse.mn/company-reports';
+     const isPermitted=/^https:\/\/[a-z0-9.-]+\//i.test(url);
+     const source=isPermitted?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Эх сурвалж ↗</a>':'—';
+     return '<tr title="'+esc(entry.note||'')+'"><td>'+esc(sym)+' · '+esc(labels[sym])+'</td><td>'+esc(asBillions(record.assets))+'</td><td>'+esc(asBillions(record.equity))+'</td><td>'+esc(asBillions(record.netProfit))+'</td><td>'+esc(asBillions(loan))+'</td><td>'+(Number.isFinite(npl)?esc(format(npl))+'%':'—')+'</td><td class="'+className+'">'+esc(names[status]||'Шалгах')+'</td><td>'+source+'</td></tr>';
+   }).join('');
+   $('issuerAuditTable').innerHTML=h+rows+'</tbody></table>';
+   const note=$('issuerAuditScan');
+   if(!note)return;
+   const sites=watch?.sites||[];
+   const reachable=sites.filter(s=>s.visited&&s.httpStatus===200).length;
+   const scanDate=watch?.scannedAt||'Одоогоор ажиллуулаагүй';
+   note.textContent='МХБ-ийн тайлан илрүүлэгчийн сүүлийн шалгалт: '+scanDate+' · Сайтын холболт: '+(sites.length?reachable+'/'+sites.length:'хүлээгдэж байна')+' · PDF/тайлангаас шалгаагүй санхүүгийн тоог автоматаар орлуулахгүй.';
+ }
+ async function load(){
+  try{
+   const res=await fetch(new URL('data/bank_nbfi_audit.json',location.href),{cache:'no-store'});
+   if(res.ok){const next=await res.json();if(next?.issuers)audit=next}
+  }catch(e){$('issuerAuditDate').textContent='Эх сурвалжийн тулгалт түр холбогдоогүй'}
+  try{
+   const res=await fetch(new URL('data/issuer_report_watch.json',location.href),{cache:'no-store'});
+   if(res.ok)watch=await res.json();
+  }catch(e){/* report discovery may not have completed */}
+  render();
+ }
+ window.MSEIssuerReports={refresh:load};
  load();
  setInterval(load,30*60*1000);
 })();
