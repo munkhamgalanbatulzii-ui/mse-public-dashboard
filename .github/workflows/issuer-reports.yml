@@ -7,8 +7,9 @@ on:
       - 'scan_mse_reports.py'
       - '.github/workflows/issuer-reports.yml'
   schedule:
-    # Weekdays at 18:30 Ulaanbaatar (UTC+8)
-    - cron: '30 10 * * 1-5'
+    # Hourly including weekends; the publication date/time is unknown.
+    # Offset from minute 00 to reduce scheduled-run congestion.
+    - cron: '31 * * * *'
   workflow_dispatch:
 
 permissions:
