@@ -1,0 +1,300 @@
+{
+  "asOf": "2026-10-09",
+  "period": "2026Q2",
+  "category": "MSE I ангилал",
+  "status": "selective_crosscheck_not_full_audit",
+  "note": "No unpublished or unverified values replace reported amounts. Metrics can have different bases; checking status is separate from source financial data.",
+  "issuers": {
+    "KHAN": {
+      "sourceUrl": "https://apex.mn/mn/articles/blogs/2026-i",
+      "sourceType": "secondary_analysis",
+      "period": "2026Q2",
+      "facts": {
+        "assets": {
+          "amount": 28100000000000,
+          "unit": "MNT",
+          "approx": true
+        },
+        "netProfit": {
+          "amount": 357200000000,
+          "unit": "MNT",
+          "approx": true
+        }
+      },
+      "checks": {
+        "assets": {
+          "sourceAmount": 28100000000000,
+          "existingAmount": 28082661655086,
+          "relativeDifference": 0.000617,
+          "passes": true
+        },
+        "netProfit": {
+          "sourceAmount": 357200000000,
+          "existingAmount": 357207155657,
+          "relativeDifference": 0.00002,
+          "passes": true
+        }
+      },
+      "note": "2026 I хагасын хөрөнгө, ашгийг Apex Capital тоймд дурдсан; эхний файлтай тулгасан, MSE тайлангийн анхдагч баталгаажуулалт биш.",
+      "matchStatus": "matched"
+    },
+    "GLMT": {
+      "sourceUrl": "https://www.golomtbank.com/about-bank/finance/season-report",
+      "sourceType": "issuer_financial_statement",
+      "period": "2026Q2",
+      "facts": {
+        "assets": {
+          "amount": 19859767000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "liabilities": {
+          "amount": 18128253000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "equity": {
+          "amount": 1731514000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "netProfit": {
+          "amount": 134246000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "revenue": {
+          "amount": 850241000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "nplRatio": {
+          "amount": 2.5,
+          "unit": "percent",
+          "approx": true
+        },
+        "loanPortfolio": {
+          "amount": 8900000000000,
+          "unit": "MNT",
+          "approx": true
+        }
+      },
+      "checks": {
+        "assets": {
+          "sourceAmount": 19859767000000,
+          "existingAmount": 19859767531212,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "liabilities": {
+          "sourceAmount": 18128253000000,
+          "existingAmount": 18128252912132,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "equity": {
+          "sourceAmount": 1731514000000,
+          "existingAmount": 1731514619079,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "netProfit": {
+          "sourceAmount": 134246000000,
+          "existingAmount": 134245980313,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "revenue": {
+          "sourceAmount": 850241000000,
+          "existingAmount": 850240558025,
+          "relativeDifference": 0.000001,
+          "passes": true
+        }
+      },
+      "note": "Компанийн 2026.06.30-ны аудитлагдаагүй хураангуй тайлан; төгрөгийн үзүүлэлтийг сая ₮-ийн нарийвчлалаар нийтэлсэн.",
+      "matchStatus": "matched"
+    },
+    "XAC": {
+      "sourceUrl": "https://xacbank.mn/news/2026q2-financial-result",
+      "sourceType": "issuer_operating_results",
+      "period": "2026Q2",
+      "facts": {
+        "quarterNetProfit": {
+          "amount": 45800000000,
+          "unit": "MNT",
+          "approx": true
+        },
+        "loanPortfolio": {
+          "amount": 4889000000000,
+          "unit": "MNT",
+          "approx": true
+        },
+        "nplRatio": {
+          "amount": 2.2,
+          "unit": "percent",
+          "approx": false
+        },
+        "annualizedRoe": {
+          "amount": 20,
+          "unit": "percent",
+          "approx": true
+        }
+      },
+      "checks": {},
+      "note": "Эх сурвалжийн 45.8 тэрбум ₮ нь зөвхөн II улирлын ашиг. Excel-ийн 88.2 тэрбум ₮ нь эхний хагас жилийн өссөн дүн тул хооронд нь сольж болохгүй.",
+      "matchStatus": "awaiting_direct_statement"
+    },
+    "SBM": {
+      "sourceUrl": "https://apex.mn/mn/articles/blogs/2026-i",
+      "sourceType": "secondary_analysis",
+      "period": "2026Q2",
+      "facts": {},
+      "checks": {},
+      "note": "Apex тоймоор 2026 H1 ашиг өмнөх оны мөн үеэс ~2 дахин өссөн. Анхдагч нарийвчилсан тоон эх сурвалж одоогоор баталгаажаагүй.",
+      "matchStatus": "awaiting_direct_statement"
+    },
+    "TDB": {
+      "sourceUrl": "https://ir.tdbm.mn/mn/financials",
+      "sourceType": "issuer_financial_statement",
+      "period": "2026Q2",
+      "facts": {
+        "assets": {
+          "amount": 17703343175190,
+          "unit": "MNT",
+          "approx": false
+        },
+        "liabilities": {
+          "amount": 16045453598980,
+          "unit": "MNT",
+          "approx": false
+        },
+        "equity": {
+          "amount": 1657889576220,
+          "unit": "MNT",
+          "approx": false
+        },
+        "netProfit": {
+          "amount": 71237410160,
+          "unit": "MNT",
+          "approx": false
+        },
+        "revenue": {
+          "amount": 802360753130,
+          "unit": "MNT",
+          "approx": false
+        }
+      },
+      "checks": {
+        "assets": {
+          "sourceAmount": 17703343175190,
+          "existingAmount": 17703343175195,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "liabilities": {
+          "sourceAmount": 16045453598980,
+          "existingAmount": 16045453598978,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "equity": {
+          "sourceAmount": 1657889576220,
+          "existingAmount": 1657889576217,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "netProfit": {
+          "sourceAmount": 71237410160,
+          "existingAmount": 71237410156,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "revenue": {
+          "sourceAmount": 802360753130,
+          "existingAmount": 802360753130,
+          "relativeDifference": 0,
+          "passes": true
+        }
+      },
+      "note": "Компанийн 2026.II улирлын MNT’000 нэгжтэй тайлан; төгрөг рүү 1000-аар үржүүлж тулгасан.",
+      "matchStatus": "matched"
+    },
+    "INV": {
+      "sourceUrl": "https://mse.mn/company-reports",
+      "sourceType": "unverified_company_report",
+      "period": "2026Q2",
+      "facts": {},
+      "checks": {},
+      "note": "2026 H1 нарийвчилсан эх сурвалжийг илрүүлэх шаардлагатай. Импортолсон ROE, цэвэр ашгийн харьцаа зөрүүтэй; 2025 FY ба 2026 H1 ашиг бараг ижил байгаа нь нэмэлт шалгалт шаарддаг.",
+      "matchStatus": "needs_review"
+    },
+    "LEND": {
+      "sourceUrl": "https://new.bdsec.mn/lend-msme-bond",
+      "sourceType": "issuer_bond_disclosure",
+      "period": "2026Q2",
+      "facts": {
+        "assets": {
+          "amount": 385900000000,
+          "unit": "MNT",
+          "approx": true
+        },
+        "equity": {
+          "amount": 107900000000,
+          "unit": "MNT",
+          "approx": true
+        },
+        "netProfit": {
+          "amount": 18400000000,
+          "unit": "MNT",
+          "approx": true
+        },
+        "loanPortfolio": {
+          "amount": 351300000000,
+          "unit": "MNT",
+          "approx": true
+        }
+      },
+      "checks": {
+        "assets": {
+          "sourceAmount": 385900000000,
+          "existingAmount": 385854899549,
+          "relativeDifference": 0.000117,
+          "passes": true
+        },
+        "equity": {
+          "sourceAmount": 107900000000,
+          "existingAmount": 107887257981,
+          "relativeDifference": 0.000118,
+          "passes": true
+        },
+        "netProfit": {
+          "sourceAmount": 18400000000,
+          "existingAmount": 18388229275,
+          "relativeDifference": 0.00064,
+          "passes": true
+        }
+      },
+      "note": "Бондын танилцуулгын 2026 H1 бодит гүйцэтгэлд суурилсан тойм; LendMN өөрийн сайт дээр хагас жилийн тайлангийн хуудсыг нийтэлсэн.",
+      "secondarySource": "https://lend.mn/2026h1-report/",
+      "matchStatus": "matched"
+    },
+    "ADB": {
+      "sourceUrl": "https://mse.mn/company-reports",
+      "sourceType": "unverified_company_report",
+      "period": "2026Q2",
+      "facts": {},
+      "checks": {},
+      "note": "2026 H1 анхдагч дэлгэрэнгүй тайланг шууд уншиж тулгаагүй.",
+      "matchStatus": "awaiting_direct_statement"
+    },
+    "SEND": {
+      "sourceUrl": "https://mse.mn/company-reports",
+      "sourceType": "unverified_company_report",
+      "period": "2026Q2",
+      "facts": {},
+      "checks": {},
+      "note": "Импортолсон ROA 21,910.51% нь хэвийн бус; эх сурвалжийн баталгаажуулалт хүртэл харагдахдаа анхааруулгатай байх шаардлагатай.",
+      "matchStatus": "needs_review"
+    }
+  }
+}
