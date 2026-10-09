@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-09T11:52:44+08:00",
+  "scannedAt": "2026-10-09T11:54:58+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -17,7 +17,22 @@
     "XAC": {
       "code": "568",
       "name": "Хас Банк",
-      "reports": []
+      "reports": [
+        {
+          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
+          "text": "1 Хас Банк XAC 2026 оны 3 -р улирлын тайлан 2026-10-09 ",
+          "urls": [],
+          "hasAction": true
+        },
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
+          "text": "1 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+          "urls": [],
+          "hasAction": true
+        }
+      ]
     },
     "SBM": {
       "code": "564",
@@ -57,28 +72,161 @@
       "tabs": [
         {
           "name": "Анхны хуудас",
-          "rows": 0,
+          "rows": 1,
           "matchingIssuerRows": 0,
-          "reportLinks": []
+          "sampleRows": [
+            "№ Компанийн нэр Симбол Тоон код Шийдвэрийн огноо Бүртгэх өдөр Тараах өдөр Нэгж хувьцаанд ногдох ашгийн хэмжээ Нийт ногдол ашиг Тайлбар"
+          ],
+          "controls": [],
+          "reportLinks": [
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "1"
+            }
+          ]
         },
         {
           "name": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "rows": 0,
-          "matchingIssuerRows": 0,
-          "reportLinks": []
+          "rows": 11,
+          "matchingIssuerRows": 1,
+          "sampleRows": [
+            "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
+            "1 Хас Банк XAC 2026 оны 3 -р улирлын тайлан 2026-10-09 ",
+            "2 Түшиг Уул ХК TUS 2026 оны 2 -р улирлын тайлан 2026-09-30 ",
+            "3 Дархан нэхий ХК NEH 2026 оны 2 -р улирлын тайлан 2026-09-28 ",
+            "4 Дорнод худалдаа ХК DES 2026 оны 2 -р улирлын тайлан 2026-09-22 ",
+            "5 Махимпекс ХК MMX 2026 оны 2 -р улирлын тайлан 2026-09-17 ",
+            "6 Эрдэнэт ус, дулаан түгээх сүлжээ ХК EUD 2026 оны 2 -р улирлын тайлан 2026-09-16 ",
+            "7 Их барилга ХК IBA 2026 оны 2 -р улирлын тайлан 2026-09-15 "
+          ],
+          "controls": [],
+          "reportLinks": [
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "Хувьцаат компаниудын тайлан, мэдээлэл\n\nХувьцаат компаниудын тайлан, мэдээлэл"
+            },
+            {
+              "url": "https://mse.mn/report-and-research",
+              "text": "Тайлан, судалгаа\n\nТайлан, судалгаа"
+            },
+            {
+              "url": "https://mse.mn/trade-report",
+              "text": "Арилжааны тайлан\n\nАрилжааны тайлан"
+            },
+            {
+              "url": "https://mse.mn/financial-transparency",
+              "text": "Төсөв, санхүүгийн ил тод байдал\n\nТөсөв, санхүүгийн ил тод байдал"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "1"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "2"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "3"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "323"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "324"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "325"
+            }
+          ]
         },
         {
           "name": "Үйл ажиллагааны тайлан",
-          "rows": 0,
-          "matchingIssuerRows": 0,
-          "reportLinks": []
+          "rows": 11,
+          "matchingIssuerRows": 1,
+          "sampleRows": [
+            "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
+            "1 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+            "2 Түшиг Уул ХК TUS хагас жилийн үйл ажиллагааны тайлан 2026-09-30 ",
+            "3 Бэрх Уул ХК BEU 2025 оны үйл ажиллагааны тайлан 2026-09-29 ",
+            "10 Монголын төмөр зам ХК MTZ 2026 оны эхний хагас жилийн тайлан 2026-09-21 ",
+            "7 Ард Даатгал ХК AIC Үйл ажиллагааны тайлан 2026 оны хагас жил 2026-09-18 ",
+            "4 Атар-Өргөө ХК ATR 2026 оны хагас жилийн үйл ажиллагааны тайлан 2026-09-17 ",
+            "5 Шивээ овоо ХК SHV Компанийн 2026 оны хагас жилийн үйл ажиллагааны тайлан 2026-09-16 "
+          ],
+          "controls": [],
+          "reportLinks": [
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "Хувьцаат компаниудын тайлан, мэдээлэл\n\nХувьцаат компаниудын тайлан, мэдээлэл"
+            },
+            {
+              "url": "https://mse.mn/report-and-research",
+              "text": "Тайлан, судалгаа\n\nТайлан, судалгаа"
+            },
+            {
+              "url": "https://mse.mn/trade-report",
+              "text": "Арилжааны тайлан\n\nАрилжааны тайлан"
+            },
+            {
+              "url": "https://mse.mn/financial-transparency",
+              "text": "Төсөв, санхүүгийн ил тод байдал\n\nТөсөв, санхүүгийн ил тод байдал"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "1"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "2"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "3"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "166"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "167"
+            },
+            {
+              "url": "https://mse.mn/company-reports",
+              "text": "168"
+            }
+          ]
         }
       ],
-      "errors": [
-        "Tab inaccessible: Хувьцаат компаниудын санхүүгийн тайлан",
-        "Tab inaccessible: Үйл ажиллагааны тайлан"
+      "errors": [],
+      "sources": [
+        {
+          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
+          "symbol": "XAC",
+          "matches": [
+            {
+              "text": "1 Хас Банк XAC 2026 оны 3 -р улирлын тайлан 2026-10-09 ",
+              "urls": [],
+              "hasAction": true
+            }
+          ]
+        },
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "symbol": "XAC",
+          "matches": [
+            {
+              "text": "1 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+              "urls": [],
+              "hasAction": true
+            }
+          ]
+        }
       ],
-      "sources": [],
       "httpStatus": 200,
       "pageTitle": "MSE",
       "finalURL": "https://mse.mn/company-reports"
@@ -91,18 +239,192 @@
           "name": "Анхны хуудас",
           "rows": 17,
           "matchingIssuerRows": 0,
+          "sampleRows": [
+            " I улирал II улирал III улирал IV улирал",
+            "",
+            "Тогтмол ирүүлэх мэдээллийн төрөл Жилийн эцсийн санхүүгийн тайлан Хувьцаа эзэмшигчдийн ээлжит хурал хуралдуулах сүүлчийн хугацаа Хагас жилийн санхүүгийн тайлан 3-р улирлын санхүүгийн тайлан",
+            "Ногдол ашиг хувиарлах тухай шийдвэр Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Хагас жилийн үйл ажиллагааны тайлан",
+            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр Аудитын дүгнэлт",
+            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Жилийн үйл ажиллагааны тайлан",
+            "Компанийн засаглалын кодексын хэрэгжилтийн тайлан, үнэлгээ",
+            "Байгаль орчин, нийгэм засаглалын тайлан"
+          ],
+          "controls": [
+            {
+              "tag": "SELECT",
+              "id": "",
+              "name": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "9t2kmsyg",
+                  "text": "Хувьцаат компани"
+                },
+                {
+                  "value": "suf17bdw",
+                  "text": "Бонд"
+                },
+                {
+                  "value": "i51kk8hz",
+                  "text": "ХБҮЦ"
+                }
+              ],
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "name": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "general",
+                  "text": "Ерөнхий мэдээлэл"
+                },
+                {
+                  "value": "financial",
+                  "text": "Санхүү үйл ажиллагааны мэдээлэл"
+                },
+                {
+                  "value": "meeting",
+                  "text": "Хурлын мэдээлэл"
+                },
+                {
+                  "value": "other",
+                  "text": "Бусад мэдээлэл"
+                }
+              ],
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+            }
+          ],
           "reportLinks": []
         },
         {
           "name": "Хувьцаат компаниудын санхүүгийн тайлан",
           "rows": 17,
           "matchingIssuerRows": 0,
+          "sampleRows": [
+            " I улирал II улирал III улирал IV улирал",
+            "",
+            "Тогтмол ирүүлэх мэдээллийн төрөл Жилийн эцсийн санхүүгийн тайлан Хувьцаа эзэмшигчдийн ээлжит хурал хуралдуулах сүүлчийн хугацаа Хагас жилийн санхүүгийн тайлан 3-р улирлын санхүүгийн тайлан",
+            "Ногдол ашиг хувиарлах тухай шийдвэр Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Хагас жилийн үйл ажиллагааны тайлан",
+            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр Аудитын дүгнэлт",
+            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Жилийн үйл ажиллагааны тайлан",
+            "Компанийн засаглалын кодексын хэрэгжилтийн тайлан, үнэлгээ",
+            "Байгаль орчин, нийгэм засаглалын тайлан"
+          ],
+          "controls": [
+            {
+              "tag": "SELECT",
+              "id": "",
+              "name": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "9t2kmsyg",
+                  "text": "Хувьцаат компани"
+                },
+                {
+                  "value": "suf17bdw",
+                  "text": "Бонд"
+                },
+                {
+                  "value": "i51kk8hz",
+                  "text": "ХБҮЦ"
+                }
+              ],
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "name": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "general",
+                  "text": "Ерөнхий мэдээлэл"
+                },
+                {
+                  "value": "financial",
+                  "text": "Санхүү үйл ажиллагааны мэдээлэл"
+                },
+                {
+                  "value": "meeting",
+                  "text": "Хурлын мэдээлэл"
+                },
+                {
+                  "value": "other",
+                  "text": "Бусад мэдээлэл"
+                }
+              ],
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+            }
+          ],
           "reportLinks": []
         },
         {
           "name": "Үйл ажиллагааны тайлан",
           "rows": 17,
           "matchingIssuerRows": 0,
+          "sampleRows": [
+            " I улирал II улирал III улирал IV улирал",
+            "",
+            "Тогтмол ирүүлэх мэдээллийн төрөл Жилийн эцсийн санхүүгийн тайлан Хувьцаа эзэмшигчдийн ээлжит хурал хуралдуулах сүүлчийн хугацаа Хагас жилийн санхүүгийн тайлан 3-р улирлын санхүүгийн тайлан",
+            "Ногдол ашиг хувиарлах тухай шийдвэр Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Хагас жилийн үйл ажиллагааны тайлан",
+            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр Аудитын дүгнэлт",
+            "Хувьцаа эзэмшигчдийн ээлжит хурлаас гарсан шийдвэр, хурлын тэмдэглэл Жилийн үйл ажиллагааны тайлан",
+            "Компанийн засаглалын кодексын хэрэгжилтийн тайлан, үнэлгээ",
+            "Байгаль орчин, нийгэм засаглалын тайлан"
+          ],
+          "controls": [
+            {
+              "tag": "SELECT",
+              "id": "",
+              "name": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "9t2kmsyg",
+                  "text": "Хувьцаат компани"
+                },
+                {
+                  "value": "suf17bdw",
+                  "text": "Бонд"
+                },
+                {
+                  "value": "i51kk8hz",
+                  "text": "ХБҮЦ"
+                }
+              ],
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+            },
+            {
+              "tag": "SELECT",
+              "id": "",
+              "name": "",
+              "placeholder": "",
+              "options": [
+                {
+                  "value": "general",
+                  "text": "Ерөнхий мэдээлэл"
+                },
+                {
+                  "value": "financial",
+                  "text": "Санхүү үйл ажиллагааны мэдээлэл"
+                },
+                {
+                  "value": "meeting",
+                  "text": "Хурлын мэдээлэл"
+                },
+                {
+                  "value": "other",
+                  "text": "Бусад мэдээлэл"
+                }
+              ],
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+            }
+          ],
           "reportLinks": []
         }
       ],
