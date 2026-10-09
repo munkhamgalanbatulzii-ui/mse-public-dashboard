@@ -33,11 +33,25 @@ jobs:
           python -m playwright install chromium --with-deps
       - name: Find financial and activity reports on MSE
         run: python scan_mse_reports.py
-      - name: Save provenance index only
+      - name: Save provenance index only (concurrent-safe)
         run: |
           git config user.name "mse-dashboard-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add financial/data/issuer_report_watch.json
-          git diff --cached --quiet || git commit -m "Scan MSE issuer report availability"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          cp financial/data/issuer_report_watch.json /tmp/mse_issuer_report_scan.json
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/mse_issuer_report_scan.json financial/data/issuer_report_watch.json
+            git add financial/data/issuer_report_watch.json
+            if git diff --cached --quiet; then
+              echo "No new report index changes"
+              exit 0
+            fi
+            git commit -m "Scan MSE issuer report availability"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Concurrent update; retrying safely"
+            sleep 2
+          done
+          exit 1
