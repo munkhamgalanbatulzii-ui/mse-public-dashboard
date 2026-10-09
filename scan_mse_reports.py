@@ -89,8 +89,21 @@ def discover_site(browser, url):
                                  "matchingIssuerRows":sum(1 for r in data["sources"] if r["tab"]==tab),
                                  "sampleRows":[r["text"][:260] for r in all_rows[:8]],
                                  "controls":controls,
-                                 "reportLinks":links[:100]})
+                                 "reportLinks":links[:100],
+                                 "navigation":page.locator("button, nav a, [role=button]").evaluate_all(
+                                      """els=>els.slice(-80).map(el=>({
+                                           text:(el.innerText||el.getAttribute('aria-label')||'').slice(0,60),
+                                           disabled:el.disabled||false,html:el.outerHTML.slice(0,360)
+                                      })).filter(x=>x.text)""")[:50]})
         collect("Анхны хуудас")
+        if "issuers-hub" in url:
+            try:
+                filter_select=page.locator("select").last
+                filter_select.select_option("financial",timeout=5000)
+                page.wait_for_timeout(2400)
+                collect("Шинэ санхүү, үйл ажиллагааны мэдээ")
+            except Exception as err:
+                data["errors"].append(f"Financial disclosure filter: {type(err).__name__}: {str(err)[:120]}")
         for tab in TABS:
             try:
                 nodes=page.get_by_text(tab,exact=True).all()
@@ -144,10 +157,23 @@ def main():
                         })
         finally:
             browser.close()
+    if OUT.exists():
+        try:
+            previous=json.loads(OUT.read_text(encoding="utf-8"))
+            for symbol,record in out["issuers"].items():
+                historic=previous.get("issuers",{}).get(symbol,{}).get("reports",[])
+                current={json.dumps(z,ensure_ascii=False,sort_keys=True) for z in record["reports"]}
+                for row in historic:
+                    key=json.dumps(row,ensure_ascii=False,sort_keys=True)
+                    if key not in current and len(record["reports"])<50:
+                        record["reports"].append(row)
+                        current.add(key)
+        except (OSError,ValueError,TypeError):
+            pass
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"scannedAt":out["scannedAt"],"sites":[{"url":s["url"],"http":s.get("httpStatus"),"tabs":s["tabs"] and [{"name":t["name"],"rows":t["rows"],"matches":t["matchingIssuerRows"]} for t in s["tabs"]],"errors":s["errors"]} for s in out["sites"]],
                       "perIssuer":{s:len(x["reports"]) for s,x in out["issuers"].items()},
-                      "diagnostics":{site["url"]: [{"name":t["name"],"rows":t["sampleRows"],"controls":t["controls"]} for t in site["tabs"]] for site in out["sites"]}},ensure_ascii=False))
+                      "diagnostics":{site["url"]: [{"name":t["name"],"rows":t["sampleRows"],"controls":t["controls"],"navigation":t["navigation"][:15]} for t in site["tabs"]] for site in out["sites"]}},ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
