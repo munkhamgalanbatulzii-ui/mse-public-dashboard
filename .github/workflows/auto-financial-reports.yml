@@ -1,0 +1,61 @@
+name: Auto-update XacBank financial reports
+
+on:
+  schedule:
+    # Check every hour, 24/7. 13 past avoids GitHub Actions top-of-hour congestion.
+    # The publishing date is deliberately NOT assumed in advance.
+    - cron: '13 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'auto_financial_reports.py'
+      - 'tests/test_auto_financial_reports.py'
+      - '.github/workflows/auto-financial-reports.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: xac-validated-statement-update
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout latest source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install lightweight HTML reader
+        run: python -m pip install -r requirements.txt
+      - name: Test reconciliation and anti-downgrade guards
+        run: python -m unittest discover -s tests -p 'test_auto_financial_reports.py' -v
+      - name: Discover issuer's newest XLSX (regardless of publish date)
+        run: python auto_financial_reports.py --discover /tmp/xac_latest_candidate.json
+      - name: Publish only changed and validated financial statements
+        run: |
+          git config user.name "mse-dashboard-bot"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            python auto_financial_reports.py --apply /tmp/xac_latest_candidate.json
+            git add financial/data/quarters.json financial/data/bank_nbfi_audit.json
+            if git diff --cached --quiet; then
+              echo "No newly published/corrected report; financial figures unchanged."
+              exit 0
+            fi
+            git commit -m "Publish verified latest XacBank financial statement"
+            if git push origin HEAD:main; then
+              echo "Verified update published; GitHub Pages deploy starts automatically."
+              exit 0
+            fi
+            echo "Concurrent repository update detected; refreshing and retrying."
+            sleep 2
+          done
+          exit 1
