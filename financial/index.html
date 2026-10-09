@@ -179,7 +179,7 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
   <p class="ratio-foot">P/E нь TTM ашиг эерэг үед; P/B нь эерэг өөрийн хөрөнгөд үндэслэнэ. ROE, ROA-д эхний ба эцсийн балансын дундаж ашиглана. Мэдээлэлгүй эсвэл тайлангийн зөрүүтэй үед дүн зохиохгүй. Хувьцааны тоо, хяналтын бус эзэмшил, ашиг тооцох суурь нь баталгаажуулалт шаарддаг.</p>
 </div>
 <div class="issuer-audit panel" id="issuerAuditPanel">
-  <div class="panel-title"><h2>Банк, ББСБ — 2026 оны эхний хагас жилийн тайлангийн тулгалт</h2><span class="hint" id="issuerAuditDate">Эх сурвалж шалгаж байна…</span></div>
+  <div class="panel-title"><h2>Банк, ББСБ — санхүүгийн тайлангийн тулгалт</h2><span class="hint" id="issuerAuditDate">Эх сурвалж шалгаж байна…</span></div>
   <p class="issuer-audit-note">5 банк, 4 ББСБ-ын тайлангийн үндсэн дүн, зээлийн багц, чанаргүй зээлийн харьцаа. Зөвхөн олдсон тоог харуулна; баримтаар баталгаажуулаагүй тоонд анхааруулга гарна.</p>
   <div id="issuerAuditTable" class="table-wrap"><div class="empty">Тайлангийн тулгалтын мэдээлэл ачаалж байна…</div></div>
   <div class="issuer-audit-note" id="issuerAuditScan">МХБ-ийн үйл ажиллагааны тайланг автоматаар шалгах төлөвийг ачаалж байна…</div>
@@ -214,7 +214,7 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
       <div id="chartLiabilities" class="history-chart"></div>
     </article>
     <article class="panel simple-quarter-card">
-      <div class="simple-quarter-header"><h2>Борлуулалтын орлого</h2><span>₮ · улирал бүр</span></div>
+      <div class="simple-quarter-header"><h2 id="histRevenueTitle">Борлуулалтын орлого</h2><span>₮ · улирал бүр</span></div>
       <div id="chartRevenue" class="history-chart"></div>
     </article>
   </div>
@@ -451,11 +451,14 @@ function drawQuarterBar(el,key,title){
  el.innerHTML=out;
 }
 function renderCharts(){
+ const bankTickers=new Set(['KHAN','GLMT','XAC','SBM','TDB']);
+ const revenueTitle=bankTickers.has(selectedSymbol)?'Хүүгийн орлого':'Борлуулалтын орлого';
+ const rt=$('histRevenueTitle');if(rt)rt.textContent=revenueTitle;
  const configs=[
   ['chartNetProfit','netProfit','Цэвэр ашиг'],
   ['chartEquity','equity','Өөрийн хөрөнгө'],
   ['chartLiabilities','liabilities','Өр төлбөр'],
-  ['chartRevenue','revenue','Борлуулалтын орлого']
+  ['chartRevenue','revenue',revenueTitle]
  ];
  for(const [id,key,title] of configs)drawQuarterBar($(id),key,title);
  const periods=activePeriods().filter(p=>configs.some(([,key])=>real(getValue(key,selectedSymbol,p.year,p.quarter))));
@@ -756,7 +759,7 @@ render();
    }
   }
   const sync=elem('ratioSyncState');
-  if(sync)sync.textContent='Ханшийн сан: '+(snapshotDate()||'Excel')+' · Тайлан: '+(imported.asOf||'эх Excel');
+  if(sync)sync.textContent='Ханшийн сан: '+(snapshotDate()||'Excel')+' · Тайлан: '+(window.MSE_FINANCIAL_AS_OF||imported.asOf||'эх Excel');
   const calcCount=key=>result.filter(r=>finite(r[key])).length;
   const cards=elem('ratioSummaryCards');
   if(cards)cards.innerHTML=[['P/E TTM',calcCount('pe'),'Үнэ шинэчлэгдэхэд'],['P/B',calcCount('pb'),'Үнэ шинэчлэгдэхэд'],['ROE TTM',calcCount('roe'),'Шинэ тайлантай'],['ROA TTM',calcCount('roa'),'Шинэ тайлантай']].map(x=>'<div class="ratio-card"><span>'+x[0]+'</span><b>'+x[1]+' / 26</b><small>'+x[2]+'</small></div>').join('');
@@ -779,7 +782,7 @@ render();
    if(response.ok){
     const doc=await response.json();
     if(doc?.quarters&&typeof doc.quarters==='object'){
-     if(doc.asOf&&doc.asOf>imported.asOf)imported.asOf=doc.asOf;
+     if(doc.asOf)window.MSE_FINANCIAL_AS_OF=doc.asOf;
      quarterly.applyHosted(doc.quarters);
     }
    }
@@ -812,11 +815,12 @@ render();
  function render(){
    if(!audit)return;
    const archive=window.MSEQuarterly?.debug.archive()||{};
-   $('issuerAuditDate').textContent='Эх сурвалжийн тулгалт: '+audit.asOf+' · 2026.II улирал';
-   const h='<table><thead><tr><th>Компани</th><th>Нийт хөрөнгө</th><th>Өөрийн хөрөнгө</th><th>Цэвэр ашиг (H1)</th><th>Зээлийн багц</th><th>NPL (%)</th><th>Тулгалтын төлөв</th><th>Тайлангийн эх сурвалж</th></tr></thead><tbody>';
+   $('issuerAuditDate').textContent='Тулгалтын огноо: '+audit.asOf+' · XAC: 2026.III · Бусад: 2026.II';
+   const h='<table><thead><tr><th>Компани</th><th>Тайлан</th><th>Нийт хөрөнгө</th><th>Өөрийн хөрөнгө</th><th>Цэвэр ашиг (өссөн дүн)</th><th>Зээлийн багц</th><th>NPL (%)</th><th>Тулгалтын төлөв</th><th>Тайлангийн эх сурвалж</th></tr></thead><tbody>';
    const rows=ids.map(sym=>{
-     const record=archive[sym+':2026Q2']||{};
      const entry=audit.issuers?.[sym]||{};
+     const period=entry.period||audit.period||'2026Q2';
+     const record=archive[sym+':'+period]||{};
      const facts=entry.facts||{};
      const status=entry.matchStatus;
      const names={matched:'Үндсэн дүн таарсан',awaiting_direct_statement:'Дэлгэрэнгүй шалгах',needs_review:'Зөрүү шалгах'};
@@ -825,7 +829,7 @@ render();
      const url=entry.sourceUrl||'https://mse.mn/company-reports';
      const isPermitted=/^https:\/\/[a-z0-9.-]+\//i.test(url);
      const source=isPermitted?'<a target="_blank" rel="noopener noreferrer" href="'+esc(url)+'">Эх сурвалж ↗</a>':'—';
-     return '<tr title="'+esc(entry.note||'')+'"><td>'+esc(sym)+' · '+esc(labels[sym])+'</td><td>'+esc(asBillions(record.assets))+'</td><td>'+esc(asBillions(record.equity))+'</td><td>'+esc(asBillions(record.netProfit))+'</td><td>'+esc(asBillions(loan))+'</td><td>'+(Number.isFinite(npl)?esc(format(npl))+'%':'—')+'</td><td class="'+className+'">'+esc(names[status]||'Шалгах')+'</td><td>'+source+'</td></tr>';
+     return '<tr title="'+esc(entry.note||'')+'"><td>'+esc(sym)+' · '+esc(labels[sym])+'</td><td>'+esc(period)+'</td><td>'+esc(asBillions(Number.isFinite(record.assets)?record.assets:facts.assets?.amount))+'</td><td>'+esc(asBillions(Number.isFinite(record.equity)?record.equity:facts.equity?.amount))+'</td><td>'+esc(asBillions(Number.isFinite(record.netProfit)?record.netProfit:facts.netProfit?.amount))+'</td><td>'+esc(asBillions(loan))+'</td><td>'+(Number.isFinite(npl)?esc(format(npl))+'%':'—')+'</td><td class="'+className+'">'+esc(names[status]||'Шалгах')+'</td><td>'+source+'</td></tr>';
    }).join('');
    $('issuerAuditTable').innerHTML=h+rows+'</tbody></table>';
    const note=$('issuerAuditScan');
