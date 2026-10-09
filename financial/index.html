@@ -410,7 +410,7 @@ function save(){try{localStorage.setItem('mseIQuarterly_v2',JSON.stringify(archi
 function coverage(){return Object.values(archive).filter(hasValues)}
 function drawQuarterBar(el,key,title){
  const periods=activePeriods().map(p=>({p,value:getValue(key,selectedSymbol,p.year,p.quarter)}))
-  .filter(x=>real(x.value));
+  .filter(x=>real(x.value)&&x.value!==0);
  if(!periods.length){
   el.innerHTML='<div class="hist-empty"><strong>Тухайн хугацааны тайлангийн мэдээлэл байхгүй.</strong>Мэдээлэлгүй улирлыг графикт оруулахгүй.</div>';
   return;
@@ -461,7 +461,7 @@ function renderCharts(){
   ['chartRevenue','revenue',revenueTitle]
  ];
  for(const [id,key,title] of configs)drawQuarterBar($(id),key,title);
- const periods=activePeriods().filter(p=>configs.some(([,key])=>real(getValue(key,selectedSymbol,p.year,p.quarter))));
+ const periods=activePeriods().filter(p=>configs.some(([,key])=>{const v=getValue(key,selectedSymbol,p.year,p.quarter);return real(v)&&v!==0}));
  const latest=periods[periods.length-1];
  $('histMessage').textContent=(selectedSymbol+' · '+periods.length+' тайлагнасан улирал')+
   (latest?' · Сүүлчийн боломжит үе '+latest.year+'.Q'+latest.quarter:' · Тайлан олдсонгүй')+
