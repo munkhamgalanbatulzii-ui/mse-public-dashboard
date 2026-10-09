@@ -98,12 +98,16 @@ def discover_site(browser, url):
         collect("Анхны хуудас")
         if "issuers-hub" in url:
             try:
-                filter_select=page.locator("select").last
-                filter_select.select_option("financial",timeout=5000)
-                page.wait_for_timeout(2400)
+                page.get_by_role("button",name="Санхүү үйл ажиллагааны мэдээлэл",exact=True).first.click(timeout=7000)
+                page.wait_for_timeout(3000)
                 collect("Шинэ санхүү, үйл ажиллагааны мэдээ")
             except Exception as err:
                 data["errors"].append(f"Financial disclosure filter: {type(err).__name__}: {str(err)[:120]}")
+            data["pageTitle"]=page.title()
+            data["finalURL"]=page.url
+            return data
+        if page.get_by_text("Үйл ажиллагааны тайлан",exact=True).count()==0:
+            page.wait_for_timeout(4500)
         for tab in TABS:
             try:
                 nodes=page.get_by_text(tab,exact=True).all()
