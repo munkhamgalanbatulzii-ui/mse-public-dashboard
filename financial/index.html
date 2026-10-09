@@ -837,7 +837,7 @@ render();
    const sites=watch?.sites||[];
    const reachable=sites.filter(s=>s.visited&&s.httpStatus===200).length;
    const scanDate=watch?.scannedAt||'Одоогоор ажиллуулаагүй';
-   note.textContent='МХБ-ийн тайлан илрүүлэгчийн сүүлийн шалгалт: '+scanDate+' · Сайтын холболт: '+(sites.length?reachable+'/'+sites.length:'хүлээгдэж байна')+' · PDF/тайлангаас шалгаагүй санхүүгийн тоог автоматаар орлуулахгүй.';
+   note.textContent='МХБ-ийн илрүүлсэн тайланг хамгийн сүүлд хадгалсан: '+scanDate+' · Сайтын холболт: '+(sites.length?reachable+'/'+sites.length:'хүлээгдэж байна')+' · PDF/тайлангаас шалгаагүй санхүүгийн тоог автоматаар орлуулахгүй.';
  }
  async function load(){
   try{
