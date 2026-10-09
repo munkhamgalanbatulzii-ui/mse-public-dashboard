@@ -1,0 +1,468 @@
+{
+  "fetchedAt": "2026-10-09T12:03:36.100491+08:00",
+  "pages": [
+    {
+      "label": "initial",
+      "url": "https://xacbank.mn/en/news/2026q3-financialresult",
+      "title": "XacBank generated net profit after tax of MNT 50.2 billion in the third quarter of 2026",
+      "body": "About us\nInvestor relations\nDigital bank\nClose\nRetail\nCurrent account\nSavings\nLoans\nCard\nRemittance\nInsurance\nXacLeasing\nCorporate\nEco bank\nDigital bank\nXacBank generated net profit after tax of MNT 50.2 billion in the third quarter of 2026\nAbout bank,  Investor relations\n2026.10.08\n\nXacBank generated net profit after tax of MNT 50.2 billion in Q3 2026, with annualized earnings per share (EPS) of MNT 175.8 and annualized ROE of 20.5%.\n\n\n\n\nFinancial highlights:\n\nThe gross loan and financial lease portfolio contracted -0.8% QoQ to MNT 4,850 billion. By segment, retail loans decreased by MNT 32 billion or -1.2% QoQ, and corporate loans fell by MNT 50 billion or -5.3% QoQ, whereas the MSME segment grew by MNT 20 billion or +6.5% QoQ, and the finance lease portfolio increased by MNT 22 billion or +2.5% QoQ.\nThe non-performing loan (NPL) ratio remained unchanged QoQ at 2.2% of the total loan portfolio.\nTotal current and deposit balances increased +28.4% QoQ to MNT 5,168 billion, supported by a +77.6% QoQ growth in current account balances (to MNT 1,916 billion) and a +10.4% QoQ growth in deposit balances (to MNT 3,251 billion).\nThe Board recommended to distribute a dividend of MNT 18.0 per share to shareholders from the net profit of the first half of 2026, which will be disbursed upon approval by the Extraordinary General Meeting of Shareholders.\nAs of Q3 2026, XacBank fully satisfied all regulatory prudential ratios set by the Bank of Mongolia, with the Tier 1 Capital adequacy ratio standing at 18.9% (minimum threshold: 12.5%) and the liquidity ratio at 43.3% (minimum threshold: 25.0%).\n\n \n\n\n\n\n \n\nThe financial statements of XacBank JSC for Q3 2026 are available via the links below.\n\nStatement of Financial Position: click HERE.\n\nStatement of Profit or Loss: click HERE.\n\nFinancial and operational result: click HERE.\n\nSHARE NEWS\n\nAbout Bank\n\nAbout us\n\nInvestor relations\n\nNews\n\nHuman resource\n\nCompliance\n\nProducts\n\nSavings\n\nCards\n\nLoans\n\nDigital bank\n\nEco bank\n\nHelp\n\nRenewing customer information\n\nHelp center\n\nBranches & ATMs\n\nJobs\n\nContact us\n\nPhone\n\n1800-1888\n\n, \n\n7577-1888\n\nEmail\n\ninfo@xacbank.mn\n\nSocial medias\n\n© 2001-2026. XacBank\nCyber security\nProcurement",
+      "rows": [],
+      "selects": [
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Digital bank",
+          "html": "<button type=\"button\" role=\"menuitem\" id=\"radix-_R_dkpd9fivbH1_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\" data-slot=\"menubar-trigger\" class=\"focus:text-accent-foreground rounded-sm outline-hidden select-none flex items-center gap-1 text-sm font-bold custom-transition border-none !bg-transparent p-0 h-auto font-inherit data-[st"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" aria-label=\"Search\" class=\"flex items-center justify-center w-10 h-10 rounded-2xl cursor-pointer custom-transition bg-background-secondary text-black hover:bg-background-secondary/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lin"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_3kpd9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 items-center justify-between border px-3 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"submit\" class=\"cursor-pointer\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search shrink-0 text-foreground-secondary\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"></path><circle"
+        },
+        {
+          "text": "Close",
+          "html": "<button type=\"button\" class=\"flex items-center gap-2 shrink-0 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer py-2\"><span>Close</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" "
+        },
+        {
+          "text": "Menu",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-vi"
+        },
+        {
+          "text": "",
+          "html": "<button aria-label=\"facebook\" style=\"background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer;outline:none;background:white;border-radius:10px;width:36px;height:36px;display:flex;justify-content:center;align-items:center\"><svg viewBox=\"0 0 64 64\" width=\"32\" height=\"32\"><rect width=\"64\" height=\"64\" rx=\"0\" ry=\"0\" f"
+        },
+        {
+          "text": "",
+          "html": "<button aria-label=\"twitter\" style=\"background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer;outline:none;background:white;border-radius:10px;width:36px;height:36px;display:flex;justify-content:center;align-items:center\"><svg viewBox=\"0 0 64 64\" width=\"32\" height=\"32\"><rect width=\"64\" height=\"64\" rx=\"0\" ry=\"0\" fi"
+        }
+      ],
+      "links": [
+        {
+          "text": "HERE",
+          "href": "https://xacbank.mn/en/statement-of-financial-position"
+        },
+        {
+          "text": "HERE",
+          "href": "https://xacbank.mn/en/financial-operational-results"
+        }
+      ]
+    },
+    {
+      "label": "initial",
+      "url": "https://xacbank.mn/en/statement-of-financial-position",
+      "title": "Statement of financial position",
+      "body": "About us\nInvestor relations\nDigital bank\nClose\nRetail\nCurrent account\nSavings\nLoans\nCard\nRemittance\nInsurance\nXacLeasing\nCorporate\nEco bank\nDigital bank\nOverview\nEvents\nReports\nNews\nGovernance\nShareholders meeting\nE-mail alerts\nContacts\nFAQ\nStatement of financial position\nFinancial highlights\nOperational results\nQuarterly reports\nAudited statements\nAnnual reports\nOthers\nStatement of financial position\nStatement of comprehensive income\nPrudential ratios\nThe loans and other equivalent assets provided to the related parties\nStatement of financial position\n4th Quarter\n\nMS Excel download\n\nAbout Bank\n\nAbout us\n\nInvestor relations\n\nNews\n\nHuman resource\n\nCompliance\n\nProducts\n\nSavings\n\nCards\n\nLoans\n\nDigital bank\n\nEco bank\n\nHelp\n\nRenewing customer information\n\nHelp center\n\nBranches & ATMs\n\nJobs\n\nContact us\n\nPhone\n\n1800-1888\n\n, \n\n7577-1888\n\nEmail\n\ninfo@xacbank.mn\n\nSocial medias\n\n© 2001-2026. XacBank\nCyber security\nProcurement",
+      "rows": [],
+      "selects": [
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        },
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Digital bank",
+          "html": "<button type=\"button\" role=\"menuitem\" id=\"radix-_R_dkpd9fivbH1_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\" data-slot=\"menubar-trigger\" class=\"focus:text-accent-foreground rounded-sm outline-hidden select-none flex items-center gap-1 text-sm font-bold custom-transition border-none !bg-transparent p-0 h-auto font-inherit data-[st"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" aria-label=\"Search\" class=\"flex items-center justify-center w-10 h-10 rounded-2xl cursor-pointer custom-transition bg-background-secondary text-black hover:bg-background-secondary/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lin"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_3kpd9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 items-center justify-between border px-3 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"submit\" class=\"cursor-pointer\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search shrink-0 text-foreground-secondary\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"></path><circle"
+        },
+        {
+          "text": "Close",
+          "html": "<button type=\"button\" class=\"flex items-center gap-2 shrink-0 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer py-2\"><span>Close</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" "
+        },
+        {
+          "text": "Menu",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-vi"
+        },
+        {
+          "text": "",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        },
+        {
+          "text": "4th Quarter",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_laqinpfh9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 w-full items-center justify-between py-2 text-inherit ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor"
+        },
+        {
+          "text": "MS Excel download",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        }
+      ],
+      "links": [
+        {
+          "text": "Reports",
+          "href": "https://xacbank.mn/en/financial-highlights"
+        },
+        {
+          "text": "Financial highlights",
+          "href": "https://xacbank.mn/en/financial-highlights"
+        },
+        {
+          "text": "Operational results",
+          "href": "https://xacbank.mn/en/financial-operational-results"
+        },
+        {
+          "text": "Quarterly reports",
+          "href": "https://xacbank.mn/en/statement-of-financial-position"
+        },
+        {
+          "text": "Audited statements",
+          "href": "https://xacbank.mn/en/audited-report"
+        },
+        {
+          "text": "Annual reports",
+          "href": "https://xacbank.mn/en/annual-report"
+        },
+        {
+          "text": "Statement of financial position",
+          "href": "https://xacbank.mn/en/statement-of-financial-position"
+        },
+        {
+          "text": "MS Excel download",
+          "href": "https://xacbank.mn/api/media/file/XacBank%20JSC%20Condensed%20Financial%20statement%20Q3%202026.xlsx"
+        }
+      ]
+    },
+    {
+      "label": "initial",
+      "url": "https://xacbank.mn/en/statement-of-comprehensive-income",
+      "title": "Statement of comprehensive income",
+      "body": "About us\nInvestor relations\nDigital bank\nClose\nRetail\nCurrent account\nSavings\nLoans\nCard\nRemittance\nInsurance\nXacLeasing\nCorporate\nEco bank\nDigital bank\nOverview\nEvents\nReports\nNews\nGovernance\nShareholders meeting\nE-mail alerts\nContacts\nFAQ\nStatement of comprehensive income\nFinancial highlights\nOperational results\nQuarterly reports\nAudited statements\nAnnual reports\nOthers\nStatement of financial position\nStatement of comprehensive income\nPrudential ratios\nThe loans and other equivalent assets provided to the related parties\nStatement of comprehensive income\n4th Quarter\n\nDownload as .xls\n\nAbout Bank\n\nAbout us\n\nInvestor relations\n\nNews\n\nHuman resource\n\nCompliance\n\nProducts\n\nSavings\n\nCards\n\nLoans\n\nDigital bank\n\nEco bank\n\nHelp\n\nRenewing customer information\n\nHelp center\n\nBranches & ATMs\n\nJobs\n\nContact us\n\nPhone\n\n1800-1888\n\n, \n\n7577-1888\n\nEmail\n\ninfo@xacbank.mn\n\nSocial medias\n\n© 2001-2026. XacBank\nCyber security\nProcurement",
+      "rows": [],
+      "selects": [
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        },
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Digital bank",
+          "html": "<button type=\"button\" role=\"menuitem\" id=\"radix-_R_dkpd9fivbH1_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\" data-slot=\"menubar-trigger\" class=\"focus:text-accent-foreground rounded-sm outline-hidden select-none flex items-center gap-1 text-sm font-bold custom-transition border-none !bg-transparent p-0 h-auto font-inherit data-[st"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" aria-label=\"Search\" class=\"flex items-center justify-center w-10 h-10 rounded-2xl cursor-pointer custom-transition bg-background-secondary text-black hover:bg-background-secondary/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lin"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_3kpd9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 items-center justify-between border px-3 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"submit\" class=\"cursor-pointer\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search shrink-0 text-foreground-secondary\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"></path><circle"
+        },
+        {
+          "text": "Close",
+          "html": "<button type=\"button\" class=\"flex items-center gap-2 shrink-0 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer py-2\"><span>Close</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" "
+        },
+        {
+          "text": "Menu",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-vi"
+        },
+        {
+          "text": "",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        },
+        {
+          "text": "4th Quarter",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_laqinpfh9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 w-full items-center justify-between py-2 text-inherit ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor"
+        },
+        {
+          "text": "Download as .xls",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        }
+      ],
+      "links": [
+        {
+          "text": "Reports",
+          "href": "https://xacbank.mn/en/financial-highlights"
+        },
+        {
+          "text": "Financial highlights",
+          "href": "https://xacbank.mn/en/financial-highlights"
+        },
+        {
+          "text": "Operational results",
+          "href": "https://xacbank.mn/en/financial-operational-results"
+        },
+        {
+          "text": "Quarterly reports",
+          "href": "https://xacbank.mn/en/statement-of-financial-position"
+        },
+        {
+          "text": "Audited statements",
+          "href": "https://xacbank.mn/en/audited-report"
+        },
+        {
+          "text": "Annual reports",
+          "href": "https://xacbank.mn/en/annual-report"
+        },
+        {
+          "text": "Statement of financial position",
+          "href": "https://xacbank.mn/en/statement-of-financial-position"
+        },
+        {
+          "text": "Download as .xls",
+          "href": "https://xacbank.mn/api/media/file/XacBank%20JSC%20Condensed%20Financial%20statement%20Q3%202026-1.xlsx"
+        }
+      ]
+    },
+    {
+      "label": "initial",
+      "url": "https://xacbank.mn/en/financial-operational-results",
+      "title": "Financial and Operational results",
+      "body": "About us\nInvestor relations\nDigital bank\nClose\nRetail\nCurrent account\nSavings\nLoans\nCard\nRemittance\nInsurance\nXacLeasing\nCorporate\nEco bank\nDigital bank\nOverview\nEvents\nReports\nNews\nGovernance\nShareholders meeting\nE-mail alerts\nContacts\nFAQ\n\nFinancial and Operational results\n\nFinancial highlights\nOperational results\nQuarterly reports\nAudited statements\nAnnual reports\nOthers\nAll\n\nAbout Bank\n\nAbout us\n\nInvestor relations\n\nNews\n\nHuman resource\n\nCompliance\n\nProducts\n\nSavings\n\nCards\n\nLoans\n\nDigital bank\n\nEco bank\n\nHelp\n\nRenewing customer information\n\nHelp center\n\nBranches & ATMs\n\nJobs\n\nContact us\n\nPhone\n\n1800-1888\n\n, \n\n7577-1888\n\nEmail\n\ninfo@xacbank.mn\n\nSocial medias\n\n© 2001-2026. XacBank\nCyber security\nProcurement",
+      "rows": [],
+      "selects": [
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        },
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"><option value=\"\"></option></select>",
+          "value": "",
+          "options": [
+            {
+              "value": "",
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Digital bank",
+          "html": "<button type=\"button\" role=\"menuitem\" id=\"radix-_R_dkpd9fivbH1_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\" data-slot=\"menubar-trigger\" class=\"focus:text-accent-foreground rounded-sm outline-hidden select-none flex items-center gap-1 text-sm font-bold custom-transition border-none !bg-transparent p-0 h-auto font-inherit data-[st"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" aria-label=\"Search\" class=\"flex items-center justify-center w-10 h-10 rounded-2xl cursor-pointer custom-transition bg-background-secondary text-black hover:bg-background-secondary/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lin"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_3kpd9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 items-center justify-between border px-3 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"submit\" class=\"cursor-pointer\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search shrink-0 text-foreground-secondary\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"></path><circle"
+        },
+        {
+          "text": "Close",
+          "html": "<button type=\"button\" class=\"flex items-center gap-2 shrink-0 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer py-2\"><span>Close</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" "
+        },
+        {
+          "text": "Menu",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-vi"
+        },
+        {
+          "text": "",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        },
+        {
+          "text": "All",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_9linpfh9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" data-placeholder=\"\" class=\"flex h-10 w-full items-center justify-between py-2 text-inherit ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offse"
+        }
+      ],
+      "links": [
+        {
+          "text": "Reports",
+          "href": "https://xacbank.mn/en/financial-highlights"
+        },
+        {
+          "text": "Financial highlights",
+          "href": "https://xacbank.mn/en/financial-highlights"
+        },
+        {
+          "text": "Operational results",
+          "href": "https://xacbank.mn/en/financial-operational-results"
+        },
+        {
+          "text": "Quarterly reports",
+          "href": "https://xacbank.mn/en/statement-of-financial-position"
+        },
+        {
+          "text": "Audited statements",
+          "href": "https://xacbank.mn/en/audited-report"
+        },
+        {
+          "text": "Annual reports",
+          "href": "https://xacbank.mn/en/annual-report"
+        }
+      ]
+    },
+    {
+      "label": "initial",
+      "url": "https://xacbank.mn/investors",
+      "title": "Investors",
+      "body": "Банкны тухай\nХөрөнгө оруулагчид\nДижитал банк\nХаах\nИргэд\nДанс\nХадгаламж\nЗээл\nКарт\nГуйвуулга\nДаатгал\nХасЛизинг\nБайгууллага\nЭко банк\nДижитал банк\nТойм\nХуанли\nТайлан\nМэдээ\nЗасаглал\nХувьцаа эзэмшигчдийн хурал\nИ-мэйл мэдэгдэл\nХолбоо барих\nFAQ\n\nХөрөнгө оруулагчид\n\nСүүлийн үеийн мэдээ\n\n2026.10.08 | 18:30\n\nХасБанкны 2026 оны III улирлын санхүүгийн тайлан\n\n2026.09.09 | 09:00\n\nХасБанк ХК-ийн хувьцаа эзэмшигчдийн 2026 оны ээлжит бус хурлын зарлал\n\n2026.08.25 | 09:30\n\nХасБанк ХК 2026 оны эхний хагас жилийн цэвэр ашгаасаа ногдол ашиг хуваарилна\nБүгдийг харах\n\nЭвентүүд\n\nОдоо болж буй эвент\n\n2026.09.17 | 09:00\n\nХувьцаа эзэмшигчдийн 2026 оны ээлжит хурал\n\nУдахгүй болох эвент\n\nОдоогоор эвент зарлагдаагүй байна.\n\nБүгдийг харах\n\nБанкны тухай\n\nБидний тухай\n\nХөрөнгө оруулагчид\n\nМэдээ, мэдээлэл\n\nХүний нөөц\n\nКомплаенс\n\nБүтээгдэхүүн\n\nХадгаламж\n\nТөлбөрийн карт\n\nЗээл\n\nДижитал банк\n\nЭко банк\n\nТусламж\n\nМэдээлэл шинэчлэх\n\nТусламжийн төв\n\nАТМ, Салбарууд\n\nНээлттэй ажлын байр\n\nХолбоо барих\n\nУтас\n\n1800-1888\n\n, \n\n7577-1888\n\nИ-мэйл\n\ninfo@xacbank.mn\n\nСошиал хаягууд\n\n© 2001-2026. XacBank\nМэдээллийн aюулгүй байдал\nТендер, сонгон шалгаруулалт",
+      "rows": [],
+      "selects": [
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Дижитал банк",
+          "html": "<button type=\"button\" role=\"menuitem\" id=\"radix-_R_dkpd9fivbH1_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\" data-slot=\"menubar-trigger\" class=\"focus:text-accent-foreground rounded-sm outline-hidden select-none flex items-center gap-1 text-sm font-bold custom-transition border-none !bg-transparent p-0 h-auto font-inherit data-[st"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" aria-label=\"Search\" class=\"flex items-center justify-center w-10 h-10 rounded-2xl cursor-pointer custom-transition bg-background-secondary text-black hover:bg-background-secondary/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lin"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_3kpd9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 items-center justify-between border px-3 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"submit\" class=\"cursor-pointer\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search shrink-0 text-foreground-secondary\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"></path><circle"
+        },
+        {
+          "text": "Хаах",
+          "html": "<button type=\"button\" class=\"flex items-center gap-2 shrink-0 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer py-2\"><span>Хаах</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" c"
+        },
+        {
+          "text": "Цэс",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-vi"
+        },
+        {
+          "text": "",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        },
+        {
+          "text": "Бүгдийг харах",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        },
+        {
+          "text": "Бүгдийг харах",
+          "html": "<button type=\"button\" class=\"h-6 flex items-center gap-1 border-b font-bold cursor-pointer text-white border-white text-sm\">Бүгдийг харах<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.25 12.0039C4.25 11.5897 4.58579 11.2539 5 11.2539H19C19.4142 11.25"
+        }
+      ],
+      "links": [
+        {
+          "text": "Тайлан",
+          "href": "https://xacbank.mn/mn/financial-highlights"
+        },
+        {
+          "text": "2026.10.08 | 18:30\n\nХасБанкны 2026 оны III улирлын санхүүгийн тайлан",
+          "href": "https://xacbank.mn/mn/news/2026q3-financial-results"
+        }
+      ]
+    },
+    {
+      "label": "investor loaded",
+      "url": "https://xacbank.mn/investors",
+      "title": "Investors",
+      "body": "Банкны тухай\nХөрөнгө оруулагчид\nДижитал банк\nХаах\nИргэд\nДанс\nХадгаламж\nЗээл\nКарт\nГуйвуулга\nДаатгал\nХасЛизинг\nБайгууллага\nЭко банк\nДижитал банк\nТойм\nХуанли\nТайлан\nМэдээ\nЗасаглал\nХувьцаа эзэмшигчдийн хурал\nИ-мэйл мэдэгдэл\nХолбоо барих\nFAQ\n\nХөрөнгө оруулагчид\n\nСүүлийн үеийн мэдээ\n\n2026.10.08 | 18:30\n\nХасБанкны 2026 оны III улирлын санхүүгийн тайлан\n\n2026.09.09 | 09:00\n\nХасБанк ХК-ийн хувьцаа эзэмшигчдийн 2026 оны ээлжит бус хурлын зарлал\n\n2026.08.25 | 09:30\n\nХасБанк ХК 2026 оны эхний хагас жилийн цэвэр ашгаасаа ногдол ашиг хуваарилна\nБүгдийг харах\n\nЭвентүүд\n\nОдоо болж буй эвент\n\n2026.09.17 | 09:00\n\nХувьцаа эзэмшигчдийн 2026 оны ээлжит хурал\n\nУдахгүй болох эвент\n\nОдоогоор эвент зарлагдаагүй байна.\n\nБүгдийг харах\n\nБанкны тухай\n\nБидний тухай\n\nХөрөнгө оруулагчид\n\nМэдээ, мэдээлэл\n\nХүний нөөц\n\nКомплаенс\n\nБүтээгдэхүүн\n\nХадгаламж\n\nТөлбөрийн карт\n\nЗээл\n\nДижитал банк\n\nЭко банк\n\nТусламж\n\nМэдээлэл шинэчлэх\n\nТусламжийн төв\n\nАТМ, Салбарууд\n\nНээлттэй ажлын байр\n\nХолбоо барих\n\nУтас\n\n1800-1888\n\n, \n\n7577-1888\n\nИ-мэйл\n\ninfo@xacbank.mn\n\nСошиал хаягууд\n\n© 2001-2026. XacBank\nМэдээллийн aюулгүй байдал\nТендер, сонгон шалгаруулалт",
+      "rows": [],
+      "selects": [
+        {
+          "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>",
+          "value": "",
+          "options": []
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Дижитал банк",
+          "html": "<button type=\"button\" role=\"menuitem\" id=\"radix-_R_dkpd9fivbH1_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\" data-slot=\"menubar-trigger\" class=\"focus:text-accent-foreground rounded-sm outline-hidden select-none flex items-center gap-1 text-sm font-bold custom-transition border-none !bg-transparent p-0 h-auto font-inherit data-[st"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" aria-label=\"Search\" class=\"flex items-center justify-center w-10 h-10 rounded-2xl cursor-pointer custom-transition bg-background-secondary text-black hover:bg-background-secondary/80\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lin"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-_R_3kpd9fivb_\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" class=\"flex h-10 items-center justify-between border px-3 py-2 ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed"
+        },
+        {
+          "text": "",
+          "html": "<button type=\"submit\" class=\"cursor-pointer\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-search shrink-0 text-foreground-secondary\" aria-hidden=\"true\"><path d=\"m21 21-4.34-4.34\"></path><circle"
+        },
+        {
+          "text": "Хаах",
+          "html": "<button type=\"button\" class=\"flex items-center gap-2 shrink-0 text-sm font-medium text-foreground-secondary hover:text-foreground cursor-pointer py-2\"><span>Хаах</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" c"
+        },
+        {
+          "text": "Цэс",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-vi"
+        },
+        {
+          "text": "",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        },
+        {
+          "text": "Бүгдийг харах",
+          "html": "<button class=\"cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium custom-transition disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-6 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:r"
+        },
+        {
+          "text": "Бүгдийг харах",
+          "html": "<button type=\"button\" class=\"h-6 flex items-center gap-1 border-b font-bold cursor-pointer text-white border-white text-sm\">Бүгдийг харах<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.25 12.0039C4.25 11.5897 4.58579 11.2539 5 11.2539H19C19.4142 11.25"
+        }
+      ],
+      "links": [
+        {
+          "text": "Тайлан",
+          "href": "https://xacbank.mn/mn/financial-highlights"
+        },
+        {
+          "text": "2026.10.08 | 18:30\n\nХасБанкны 2026 оны III улирлын санхүүгийн тайлан",
+          "href": "https://xacbank.mn/mn/news/2026q3-financial-results"
+        }
+      ]
+    },
+    {
+      "label": "initial",
+      "url": "https://mse.mn/company-reports",
+      "title": "MSE",
+      "body": "",
+      "rows": [],
+      "selects": [],
+      "buttons": [],
+      "links": []
+    }
+  ],
+  "errors": [
+    "Хувьцаат компаниудын санхүүгийн тайлан Locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for get_by_text(\"Хувьцаат компаниудын санхүүгийн тайлан\", exact=True).first\n",
+    "Үйл ажиллагааны тайлан Locator.click: Timeout 4500ms exceeded.\nCall log:\n  - waiting for get_by_text(\"Үйл ажиллагааны тайлан\", exact=True).first\n"
+  ],
+  "source": "XacBank and MSE public pages"
+}
