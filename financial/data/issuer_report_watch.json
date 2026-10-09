@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-09T11:57:20+08:00",
+  "scannedAt": "2026-10-10T00:41:41+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -72,18 +72,11 @@
       "tabs": [
         {
           "name": "Анхны хуудас",
-          "rows": 1,
+          "rows": 0,
           "matchingIssuerRows": 0,
-          "sampleRows": [
-            "№ Компанийн нэр Симбол Тоон код Шийдвэрийн огноо Бүртгэх өдөр Тараах өдөр Нэгж хувьцаанд ногдох ашгийн хэмжээ Нийт ногдол ашиг Тайлбар"
-          ],
+          "sampleRows": [],
           "controls": [],
-          "reportLinks": [
-            {
-              "url": "https://mse.mn/company-reports",
-              "text": "1"
-            }
-          ],
+          "reportLinks": [],
           "navigation": [
             {
               "text": "Шинэ хувилбартай танилцах",
@@ -104,31 +97,6 @@
               "text": "ENG",
               "disabled": false,
               "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary disable"
-            },
-            {
-              "text": "Бүгд",
-              "disabled": false,
-              "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-:r5:\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" data-placeholder=\"\" class=\"flex items-center justify-between whitespace-nowrap rounded-md border border-border-primary shadow-xs text-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring disabled:c"
-            },
-            {
-              "text": "Бүгд",
-              "disabled": false,
-              "html": "<button type=\"button\" role=\"combobox\" aria-controls=\"radix-:r6:\" aria-expanded=\"false\" aria-autocomplete=\"none\" dir=\"ltr\" data-state=\"closed\" data-placeholder=\"\" class=\"flex items-center justify-between whitespace-nowrap rounded-md border border-border-primary shadow-xs text-sm ring-offset-background focus:outline-none focus:ring-1 focus:ring-ring disabled:c"
-            },
-            {
-              "text": "Өмнөх",
-              "disabled": false,
-              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary d"
-            },
-            {
-              "text": "1",
-              "disabled": false,
-              "html": "<a aria-current=\"page\" class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 rounded-md p-xl size-[40px] text-sm leading-5 font-medium text-text-primary hover:bg-gray-50 bg-gray-50\" href=\"#\">1</a>"
-            },
-            {
-              "text": "Дараах",
-              "disabled": false,
-              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary d"
             }
           ]
         },
@@ -213,7 +181,7 @@
             {
               "text": "Үнэт цаас",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6a:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6a:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5o:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5o:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Хувьцаат компани\n\nХувьцаат компани",
@@ -283,7 +251,7 @@
             {
               "text": "Гишүүн брокер",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6b:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6b:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5p:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5p:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Гишүүн брокерийн мэдээлэл\n\nГишүүн брокерийн мэдээлэл",
@@ -313,7 +281,7 @@
             {
               "text": "Үнэт цаасны арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6c:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6c:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5q:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5q:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Өнөөдрийн арилжаа\n\nӨнөөдрийн арилжаа",
@@ -353,7 +321,7 @@
             {
               "text": "УУБ-ийн арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6d:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6d:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5r:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5r:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Бүтээгдэхүүн\n\nБүтээгдэхүүн",
@@ -403,7 +371,7 @@
             {
               "text": "Ил тод байдал",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6e:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6e:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5s:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5s:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Авлигын эсрэг\n\nАвлигын эсрэг",
@@ -523,7 +491,7 @@
             {
               "text": "Үнэт цаас",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6a:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6a:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5o:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5o:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Хувьцаат компани\n\nХувьцаат компани",
@@ -593,7 +561,7 @@
             {
               "text": "Гишүүн брокер",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6b:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6b:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5p:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5p:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Гишүүн брокерийн мэдээлэл\n\nГишүүн брокерийн мэдээлэл",
@@ -623,7 +591,7 @@
             {
               "text": "Үнэт цаасны арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6c:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6c:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5q:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5q:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Өнөөдрийн арилжаа\n\nӨнөөдрийн арилжаа",
@@ -663,7 +631,7 @@
             {
               "text": "УУБ-ийн арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6d:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6d:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5r:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5r:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Бүтээгдэхүүн\n\nБүтээгдэхүүн",
@@ -713,7 +681,7 @@
             {
               "text": "Ил тод байдал",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r6e:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r6e:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:r5s:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5s:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Авлигын эсрэг\n\nАвлигын эсрэг",
@@ -951,7 +919,7 @@
                   "text": "ХБҮЦ"
                 }
               ],
-              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
             },
             {
               "tag": "SELECT",
@@ -976,7 +944,7 @@
                   "text": "Бусад мэдээлэл"
                 }
               ],
-              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
             }
           ],
           "reportLinks": [
@@ -1139,7 +1107,7 @@
             {
               "text": "Бүртгүүлэх",
               "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-brand-500 bg-brand-600 px-4 py-2.5 text-[14px] font-semibold leading-5 text-white shadow-xs transition-colors hover:bg-brand-500 sm:flex-none\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_0_\" data-state=\"closed\">Бүртгүүлэх <svg xmlns=\""
+              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-brand-500 bg-brand-600 px-4 py-2.5 text-[14px] font-semibold leading-5 text-white shadow-xs transition-colors hover:bg-brand-500 sm:flex-none\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_3_\" data-state=\"closed\">Бүртгүүлэх <svg xmlns=\""
             },
             {
               "text": "10-р сар\n06\nСургалт\nҮнэт цаасны зах зээлийн анхан шатны мэдл",
