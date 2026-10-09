@@ -1,0 +1,36 @@
+name: Extract XacBank Q3 financial statements
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'extract_xac_q3_statements.py'
+      - '.github/workflows/xac-statements.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python extract_xac_q3_statements.py
+      - name: Save extracted source values
+        run: |
+          git config user.name "mse-dashboard-bot"
+          git config user.email "actions@users.noreply.github.com"
+          cp financial/data/xac_2026q3_xlsx_extract.json /tmp/xac_q3_extract.json
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/xac_q3_extract.json financial/data/xac_2026q3_xlsx_extract.json
+            git add financial/data/xac_2026q3_xlsx_extract.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Read official XacBank Q3 2026 XLSX disclosures"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
