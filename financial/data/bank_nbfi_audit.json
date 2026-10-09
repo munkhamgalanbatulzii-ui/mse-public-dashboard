@@ -115,19 +115,64 @@
       "matchStatus": "matched"
     },
     "XAC": {
-      "sourceUrl": "https://xacbank.mn/news/2026q2-financial-result",
-      "sourceType": "issuer_operating_results",
-      "period": "2026Q2",
+      "sourceUrl": "https://xacbank.mn/api/media/file/XacBank%20JSC%20Condensed%20Financial%20statement%20Q3%202026.xlsx",
+      "sourceType": "issuer_official_xlsx",
+      "period": "2026Q3",
       "facts": {
+        "assets": {
+          "amount": 8847742000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "liabilities": {
+          "amount": 7886025000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "equity": {
+          "amount": 961717000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "netProfit": {
+          "amount": 138422000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "revenue": {
+          "amount": 716839000000,
+          "unit": "MNT",
+          "approx": false
+        },
         "quarterNetProfit": {
-          "amount": 45800000000,
+          "amount": 50187000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "loanPortfolio": {
+          "amount": 4850000000000,
           "unit": "MNT",
           "approx": true
         },
-        "loanPortfolio": {
-          "amount": 4889000000000,
+        "loansNet": {
+          "amount": 4845525000000,
           "unit": "MNT",
-          "approx": true
+          "approx": false
+        },
+        "deposits": {
+          "amount": 3251043000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "currentAccounts": {
+          "amount": 1916472000000,
+          "unit": "MNT",
+          "approx": false
+        },
+        "netInterestIncome": {
+          "amount": 259428000000,
+          "unit": "MNT",
+          "approx": false
         },
         "nplRatio": {
           "amount": 2.2,
@@ -135,14 +180,47 @@
           "approx": false
         },
         "annualizedRoe": {
-          "amount": 20,
+          "amount": 20.5,
           "unit": "percent",
-          "approx": true
+          "approx": false
         }
       },
-      "checks": {},
-      "note": "Эх сурвалжийн 45.8 тэрбум ₮ нь зөвхөн II улирлын ашиг. Excel-ийн 88.2 тэрбум ₮ нь эхний хагас жилийн өссөн дүн тул хооронд нь сольж болохгүй.",
-      "matchStatus": "awaiting_direct_statement"
+      "checks": {
+        "assets": {
+          "sourceAmount": 8847742000000,
+          "existingAmount": 8847742000000,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "liabilities": {
+          "sourceAmount": 7886025000000,
+          "existingAmount": 7886025000000,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "equity": {
+          "sourceAmount": 961717000000,
+          "existingAmount": 961717000000,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "netProfit": {
+          "sourceAmount": 138422000000,
+          "existingAmount": 138422000000,
+          "relativeDifference": 0,
+          "passes": true
+        },
+        "revenue": {
+          "sourceAmount": 716839000000,
+          "existingAmount": 716839000000,
+          "relativeDifference": 0,
+          "passes": true
+        }
+      },
+      "note": "2026.III улирлын албан ёсны XLSX-ээс: балансын 9/30 утгууд, орлого үр дүнгийн есөн сарын YTD. Q3 дан цэвэр ашиг 50.187 тэрбум; есөн сарын нийт ашиг 138.422 тэрбум. Хүүгийн орлого 716.839 тэрбум. ROE 20.5% нь банкны мэдээлсэн жилжүүлсэн ROE, дашбоардын TTM ROE-ээс аргачлалаар зөрж болно.",
+      "matchStatus": "matched",
+      "secondarySource": "https://xacbank.mn/en/news/2026q3-financialresult",
+      "financialPeriodEnd": "2026-09-30"
     },
     "SBM": {
       "sourceUrl": "https://apex.mn/mn/articles/blogs/2026-i",
@@ -296,5 +374,6 @@
       "note": "Импортолсон ROA 21,910.51% нь хэвийн бус; эх сурвалжийн баталгаажуулалт хүртэл харагдахдаа анхааруулгатай байх шаардлагатай.",
       "matchStatus": "needs_review"
     }
-  }
+  },
+  "notes": "XAC uses separately sourced Q3 2026 filing; remaining issuers use 2026 H1 checks."
 }
