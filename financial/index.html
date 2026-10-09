@@ -109,6 +109,12 @@ html{scroll-behavior:smooth}html,body{background:var(--bg);font-family:'MandalFa
 .yearly-key-dot.recent-dot{background:#137f78}
 .simple-quarter-note{font-size:12px;color:#647d7b;margin:0 0 17px;line-height:1.7;padding-left:3px}
 .simple-quarter-charts{gap:18px;align-items:stretch}
+/* Four charts must fill a balanced 2×2 grid: override the older rule that stretched the last chart across both columns at ≥1500px. */
+@media(min-width:1500px){
+  .history-charts.simple-quarter-charts>.simple-quarter-card:last-child{grid-column:auto}
+  .history-charts.simple-quarter-charts>.simple-quarter-card:last-child .history-chart{max-width:none;margin:0}
+}
+
 .simple-quarter-card{min-width:0;background:#fff;border:1px solid #dde4e4;border-radius:9px;padding:0 14px 12px;overflow:hidden}
 .simple-quarter-header{min-height:65px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;padding:14px 4px 5px}
 .simple-quarter-header h2{font-size:17px;font-weight:650;letter-spacing:-.01em;color:#465358;margin:0}
