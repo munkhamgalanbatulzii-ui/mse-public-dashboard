@@ -78,8 +78,17 @@ def discover_site(browser, url):
                 link=allowed_link(url,x["url"])
                 if link and any(term in link.lower() for term in LINK_PATHS):
                     links.append({"url":link,"text":x["text"][:100]})
+            controls=page.locator("select, input[type=search], input[type=text]").evaluate_all(
+                """els=>els.slice(0,22).map(el=>({
+                    tag:el.tagName,id:el.id,name:el.name,placeholder:el.placeholder||'',
+                    options:el.tagName==='SELECT'?[...el.options].slice(0,12).map(x=>({value:x.value,text:x.text})):[],
+                    html:(el.outerHTML||'').slice(0,450)
+                }))"""
+            )
             data["tabs"].append({"name":tab,"rows":len(all_rows),
                                  "matchingIssuerRows":sum(1 for r in data["sources"] if r["tab"]==tab),
+                                 "sampleRows":[r["text"][:260] for r in all_rows[:8]],
+                                 "controls":controls,
                                  "reportLinks":links[:100]})
         collect("Анхны хуудас")
         for tab in TABS:
@@ -137,7 +146,8 @@ def main():
             browser.close()
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"scannedAt":out["scannedAt"],"sites":[{"url":s["url"],"http":s.get("httpStatus"),"tabs":s["tabs"] and [{"name":t["name"],"rows":t["rows"],"matches":t["matchingIssuerRows"]} for t in s["tabs"]],"errors":s["errors"]} for s in out["sites"]],
-                      "perIssuer":{s:len(x["reports"]) for s,x in out["issuers"].items()}},ensure_ascii=False))
+                      "perIssuer":{s:len(x["reports"]) for s,x in out["issuers"].items()},
+                      "diagnostics":{site["url"]: [{"name":t["name"],"rows":t["sampleRows"],"controls":t["controls"]} for t in site["tabs"]] for site in out["sites"]}},ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
