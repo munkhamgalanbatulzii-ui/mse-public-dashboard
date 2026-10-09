@@ -1,0 +1,39 @@
+name: Probe XacBank 2026 Q3 official reports
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'probe_xac_q3.py'
+      - '.github/workflows/probe-xac.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install chromium --with-deps
+      - run: python probe_xac_q3.py
+      - name: Commit XacBank source diagnostic
+        run: |
+          git config user.name "mse-dashboard-bot"
+          git config user.email "actions@users.noreply.github.com"
+          cp financial/data/xac_2026q3_raw.json /tmp/xac_q3_raw.json
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/xac_q3_raw.json financial/data/xac_2026q3_raw.json
+            git add financial/data/xac_2026q3_raw.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Capture XacBank 2026 Q3 source report tables"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          exit 1
