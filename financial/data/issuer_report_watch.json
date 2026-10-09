@@ -1,0 +1,119 @@
+{
+  "scannedAt": "2026-10-09T11:52:44+08:00",
+  "mode": "discovery_only_no_automatic_financial_overwrite",
+  "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
+  "issuerCount": 9,
+  "issuers": {
+    "KHAN": {
+      "code": "563",
+      "name": "Хаан банк ХК",
+      "reports": []
+    },
+    "GLMT": {
+      "code": "562",
+      "name": "Голомт банк ХК",
+      "reports": []
+    },
+    "XAC": {
+      "code": "568",
+      "name": "Хас Банк",
+      "reports": []
+    },
+    "SBM": {
+      "code": "564",
+      "name": "Төрийн Банк ХК",
+      "reports": []
+    },
+    "TDB": {
+      "code": "567",
+      "name": "Худалдаа хөгжлийн банк",
+      "reports": []
+    },
+    "INV": {
+      "code": "553",
+      "name": "Инвескор ББСБ ХК",
+      "reports": []
+    },
+    "LEND": {
+      "code": "545",
+      "name": "ЛэндМН ББСБ ХК",
+      "reports": []
+    },
+    "ADB": {
+      "code": "550",
+      "name": "Ард кредит ББСБ ХК",
+      "reports": []
+    },
+    "SEND": {
+      "code": "561",
+      "name": "Сэндли ББСБ ХК",
+      "reports": []
+    }
+  },
+  "sites": [
+    {
+      "url": "https://mse.mn/company-reports",
+      "visited": true,
+      "tabs": [
+        {
+          "name": "Анхны хуудас",
+          "rows": 0,
+          "matchingIssuerRows": 0,
+          "reportLinks": []
+        },
+        {
+          "name": "Хувьцаат компаниудын санхүүгийн тайлан",
+          "rows": 0,
+          "matchingIssuerRows": 0,
+          "reportLinks": []
+        },
+        {
+          "name": "Үйл ажиллагааны тайлан",
+          "rows": 0,
+          "matchingIssuerRows": 0,
+          "reportLinks": []
+        }
+      ],
+      "errors": [
+        "Tab inaccessible: Хувьцаат компаниудын санхүүгийн тайлан",
+        "Tab inaccessible: Үйл ажиллагааны тайлан"
+      ],
+      "sources": [],
+      "httpStatus": 200,
+      "pageTitle": "MSE",
+      "finalURL": "https://mse.mn/company-reports"
+    },
+    {
+      "url": "https://new.mse.mn/issuers-hub",
+      "visited": true,
+      "tabs": [
+        {
+          "name": "Анхны хуудас",
+          "rows": 17,
+          "matchingIssuerRows": 0,
+          "reportLinks": []
+        },
+        {
+          "name": "Хувьцаат компаниудын санхүүгийн тайлан",
+          "rows": 17,
+          "matchingIssuerRows": 0,
+          "reportLinks": []
+        },
+        {
+          "name": "Үйл ажиллагааны тайлан",
+          "rows": 17,
+          "matchingIssuerRows": 0,
+          "reportLinks": []
+        }
+      ],
+      "errors": [
+        "Tab inaccessible: Хувьцаат компаниудын санхүүгийн тайлан",
+        "Tab inaccessible: Үйл ажиллагааны тайлан"
+      ],
+      "sources": [],
+      "httpStatus": 200,
+      "pageTitle": "Үнэт цаас гаргагч · Монголын Хөрөнгийн Бирж",
+      "finalURL": "https://new.mse.mn/issuers-hub"
+    }
+  ]
+}
