@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-13T17:43:46+08:00",
+  "scannedAt": "2026-10-14T00:44:46+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -977,7 +977,7 @@
                   "text": "ХБҮЦ"
                 }
               ],
-              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
             },
             {
               "tag": "SELECT",
@@ -1002,7 +1002,7 @@
                   "text": "Бусад мэдээлэл"
                 }
               ],
-              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
             }
           ],
           "reportLinks": [
@@ -1155,7 +1155,7 @@
             {
               "text": "Бүртгүүлэх",
               "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-brand-500 bg-brand-600 px-4 py-2.5 text-[14px] font-semibold leading-5 text-white shadow-xs transition-colors hover:bg-brand-500 sm:flex-none\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_0_\" data-state=\"closed\">Бүртгүүлэх <svg xmlns=\""
+              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-brand-500 bg-brand-600 px-4 py-2.5 text-[14px] font-semibold leading-5 text-white shadow-xs transition-colors hover:bg-brand-500 sm:flex-none\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_3_\" data-state=\"closed\">Бүртгүүлэх <svg xmlns=\""
             },
             {
               "text": "10-р сар\n13\nЦан цохих ёслол\n\"ЛэндМН ББСБ\" ХК-ийн \"Lend MSME ",
