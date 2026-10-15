@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-15T13:55:24+08:00",
+  "scannedAt": "2026-10-16T01:00:17+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -1053,7 +1053,7 @@
                   "text": "ХБҮЦ"
                 }
               ],
-              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
             },
             {
               "tag": "SELECT",
@@ -1078,7 +1078,7 @@
                   "text": "Бусад мэдээлэл"
                 }
               ],
-              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
             }
           ],
           "reportLinks": [
@@ -1204,16 +1204,6 @@
               "html": "<button class=\"whitespace-nowrap px-4 pb-3 pt-1 text-[14px] font-medium transition-colors text-gray-500 hover:text-gray-700\">Бусад мэдээлэл</button>"
             },
             {
-              "text": "10-р сар\n15\nСургалт\nХөрөнгийн зах зээл дээрээс санхүүжилт та",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
               "text": "10-р сар\n21\nСургалт\nМонголын хөрөнгийн бирж, Чикагогийн түүх",
               "disabled": false,
               "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
@@ -1226,7 +1216,17 @@
             {
               "text": "Бүртгүүлэх",
               "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-brand-500 bg-brand-600 px-4 py-2.5 text-[14px] font-semibold leading-5 text-white shadow-xs transition-colors hover:bg-brand-500 sm:flex-none\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_0_\" data-state=\"closed\">Бүртгүүлэх <svg xmlns=\""
+              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-brand-500 bg-brand-600 px-4 py-2.5 text-[14px] font-semibold leading-5 text-white shadow-xs transition-colors hover:bg-brand-500 sm:flex-none\" aria-haspopup=\"dialog\" aria-expanded=\"false\" aria-controls=\"radix-_r_3_\" data-state=\"closed\">Бүртгүүлэх <svg xmlns=\""
+            },
+            {
+              "text": "10-р сар\n15\nСургалт\nХөрөнгийн зах зээл дээрээс санхүүжилт та",
+              "disabled": false,
+              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
+            },
+            {
+              "text": "Дэлгэрэнгүй",
+              "disabled": false,
+              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
             },
             {
               "text": "10-р сар\n13\nЦан цохих ёслол\n\"ЛэндМН ББСБ\" ХК-ийн \"Lend MSME ",
