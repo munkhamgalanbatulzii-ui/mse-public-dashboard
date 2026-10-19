@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-19T15:19:49+08:00",
+  "scannedAt": "2026-10-19T16:09:32+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -18,6 +18,13 @@
       "code": "568",
       "name": "Хас Банк",
       "reports": [
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
+          "text": "5 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+          "urls": [],
+          "hasAction": true
+        },
         {
           "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
           "sourcePage": "https://mse.mn/company-reports",
@@ -170,6 +177,13 @@
         {
           "tab": "Үйл ажиллагааны тайлан",
           "sourcePage": "https://mse.mn/company-reports",
+          "text": "4 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
+          "urls": [],
+          "hasAction": true
+        },
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
           "text": "3 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
           "urls": [],
           "hasAction": true
@@ -200,13 +214,6 @@
       "name": "Сэндли ББСБ ХК",
       "reports": [
         {
-          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "sourcePage": "https://mse.mn/company-reports",
-          "text": "3 Сэндли ББСБ ХК SEND 2026 оны 3 -р улирлын тайлан 2026-10-19 ",
-          "urls": [],
-          "hasAction": true
-        },
-        {
           "tab": "Шинэ санхүү, үйл ажиллагааны мэдээ",
           "sourcePage": "https://new.mse.mn/issuers-hub",
           "text": "Сэндли ББСБ ХК SEND ТУЗ-ийн гишүүн 2026-10-19 Open.MSE ↗",
@@ -214,6 +221,13 @@
             "https://open.mse.mn/securities/561"
           ],
           "hasAction": false
+        },
+        {
+          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
+          "text": "3 Сэндли ББСБ ХК SEND 2026 оны 3 -р улирлын тайлан 2026-10-19 ",
+          "urls": [],
+          "hasAction": true
         }
       ]
     }
@@ -255,17 +269,10 @@
         },
         {
           "name": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "rows": 11,
-          "matchingIssuerRows": 4,
+          "rows": 1,
+          "matchingIssuerRows": 0,
           "sampleRows": [
-            "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
-            "1 Тэнгэрлиг медиа групп ХК TNGR 2026 оны 3 -р улирлын тайлан 2026-10-19 ",
-            "2 Хөсөг трейд ХК HSG 2026 оны 3 -р улирлын тайлан 2026-10-19 ",
-            "3 Сэндли ББСБ ХК SEND 2026 оны 3 -р улирлын тайлан 2026-10-19 ",
-            "4 Ган хийц ХК GHC 2026 оны 2 -р улирлын тайлан 2026-10-15 ",
-            "5 Худалдаа Хөгжлийн банк TDB 2026 оны 3 -р улирлын тайлан 2026-10-15 ",
-            "6 Төрийн Банк ХК SBM 2026 оны 3 -р улирлын тайлан 2026-10-15 ",
-            "7 Стандарт ноос ХК ALI 2026 оны 2 -р улирлын тайлан 2026-10-14 "
+            "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл"
           ],
           "controls": [],
           "reportLinks": [
@@ -288,26 +295,6 @@
             {
               "url": "https://mse.mn/company-reports",
               "text": "1"
-            },
-            {
-              "url": "https://mse.mn/company-reports",
-              "text": "2"
-            },
-            {
-              "url": "https://mse.mn/company-reports",
-              "text": "3"
-            },
-            {
-              "url": "https://mse.mn/company-reports",
-              "text": "324"
-            },
-            {
-              "url": "https://mse.mn/company-reports",
-              "text": "325"
-            },
-            {
-              "url": "https://mse.mn/company-reports",
-              "text": "326"
             }
           ],
           "navigation": [
@@ -334,7 +321,7 @@
             {
               "text": "Үнэт цаас",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5o:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5o:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbb:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbb:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Хувьцаат компани\n\nХувьцаат компани",
@@ -404,7 +391,7 @@
             {
               "text": "Гишүүн брокер",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5p:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5p:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbc:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbc:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Гишүүн брокерийн мэдээлэл\n\nГишүүн брокерийн мэдээлэл",
@@ -434,7 +421,7 @@
             {
               "text": "Үнэт цаасны арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5q:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5q:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbd:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbd:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Өнөөдрийн арилжаа\n\nӨнөөдрийн арилжаа",
@@ -474,7 +461,7 @@
             {
               "text": "УУБ-ийн арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5r:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5r:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbe:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbe:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Бүтээгдэхүүн\n\nБүтээгдэхүүн",
@@ -524,7 +511,7 @@
             {
               "text": "Ил тод байдал",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5s:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5s:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbf:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbf:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Авлигын эсрэг\n\nАвлигын эсрэг",
@@ -569,13 +556,13 @@
           "matchingIssuerRows": 2,
           "sampleRows": [
             "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
+            "2 Монгео ХК MOG Үйл ажиллагааны хагас жилийн тайлан мэдээлэл 2026-10-19 ",
             "1 Бөхөг ХК BHG Хагас жилийн үйл ажиллагааны тайланг илгээж байна 2026-10-19 ",
-            "2 Мандал говь импэкс ХК MNG 2026-10-15 ",
-            "3 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
-            "4 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
-            "5 Түшиг Уул ХК TUS хагас жилийн үйл ажиллагааны тайлан 2026-09-30 ",
-            "6 Бэрх Уул ХК BEU 2025 оны үйл ажиллагааны тайлан 2026-09-29 ",
-            "13 Монголын төмөр зам ХК MTZ 2026 оны эхний хагас жилийн тайлан 2026-09-21 "
+            "3 Мандал говь импэкс ХК MNG 2026-10-15 ",
+            "4 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
+            "5 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+            "6 Түшиг Уул ХК TUS хагас жилийн үйл ажиллагааны тайлан 2026-09-30 ",
+            "7 Бэрх Уул ХК BEU 2025 оны үйл ажиллагааны тайлан 2026-09-29 "
           ],
           "controls": [],
           "reportLinks": [
@@ -644,7 +631,7 @@
             {
               "text": "Үнэт цаас",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5o:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5o:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbb:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbb:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Хувьцаат компани\n\nХувьцаат компани",
@@ -714,7 +701,7 @@
             {
               "text": "Гишүүн брокер",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5p:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5p:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbc:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbc:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Гишүүн брокерийн мэдээлэл\n\nГишүүн брокерийн мэдээлэл",
@@ -744,7 +731,7 @@
             {
               "text": "Үнэт цаасны арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5q:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5q:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbd:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbd:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Өнөөдрийн арилжаа\n\nӨнөөдрийн арилжаа",
@@ -784,7 +771,7 @@
             {
               "text": "УУБ-ийн арилжаа",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5r:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5r:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbe:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbe:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Бүтээгдэхүүн\n\nБүтээгдэхүүн",
@@ -834,7 +821,7 @@
             {
               "text": "Ил тод байдал",
               "disabled": false,
-              "html": "<button id=\"radix-:r4:-trigger-radix-:r5s:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:r5s:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
+              "html": "<button id=\"radix-:r4:-trigger-radix-:rbf:\" data-state=\"closed\" aria-expanded=\"false\" aria-controls=\"radix-:r4:-content-radix-:rbf:\" class=\"group gap-md text-sm font-medium transition-colors p-xl h-16 flex items-center justify-start rounded-lg hover:bg-gradient-400-600 false\" data-radix-collection-item=\"\"><div class=\"w-fit max-w-fit\"><p class=\"text-sm leadin"
             },
             {
               "text": "Авлигын эсрэг\n\nАвлигын эсрэг",
@@ -877,55 +864,11 @@
       "errors": [],
       "sources": [
         {
-          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "symbol": "XAC",
-          "matches": [
-            {
-              "text": "9 Хас Банк XAC 2026 оны 3 -р улирлын тайлан 2026-10-09 ",
-              "urls": [],
-              "hasAction": true
-            }
-          ]
-        },
-        {
-          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "symbol": "SBM",
-          "matches": [
-            {
-              "text": "6 Төрийн Банк ХК SBM 2026 оны 3 -р улирлын тайлан 2026-10-15 ",
-              "urls": [],
-              "hasAction": true
-            }
-          ]
-        },
-        {
-          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "symbol": "TDB",
-          "matches": [
-            {
-              "text": "5 Худалдаа Хөгжлийн банк TDB 2026 оны 3 -р улирлын тайлан 2026-10-15 ",
-              "urls": [],
-              "hasAction": true
-            }
-          ]
-        },
-        {
-          "tab": "Хувьцаат компаниудын санхүүгийн тайлан",
-          "symbol": "SEND",
-          "matches": [
-            {
-              "text": "3 Сэндли ББСБ ХК SEND 2026 оны 3 -р улирлын тайлан 2026-10-19 ",
-              "urls": [],
-              "hasAction": true
-            }
-          ]
-        },
-        {
           "tab": "Үйл ажиллагааны тайлан",
           "symbol": "XAC",
           "matches": [
             {
-              "text": "4 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+              "text": "5 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
               "urls": [],
               "hasAction": true
             }
@@ -936,7 +879,7 @@
           "symbol": "LEND",
           "matches": [
             {
-              "text": "3 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
+              "text": "4 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
               "urls": [],
               "hasAction": true
             }
