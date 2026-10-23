@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-23T00:59:38+08:00",
+  "scannedAt": "2026-10-23T12:07:01+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -61,6 +61,13 @@
       "code": "568",
       "name": "Хас Банк",
       "reports": [
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
+          "text": "10 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+          "urls": [],
+          "hasAction": true
+        },
         {
           "tab": "Үйл ажиллагааны тайлан",
           "sourcePage": "https://mse.mn/company-reports",
@@ -311,6 +318,13 @@
         {
           "tab": "Үйл ажиллагааны тайлан",
           "sourcePage": "https://mse.mn/company-reports",
+          "text": "9 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
+          "urls": [],
+          "hasAction": true
+        },
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
           "text": "8 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
           "urls": [],
           "hasAction": true
@@ -375,6 +389,13 @@
       "code": "561",
       "name": "Сэндли ББСБ ХК",
       "reports": [
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
+          "text": "3 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
+          "urls": [],
+          "hasAction": true
+        },
         {
           "tab": "Үйл ажиллагааны тайлан",
           "sourcePage": "https://mse.mn/company-reports",
@@ -525,13 +546,13 @@
           "matchingIssuerRows": 0,
           "sampleRows": [
             "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
-            "1 Жидакс ХК SOH 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
-            "2 Өндөрхаан ХК ONH 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
-            "3 Мик холдинг ХК MIK 2026 оны 3 -р улирлын тайлан 2026-10-21 ",
-            "4 Булигаар ХК MBG 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
-            "5 Улсын их дэлгүүр ХК UID 2026 оны 3 -р улирлын тайлан 2026-10-21 ",
-            "6 Монложистикс Холдинг ХК MLG 2026 оны 3 -р улирлын тайлан 2026-10-21 ",
-            "7 Инновэйшн инвестмент ХК QPAY 2026 оны 3 -р улирлын тайлан 2026-10-21 "
+            "1 Бодь Даатгал ХК BODI 2026 оны 3 -р улирлын тайлан 2026-10-23 ",
+            "2 Жидакс ХК SOH 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
+            "3 Өндөрхаан ХК ONH 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
+            "4 Мик холдинг ХК MIK 2026 оны 3 -р улирлын тайлан 2026-10-21 ",
+            "5 Булигаар ХК MBG 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
+            "6 Улсын их дэлгүүр ХК UID 2026 оны 3 -р улирлын тайлан 2026-10-21 ",
+            "7 Монложистикс Холдинг ХК MLG 2026 оны 3 -р улирлын тайлан 2026-10-21 "
           ],
           "controls": [],
           "reportLinks": [
@@ -835,13 +856,13 @@
           "matchingIssuerRows": 3,
           "sampleRows": [
             "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
-            "1 Булигаар ХК MBG 2026 оны хагас 3-р улирлын үйл ажиллагааны тайлан 2026-10-22 ",
-            "4 Монложистикс Холдинг ХК MLG Монложистикс Холдинг ХК-ийн 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-21 ",
-            "2 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
-            "3 Улсын их дэлгүүр ХК UID 2026 оны 3-р улирлын тайлан 2026-10-21 ",
-            "6 Монгео ХК MOG Үйл ажиллагааны хагас жилийн тайлан мэдээлэл 2026-10-19 ",
-            "5 Бөхөг ХК BHG Хагас жилийн үйл ажиллагааны тайланг илгээж байна 2026-10-19 ",
-            "7 Мандал говь импэкс ХК MNG 2026-10-15 "
+            "1 Премиум Нэксус ХК CUMN Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-23 ",
+            "2 Булигаар ХК MBG 2026 оны хагас 3-р улирлын үйл ажиллагааны тайлан 2026-10-22 ",
+            "5 Монложистикс Холдинг ХК MLG Монложистикс Холдинг ХК-ийн 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-21 ",
+            "3 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
+            "4 Улсын их дэлгүүр ХК UID 2026 оны 3-р улирлын тайлан 2026-10-21 ",
+            "7 Монгео ХК MOG Үйл ажиллагааны хагас жилийн тайлан мэдээлэл 2026-10-19 ",
+            "6 Бөхөг ХК BHG Хагас жилийн үйл ажиллагааны тайланг илгээж байна 2026-10-19 "
           ],
           "controls": [],
           "reportLinks": [
@@ -1147,7 +1168,7 @@
           "symbol": "XAC",
           "matches": [
             {
-              "text": "9 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
+              "text": "10 Хас Банк XAC ХасБанкны 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-09 ",
               "urls": [],
               "hasAction": true
             }
@@ -1158,7 +1179,7 @@
           "symbol": "LEND",
           "matches": [
             {
-              "text": "8 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
+              "text": "9 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
               "urls": [],
               "hasAction": true
             }
@@ -1169,7 +1190,7 @@
           "symbol": "SEND",
           "matches": [
             {
-              "text": "2 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
+              "text": "3 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
               "urls": [],
               "hasAction": true
             }
@@ -1349,7 +1370,7 @@
                   "text": "ХБҮЦ"
                 }
               ],
-              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
             },
             {
               "tag": "SELECT",
@@ -1374,7 +1395,7 @@
                   "text": "Бусад мэдээлэл"
                 }
               ],
-              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
             }
           ],
           "reportLinks": [
