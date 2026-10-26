@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-10-26T00:38:39+08:00",
+  "scannedAt": "2026-10-26T14:34:53+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -399,6 +399,13 @@
         {
           "tab": "Үйл ажиллагааны тайлан",
           "sourcePage": "https://mse.mn/company-reports",
+          "text": "5 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
+          "urls": [],
+          "hasAction": true
+        },
+        {
+          "tab": "Үйл ажиллагааны тайлан",
+          "sourcePage": "https://mse.mn/company-reports",
           "text": "4 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
           "urls": [],
           "hasAction": true
@@ -528,7 +535,7 @@
           "matchingIssuerRows": 0,
           "sampleRows": [
             "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
-            "1 Бодь Даатгал ХК BODI 2026 оны 3 -р улирлын тайлан 2026-10-23 ",
+            "1 Богд Даатгал ХК BODI 2026 оны 3 -р улирлын тайлан 2026-10-23 ",
             "2 Жидакс ХК SOH 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
             "3 Өндөрхаан ХК ONH 2026 оны 3 -р улирлын тайлан 2026-10-22 ",
             "4 Мик холдинг ХК MIK 2026 оны 3 -р улирлын тайлан 2026-10-21 ",
@@ -835,16 +842,16 @@
         {
           "name": "Үйл ажиллагааны тайлан",
           "rows": 11,
-          "matchingIssuerRows": 2,
+          "matchingIssuerRows": 1,
           "sampleRows": [
             "№ Компанийн нэр Симбол Тайлбар Нийтэлсэн огноо Файл",
-            "1 Алтайн зам ХК AZH Хагас жилийн үйл ажиллагааны тайлан 2026-10-23 ",
-            "2 Премиум Нэксус ХК CUMN Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-23 ",
-            "3 Булигаар ХК MBG 2026 оны хагас 3-р улирлын үйл ажиллагааны тайлан 2026-10-22 ",
-            "6 Монложистикс Холдинг ХК MLG Монложистикс Холдинг ХК-ийн 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-21 ",
-            "4 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
-            "5 Улсын их дэлгүүр ХК UID 2026 оны 3-р улирлын тайлан 2026-10-21 ",
-            "8 Монгео ХК MOG Үйл ажиллагааны хагас жилийн тайлан мэдээлэл 2026-10-19 "
+            "1 Ган хийц ХК GHC 2026 оны хагас жилийн үйл ажиллагааны тайлан 2026-10-26 ",
+            "2 Алтайн зам ХК AZH Хагас жилийн үйл ажиллагааны тайлан 2026-10-23 ",
+            "3 Премиум Нэксус ХК CUMN Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-23 ",
+            "4 Булигаар ХК MBG 2026 оны хагас 3-р улирлын үйл ажиллагааны тайлан 2026-10-22 ",
+            "7 Монложистикс Холдинг ХК MLG Монложистикс Холдинг ХК-ийн 2026 оны III улирлын үйл ажиллагааны тайлан 2026-10-21 ",
+            "5 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
+            "6 Улсын их дэлгүүр ХК UID 2026 оны 3-р улирлын тайлан 2026-10-21 "
           ],
           "controls": [],
           "reportLinks": [
@@ -1147,21 +1154,10 @@
       "sources": [
         {
           "tab": "Үйл ажиллагааны тайлан",
-          "symbol": "LEND",
-          "matches": [
-            {
-              "text": "10 ЛэндМН ББСБ ХК LEND 2026 оны III улирлын санхүү, үйл ажиллагааны тайлан 2026-10-13 ",
-              "urls": [],
-              "hasAction": true
-            }
-          ]
-        },
-        {
-          "tab": "Үйл ажиллагааны тайлан",
           "symbol": "SEND",
           "matches": [
             {
-              "text": "4 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
+              "text": "5 Сэндли ББСБ ХК SEND Үйл ажиллагааны тайлан 2026 оны III улирал 2026-10-21 ",
               "urls": [],
               "hasAction": true
             }
@@ -1341,7 +1337,7 @@
                   "text": "ХБҮЦ"
                 }
               ],
-              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
+              "html": "<select class=\"h-10 w-full rounded-sm border border-gray-300 bg-white px-3 text-sm font-medium text-gray-900 focus:border-brand-600 focus:outline-none focus:ring-1 focus:ring-brand-600\"><option value=\"9t2kmsyg\" selected=\"\">Хувьцаат компани </option><option value=\"suf17bdw\">Бонд</option><option value=\"i51kk8hz\">ХБҮЦ</option></select>"
             },
             {
               "tag": "SELECT",
@@ -1366,66 +1362,11 @@
                   "text": "Бусад мэдээлэл"
                 }
               ],
-              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
+              "html": "<select class=\"w-full appearance-none rounded-sm border border-gray-300 bg-white py-2.5 pl-4 pr-10 text-sm font-medium text-gray-700 focus:outline-none\"><option value=\"general\" selected=\"\">Ерөнхий мэдээлэл</option><option value=\"financial\">Санхүү үйл ажиллагааны мэдээлэл</option><option value=\"meeting\">Хурлын мэдээлэл</option><option value=\"other\">Бусад мэдээлэл</option></select>"
             }
           ],
-          "reportLinks": [
-            {
-              "url": "https://new.mse.mn/financial-transparency",
-              "text": "Ил тод байдал"
-            }
-          ],
+          "reportLinks": [],
           "navigation": [
-            {
-              "text": "ENG",
-              "disabled": false,
-              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none hover:rounded-sm focus:ring-bg-brand-solid focus:ring-offset-white disabled:text-button-tertiary-fg-disabled rounded-sm p-0 text-sm leading-5 font-semibold gap-1 focus:ring-0 focus:ring-offset-0 focus:outline-none text-white hover:text-whit"
-            },
-            {
-              "text": "Бусад систем",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex h-6 items-center gap-1 rounded-xs border border-white/40 bg-transparent px-2 text-[12px] font-medium leading-4 text-white hover:bg-white/10 transition-colors\">Бусад систем<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap"
-            },
-            {
-              "text": "Зах зээл",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Зах зээл<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\""
-            },
-            {
-              "text": "Үнэт цаас гаргагч",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-brand-600\">Үнэт цаас гаргагч<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejo"
-            },
-            {
-              "text": "Хөрөнгө оруулагч",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Хөрөнгө оруулагч<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin"
-            },
-            {
-              "text": "УУБ-ний арилжаа",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">УУБ-ний арилжаа<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin="
-            },
-            {
-              "text": "IPO Hub",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">IPO Hub<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" "
-            },
-            {
-              "text": "Foreign investor",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Foreign investor<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin"
-            },
-            {
-              "text": "Ил тод байдал",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Ил тод байдал<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"r"
-            },
-            {
-              "text": "Таны мэдлэгт",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex h-full items-center gap-2 px-3 text-[14px] font-normal whitespace-nowrap transition-colors hover:bg-black/5 bg-transparent text-gray-900\">Таны мэдлэгт<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"ro"
-            },
             {
               "text": "Open",
               "disabled": false,
@@ -1490,66 +1431,6 @@
               "text": "Бусад мэдээлэл",
               "disabled": false,
               "html": "<button class=\"whitespace-nowrap px-4 pb-3 pt-1 text-[14px] font-medium transition-colors text-gray-500 hover:text-gray-700\">Бусад мэдээлэл</button>"
-            },
-            {
-              "text": "10-р сар\n21\nСургалт\nМонголын хөрөнгийн бирж, Чикагогийн түүх",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "10-р сар\n15\nСургалт\nХөрөнгийн зах зээл дээрээс санхүүжилт та",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "10-р сар\n13\nЦан цохих ёслол\n\"ЛэндМН ББСБ\" ХК-ийн \"Lend MSME ",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "10-р сар\n06\nСургалт\nҮнэт цаасны зах зээлийн анхан шатны мэдл",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"flex flex-1 flex-col gap-4 p-5 text-left focus:outline-none focus-visible:bg-gray-50\"><div class=\"flex items-start gap-4\"><div class=\"flex shrink-0 flex-col items-center justify-center gap-1 rounded-[4px] bg-[#f3f4f6] p-2\"><span class=\"text-center text-[12px] font-semibold leading-[18px] text-text-quaternary\">10-р сар</span><span"
-            },
-            {
-              "text": "Дэлгэрэнгүй",
-              "disabled": false,
-              "html": "<button type=\"button\" class=\"inline-flex flex-1 items-center justify-center rounded-sm border border-gray-300 bg-white px-4 py-2.5 text-[14px] font-semibold leading-5 text-brand-600 shadow-xs transition-colors hover:bg-gray-50 sm:flex-none\">Дэлгэрэнгүй</button>"
-            },
-            {
-              "text": "Go to slide 1",
-              "disabled": false,
-              "html": "<button type=\"button\" aria-label=\"Go to slide 1\" class=\"h-1 cursor-pointer rounded-sm transition-colors w-16 bg-brand-600\"></button>"
-            },
-            {
-              "text": "Go to slide 2",
-              "disabled": false,
-              "html": "<button type=\"button\" aria-label=\"Go to slide 2\" class=\"h-1 cursor-pointer rounded-sm transition-colors w-16 bg-gray-200\"></button>"
-            },
-            {
-              "text": "Previous slide",
-              "disabled": true,
-              "html": "<button type=\"button\" disabled=\"\" aria-label=\"Previous slide\" class=\"inline-flex h-10 w-10 items-center justify-center rounded-sm shadow-xs transition-colors disabled:cursor-not-allowed bg-gray-100 text-gray-400\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-lineca"
-            },
-            {
-              "text": "Next slide",
-              "disabled": false,
-              "html": "<button type=\"button\" aria-label=\"Next slide\" class=\"inline-flex h-10 w-10 items-center justify-center rounded-sm shadow-xs transition-colors disabled:cursor-not-allowed bg-brand-600 text-white hover:bg-brand-700\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linec"
             }
           ]
         }
