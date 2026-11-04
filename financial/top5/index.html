@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Монголын ТОП-5 банкны 2026 оны III улирлын санхүүгийн интерактив харьцуулалт">
+<title>ТОП-5 банкны санхүүгийн дашбоард | Mandal Capital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffbf2;--paper:#fff;--navy:#142e42;--navy2:#193c50;--teal:#0d8276;--tealLight:#e9f5ef;--ink:#182e40;--muted:#73808b;--line:#e7e8e4;--red:#bf5661;--gray:#a5b9c3}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Montserrat,Arial,sans-serif}a{color:inherit;text-decoration:none}button,select{font:inherit;cursor:pointer}button{border:0}
+.wrap{max-width:1430px;margin:auto;padding:24px 32px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;margin-bottom:23px}
+.brand{display:flex;align-items:center;gap:13px;font-size:13px;font-weight:800;letter-spacing:2.5px}
+.mark{width:39px;height:39px;display:grid;place-items:center;background:var(--navy);color:#fff;border-radius:11px;font-size:22px;letter-spacing:0}
+.topLinks{display:flex;gap:11px;flex-wrap:wrap}.topLinks a{font-size:11px;color:#435a6a;border:1px solid #dce5e3;padding:12px 16px;border-radius:8px;background:#fff;font-weight:600}
+.hero{background:linear-gradient(120deg,#102d3b 0%,#174f50 72%,#0b7165 100%);color:white;border-radius:18px;padding:32px 36px;display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;box-shadow:0 12px 26px rgba(9,44,55,.09)}
+.overline{font-size:11px;font-weight:700;letter-spacing:2px;color:#aad4cd;margin-bottom:14px}
+.hero h1{font-size:clamp(24px,3.1vw,37px);letter-spacing:-1px;line-height:1.34;margin:0 0 11px}
+.hero p{font-size:12px;color:#c8e2df;max-width:640px;margin:0;line-height:1.9}
+.heroStat{font-size:13px;line-height:1.8;text-align:right;color:#dceae7}
+.heroStat strong{font-size:25px;color:#fff;display:block}
+.heroStat small{display:block;font-size:10px}
+.kpis{margin:20px 0 23px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.kpi,.panel{background:var(--paper);border:1px solid var(--line);border-radius:13px;box-shadow:0 4px 20px rgba(14,35,49,.025)}
+.kpi{padding:20px 19px}.kpi .label{font-size:10px;color:var(--muted);font-weight:700;line-height:1.5}.kpi .value{font-size:clamp(18px,1.9vw,26px);font-weight:800;color:var(--navy);margin:11px 0 5px;letter-spacing:-.8px}.kpi .foot{font-size:10px;color:#76918c}
+.sectionHead{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:28px 0 12px}
+h2{font-size:17px;margin:0;font-weight:800;color:var(--navy);letter-spacing:-.35px}.small{font-size:10px;line-height:1.75;color:var(--muted)}.controls{display:flex;gap:9px;flex-wrap:wrap}
+select{background:white;border:1px solid #dbe4e2;padding:10px 14px;border-radius:7px;color:var(--ink);font-size:11px;font-weight:700;min-height:40px}
+.panels{display:grid;grid-template-columns:1.15fr .85fr;gap:15px}.panel{padding:22px;min-width:0}
+.panel h3{font-size:14px;margin:0 0 7px;color:var(--navy)}.panelNote{font-size:10px;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.barRow{display:grid;grid-template-columns:85px minmax(50px,1fr) 90px;align-items:center;gap:10px;margin:14px 0;min-height:28px}
+.barName{font-size:11px;font-weight:700}.track{background:#edf2f1;height:20px;border-radius:4px;position:relative;overflow:hidden}.fill{height:100%;background:var(--teal);border-radius:4px;min-width:2px}.barNum{font-size:11px;font-weight:700;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pairRow{margin:16px 0}.pairLabel{font-size:11px;font-weight:700;display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}.pairBars{display:grid;grid-template-columns:1fr 1fr;gap:8px;height:56px}.pairBar{display:flex;align-items:flex-end;justify-content:flex-end;gap:6px;flex-direction:column;font-size:10px;font-weight:700;border-radius:5px;padding:0 9px;overflow:hidden;white-space:nowrap}.pairBar.past{background:#e8eef1;color:#48616f}.pairBar.now{background:#d2ece2;color:#086e62}
+.chartLegend{font-size:10px;color:var(--muted);margin-top:12px}.dot{width:8px;height:8px;border-radius:3px;background:#a5b9c3;display:inline-block;margin:0 6px 0 13px}.dot.green{background:#13a184}
+.tableWrap{overflow:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+table{border-collapse:collapse;width:100%;white-space:nowrap;font-size:11px}th{background:#f3f6f4;color:#5b7281;text-align:right;font-weight:700;font-size:10px;padding:16px 14px;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left}
+td{padding:16px 14px;border-bottom:1px solid #edf0ef;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}tbody tr:last-child td{border-bottom:0}tbody tr{cursor:pointer}tbody tr:hover,tbody tr.active{background:#eef7f3}.bankCode{font-weight:800;color:var(--navy);font-size:12px}.bankName{display:block;font-size:10px;color:var(--muted);padding-top:4px}
+.pos{color:#087967}.neg{color:var(--red)}.tag{font-size:9px;border-radius:5px;padding:4px 6px;background:#edf3f1;color:#48746e;white-space:nowrap}.tag.above{background:#f9ece3;color:#a2633e}
+.insights{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}.note{padding:18px 21px;border:1px solid var(--line);background:#fff;border-radius:11px;font-size:11px;line-height:1.9;color:#5f7280}.note strong{color:var(--navy)}
+.detailKpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0}.detailStat{padding:12px;background:#f7faf8;border:1px solid #e8efea;border-radius:8px}.detailStat small{font-size:9px;color:var(--muted);display:block;line-height:1.7}.detailStat b{font-size:13px;color:var(--navy);display:block;margin-top:6px}
+.foot{margin-top:20px;font-size:10px;line-height:2;color:#697c86}.foot a{color:#08786e;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1100px){.kpis{grid-template-columns:repeat(3,1fr)}.panels{grid-template-columns:1fr}.insights{grid-template-columns:1fr}}@media(max-width:670px){.wrap{padding:16px 13px 45px}.hero{padding:23px 22px}.heroStat{text-align:left}.kpis{grid-template-columns:repeat(2,1fr);gap:8px}.kpi{padding:14px 13px}.barRow{grid-template-columns:58px minmax(20px,1fr) 73px;gap:7px}.panel{padding:16px}.detailKpis{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="top"><div class="brand"><span class="mark">✦</span><span>MANDAL <span style="color:#0f897b">CAPITAL</span> <span style="font-size:9px;letter-spacing:0;color:#80919b;font-weight:600">/ RESEARCH</span></span></div><nav class="topLinks"><a href="../">Санхүүгийн үндсэн дашбоард</a><a href="../../">MSE Market Terminal</a></nav></div>
+ <header class="hero"><div><div class="overline">MONGOLIA BANKING SECTOR · FINANCIAL INTELLIGENCE</div><h1>ТОП-5 банкны санхүүгийн шинжилгээ</h1><p>2026 оны III улирал · 2026.09.30-ны баланс ба оны эхнээс хуримтлагдсан (YTD) ашгийн мэдээлэл · 2025 оны ижил үетэй харьцуулалт</p></div><div class="heroStat"><small>САНХҮҮГИЙН ТАЙЛАН</small><strong>2026 · Q3</strong><small id="quoteDate">Ханшийн мэдээлэл ачаалж байна…</small></div></header>
+ <section id="kpis" class="kpis"></section>
+ <div class="sectionHead"><h2>Банкуудын харьцуулалт</h2><div class="controls"><select id="metric"><option value="assets">Нийт хөрөнгө</option><option value="equity">Өөрийн хөрөнгө</option><option value="netProfit">Цэвэр ашиг · YTD</option><option value="loansNet">Цэвэр зээлийн багц</option><option value="roe">ROE · Excel</option><option value="nplRatio">Чанаргүй зээл / NPL</option><option value="pb">Үнэ / дансны үнэ · P/B</option><option value="profitGrowth">Цэвэр ашгийн YoY өсөлт</option></select><select id="selected"><option value="KHAN">ХААН банк</option><option value="GLMT">Голомт банк</option><option value="TDB">ХХБ</option><option value="XAC">ХасБанк</option><option value="SBM">Төрийн банк</option></select></div></div>
+ <div class="panels">
+  <div class="panel"><h3 id="chartTitle">Нийт хөрөнгийн хэмжээ</h3><div class="panelNote" id="chartNote">2026 оны III улирал, их наяд төгрөгөөр</div><div id="bars"></div><div class="chartLegend">Хэмжээнээс шалтгаалсан харьцуулалт · утгууд нь тайлангийн огнооны үлдэгдэл / YTD</div></div>
+  <div class="panel"><h3 id="detailTitle">Банкны дэлгэрэнгүй үзүүлэлт</h3><div class="panelNote">2026.III · 2025.III (ижил улирал) · 2025 оны жилийн эцэс</div><div id="bankDetails"></div></div>
+ </div>
+ <div class="sectionHead"><h2>ТОП-5 банк · нэгдсэн хүснэгт</h2><span class="small">Ханшид суурилсан үнэлгээ нь 2026.III тайлангийн өөрийн хөрөнгө ба сүүлийн хадгалсан ханшаар бодогдоно.</span></div>
+ <div class="tableWrap"><table><thead><tr><th>Банк / тикер</th><th>Хөрөнгө<br>(их наяд ₮)</th><th>Өөрийн хөрөнгө<br>(тэрбум ₮)</th><th>Цэвэр ашиг · 9 сар<br>(тэрбум ₮)</th><th>Ашгийн YoY</th><th>ROE<br>(Excel)</th><th>NPL</th><th>Coverage</th><th>P/B</th><th>P/E · TTM</th></tr></thead><tbody id="rows"></tbody></table></div>
+ <div class="insights"><div class="note"><strong>Аргачлал</strong> — 2026.III-ны балансын хөрөнгө, өөрийн хөрөнгө; 9 сарын YTD цэвэр ашиг; ашгийн YoY = 2026.III / 2025.III − 1. P/E нь сүүлийн 12 сарын ашиг (2025 бүтэн жил + 2026 есөн сар − 2025 есөн сар), P/B нь сүүлийн хадгалсан ханш × хувьцааны тоо / өөрийн хөрөнгө. Coverage = зээлийн эрсдэлийн сан / чанаргүй зээлийн үлдэгдэл. Хувьцааны тоонд 2026.II-ийн мэдээлэл ашигласан.</div>
+ <div class="note"><strong>Эх сурвалж ба анхааруулга</strong> — хэрэглэгчийн «банкны дата.xlsx», банкнуудын 2026.III тайлан, МХБ-ийн хадгалсан арилжааны ханш. ХХБ-ны мянган төгрөгөөрх дүнг нэгжид хөрвүүлсэн. Голомтын дутуу баланс ба орлогын мэдээллийг <a href="https://www.golomtbank.com/investor-relations/season-report" target="_blank" rel="noopener">албан тайлангаас</a> нөхсөн. ROE нь Excel-ийн тооцоо; банкны өөрийн тайлагнасан эсвэл TTM өгөөжөөс зөрж болно. P/B 1-ээс доош байх нь дангаараа авах дохио биш.</div></div>
+ <div class="foot" id="sources">Эх сурвалж: <a href="https://www.golomtbank.com/investor-relations/season-report" target="_blank" rel="noopener">Голомт банк</a> · <a href="https://www.tdbm.mn/mn/financial-reports/2026/ulirlyn-sankhuugiyn-taylan-orlogyn-taylan-mon-2026q3" target="_blank" rel="noopener">ХХБ</a> · <a href="https://xacbank.mn/api/media/file/XacBank%20JSC%20Condensed%20Financial%20statement%20Q3%202026.xlsx" target="_blank" rel="noopener">ХасБанк</a> · <a href="https://mse.mn/company-reports" target="_blank" rel="noopener">МХБ</a></div>
+</div>
+<script>
+(function(){
+'use strict';
+var names={KHAN:'ХААН банк',GLMT:'Голомт банк',TDB:'Худалдаа, хөгжлийн банк',XAC:'ХасБанк',SBM:'Төрийн банк'};
+var syms=['KHAN','GLMT','TDB','XAC','SBM'], Q={},quotes={},quoteDate='',chosen='KHAN',metric='assets';
+var $=function(id){return document.getElementById(id)};
+var valid=function(n){return typeof n==='number'&&Number.isFinite(n)};
+var fmt=function(n,d){return valid(n)?new Intl.NumberFormat('mn-MN',{maximumFractionDigits:d||0,minimumFractionDigits:d||0}).format(n):'—'};
+var short=function(n){return fmt(n/1e12,2)+' их наяд'};
+var b=function(n){return fmt(n/1e9,1)+' тэрбум'};
+var pct=function(n){return valid(n)?(n>0?'+':'')+fmt(n,1)+'%':'—'};
+var r=function(s,y,q){return Q[s+':'+y+'Q'+q]||{}};
+var growth=function(s){var a=r(s,2026,3).netProfit,o=r(s,2025,3).netProfit;return valid(a)&&valid(o)&&o!==0?(a/o-1)*100:null};
+var price=function(s){return valid(quotes[s])?quotes[s]:null};
+var pb=function(s){var x=r(s,2026,3),p=price(s);return valid(p)&&valid(x.equity)&&valid(x.shares)&&x.equity>0?p*x.shares/x.equity:null};
+var ttm=function(s){var a=r(s,2026,3).netProfit,fy=r(s,2025,4).netProfit,old=r(s,2025,3).netProfit;return valid(a)&&valid(fy)&&valid(old)?fy+a-old:null};
+var pe=function(s){var x=r(s,2026,3),p=price(s),v=ttm(s);return valid(p)&&valid(x.shares)&&valid(v)&&v>0?p*x.shares/v:null};
+var cov=function(s){var x=r(s,2026,3);return valid(x.loanLossReserve)&&valid(x.nplLoans)&&x.nplLoans>0?x.loanLossReserve/x.nplLoans*100:null};
+var metrics={assets:{title:'Нийт хөрөнгийн хэмжээ',unit:'их наяд ₮',get:function(s){return r(s,2026,3).assets/1e12},d:2},
+equity:{title:'Өөрийн хөрөнгө',unit:'тэрбум ₮',get:function(s){return r(s,2026,3).equity/1e9},d:1},
+netProfit:{title:'Цэвэр ашиг · 9 сар',unit:'тэрбум ₮',get:function(s){return r(s,2026,3).netProfit/1e9},d:1},
+loansNet:{title:'Цэвэр зээлийн багц',unit:'их наяд ₮',get:function(s){return r(s,2026,3).loansNet/1e12},d:2},
+roe:{title:'Өөрийн хөрөнгийн өгөөж (ROE)',unit:'% · Excel-ийн үзүүлэлт',get:function(s){return r(s,2026,3).roe},d:1},
+nplRatio:{title:'Чанаргүй зээлийн харьцаа (NPL)',unit:'%',get:function(s){return r(s,2026,3).nplRatio},d:1},
+pb:{title:'Үнэ / дансны үнийн харьцаа (P/B)',unit:'дахин',get:pb,d:2},
+profitGrowth:{title:'Цэвэр ашгийн жилийн өсөлт (YoY)',unit:'%',get:growth,d:1}};
+function renderKpis(){
+var profit=syms.reduce(function(t,s){return t+r(s,2026,3).netProfit},0),assets=syms.reduce(function(t,s){return t+r(s,2026,3).assets},0),equity=syms.reduce(function(t,s){return t+r(s,2026,3).equity},0),growthList=syms.map(function(s){return {s:s,g:growth(s)}}).sort(function(a,b){return b.g-a.g});
+var list=[['Нийт хөрөнгө',short(assets),'2026.09.30 · 5 банк'],['Нийт өөрийн хөрөнгө',short(equity),'2026.09.30 · 5 банк'],['9 сарын цэвэр ашиг',b(profit),'Оны эхнээс хуримтлагдсан'],['Ашиг хамгийн их өссөн',names[growthList[0].s],pct(growthList[0].g)+' · YoY'],['Банкуудын хамрах хүрээ','5 / 5','2026.III тайлан']];
+$('kpis').innerHTML=list.map(function(x){return '<div class="kpi"><div class="label">'+x[0]+'</div><div class="value">'+x[1]+'</div><div class="foot">'+x[2]+'</div></div>'}).join('');
+}
+function renderBars(){var cfg=metrics[metric];$('chartTitle').textContent=cfg.title;$('chartNote').textContent='2026.III · '+cfg.unit+' · ихээс бага руу эрэмбэлсэн';var list=syms.map(function(s){return {s:s,v:cfg.get(s)}}).filter(function(x){return valid(x.v)}).sort(function(a,b){return b.v-a.v}),max=Math.max(1,...list.map(function(x){return Math.abs(x.v)}));
+$('bars').innerHTML=list.map(function(o){var width=Math.max(0,Math.abs(o.v)/max*100);return '<div class="barRow"><span class="barName">'+o.s+'</span><div class="track" title="'+names[o.s]+' · '+fmt(o.v,cfg.d)+' '+cfg.unit+'"><div class="fill" style="width:'+width+'%;background:'+(o.s===chosen?'#0d8276':'#8fb7b2')+'"></div></div><span class="barNum'+(o.v<0?' neg':'')+'">'+fmt(o.v,cfg.d)+(metric==='pb'?'×':['roe','nplRatio','profitGrowth'].includes(metric)?'%':'')+'</span></div>'}).join('');
+}
+function renderDetails(){var now=r(chosen,2026,3),old=r(chosen,2025,3),fy=r(chosen,2025,4);$('detailTitle').textContent=names[chosen]+' · '+chosen;
+var specs=[['Цэвэр ашиг · 2026.III',b(now.netProfit)],['Цэвэр ашиг · 2025.III',b(old.netProfit)],['Ашгийн өсөлт',pct(growth(chosen))],['Нийт хөрөнгө',short(now.assets)],['Цэвэр зээлийн багц',short(now.loansNet)],['NPL',fmt(now.nplRatio,1)+'%'],['Coverage',fmt(cov(chosen),1)+'%'],['P/B',valid(pb(chosen))?fmt(pb(chosen),2)+'×':'—']];
+var past=valid(old.netProfit)?old.netProfit:0,cur=valid(now.netProfit)?now.netProfit:0,highest=Math.max(1,past,cur);
+$('bankDetails').innerHTML='<div class="detailKpis">'+specs.map(function(x){return '<div class="detailStat"><small>'+x[0]+'</small><b>'+x[1]+'</b></div>'}).join('')+'</div><div class="pairRow"><div class="pairLabel"><span>Цэвэр ашиг · ижил улирал</span><span>'+pct(growth(chosen))+'</span></div><div class="pairBars"><div class="pairBar past" style="opacity:'+(.2+.8*past/highest)+'">2025.III · '+b(past)+'</div><div class="pairBar now" style="opacity:'+(.2+.8*cur/highest)+'">2026.III · '+b(cur)+'</div></div></div><div class="small">2025 жилийн эцсийн ашиг: '+b(fy.netProfit)+' · 2026.III TTM ашиг: '+b(ttm(chosen))+' · Ханш: '+(valid(price(chosen))?fmt(price(chosen),2)+' ₮':'—')+'</div>';
+}
+function renderTable(){var items=syms.slice().sort(function(a,b){return r(b,2026,3).assets-r(a,2026,3).assets});$('rows').innerHTML=items.map(function(s){var a=r(s,2026,3),g=growth(s),v=pb(s),p=pe(s),valText=valid(v)?fmt(v,2)+'× · '+(v<1?'доогуур':'дээгүүр'):'—';return '<tr data-bank="'+s+'" class="'+(chosen===s?'active':'')+'"><td><span class="bankCode">'+s+'</span><span class="bankName">'+names[s]+'</span></td><td>'+fmt(a.assets/1e12,2)+'</td><td>'+fmt(a.equity/1e9,1)+'</td><td>'+fmt(a.netProfit/1e9,1)+'</td><td class="'+(g>=0?'pos':'neg')+'">'+pct(g)+'</td><td>'+fmt(a.roe,1)+'%</td><td>'+fmt(a.nplRatio,1)+'%</td><td>'+fmt(cov(s),1)+'%</td><td><span class="tag'+(v>=1?' above':'')+'">'+valText+'</span></td><td>'+(valid(p)?fmt(p,2)+'×':'—')+'</td></tr>'}).join('');
+Array.from($('rows').querySelectorAll('tr')).forEach(function(tr){tr.addEventListener('click',function(){chosen=tr.dataset.bank;$('selected').value=chosen;render()})});
+}
+function render(){if(!Q['KHAN:2026Q3'])return;renderKpis();renderBars();renderDetails();renderTable()}
+$('metric').addEventListener('change',function(e){metric=e.target.value;render()});
+$('selected').addEventListener('change',function(e){chosen=e.target.value;render()});
+Promise.all([fetch('../data/quarters.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('financial data '+r.status);return r.json()}),fetch('../../data/latest.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})]).then(function(all){Q=all[0].quarters||{};var feed=all[1];if(feed&&Array.isArray(feed.securities)){quoteDate=feed.date;feed.securities.forEach(function(o){if(valid(o.close)&&o.close>0)quotes[o.symbol]=o.close})}$('quoteDate').textContent='Ханш: '+(quoteDate||'мэдээлэл байхгүй')+' · тайлан: 2026.09.30';render()}).catch(function(err){$('kpis').innerHTML='<div class="kpi" style="grid-column:1/-1">Өгөгдөл ачаалж чадсангүй. Санхүүгийн дашбоардын үндсэн хэсгийг шалгана уу. '+String(err.message)+'</div>';});
+})();
+</script>
+</body></html>
