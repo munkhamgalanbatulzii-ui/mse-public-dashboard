@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-06T02:52:25+08:00",
+  "scannedAt": "2026-11-07T04:58:06+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -583,6 +583,21 @@
               "text": "ENG",
               "disabled": false,
               "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none text-button-tertiary-fg hover:bg-button-tertiary-bg_hover hover:text-button-tertiary-fg-hover hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary disable"
+            },
+            {
+              "text": "Шинэ хувилбарт шилжих",
+              "disabled": false,
+              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 border shadow-xs focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:border-button-primary-border disabled:border-button-primary-border-disabled disabled:bg-button-primary-bg-dis"
+            },
+            {
+              "text": "Одоогийн хувилбараар үргэлжлүүлэх",
+              "disabled": false,
+              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none gap-4 hover:rounded-md focus:outline-none focus:ring-2 focus:ring-bg-brand-solid focus:ring-offset-2 focus:ring-offset-white focus:bg-bg-primary disabled:text-button-tertiary-fg-disabled rounded-md px-5 py-3 text-base leading-6 font-semibol"
+            },
+            {
+              "text": "Close",
+              "disabled": false,
+              "html": "<button type=\"button\" class=\"absolute right-4 top-4 rounded-full bg-black/30 p-1.5 text-white opacity-80 transition-opacity hover:opacity-100 focus:outline-none\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide luc"
             }
           ]
         },
