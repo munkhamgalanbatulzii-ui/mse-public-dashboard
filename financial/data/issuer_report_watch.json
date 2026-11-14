@@ -1,5 +1,5 @@
 {
-  "scannedAt": "2026-11-14T00:37:37+08:00",
+  "scannedAt": "2026-11-15T01:14:50+08:00",
   "mode": "discovery_only_no_automatic_financial_overwrite",
   "note": "Only newly published report locations are discovered. Figures require checked source/period/units before use.",
   "issuerCount": 9,
@@ -568,18 +568,19 @@
           "rows": 0,
           "matchingIssuerRows": 0,
           "sampleRows": [],
-          "controls": [
-            {
-              "tag": "SELECT",
-              "id": "",
-              "name": "",
-              "placeholder": "",
-              "options": [],
-              "html": "<select aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;border:0;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;word-wrap:normal\"></select>"
-            }
-          ],
+          "controls": [],
           "reportLinks": [],
           "navigation": [
+            {
+              "text": "ENG",
+              "disabled": false,
+              "html": "<button class=\"inline-flex items-center justify-center whitespace-nowrap transition-colors disabled:pointer-events-none hover:rounded-sm focus:ring-bg-brand-solid focus:ring-offset-white disabled:text-button-tertiary-fg-disabled rounded-sm p-0 text-sm leading-5 font-semibold gap-1 focus:ring-0 focus:ring-offset-0 focus:outline-none text-white hover:text-whit"
+            },
+            {
+              "text": "Бусад систем",
+              "disabled": false,
+              "html": "<button type=\"button\" class=\"inline-flex h-6 items-center gap-1 rounded-xs border border-white/40 bg-transparent px-2 text-[12px] font-medium leading-4 text-white hover:bg-white/10 transition-colors\">Бусад систем<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap"
+            },
             {
               "text": "Нүүр хуудас",
               "disabled": false,
